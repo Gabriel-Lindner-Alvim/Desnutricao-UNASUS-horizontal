@@ -8,6 +8,31 @@ body {
   position: relative;
 }
 
+.capa {
+  background: url(../img/header_titulo.svg) repeat;
+        background-size: cover;
+}
+v
+.conteudo-capa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  padding-left: 5%; 
+  max-width: 100%;
+}
+
+
+.conteudo-capa img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-left: 10%; 
+}
+
 header {
   background-color: #0E9FE9;
   color: white;
@@ -99,13 +124,13 @@ h3, li{
 
  ul li {
 	margin: 0;
-	padding-left: 50px; /* space for bullet */
+	padding-left: 50px;
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 120% !important;
-	list-style: none; /* disable default bullets */
+	list-style: none;
 	
   }
   
@@ -115,7 +140,7 @@ h3, li{
 	left: 0;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 16px; /* adjust to your bullet image size */
+	width: 16px;
 	height: 16px;
 	background-image: url('../img/bullet.svg');
 	background-size: contain;
@@ -262,3 +287,9 @@ p {
 		font-size: 18px !important;
 
 	}
+
+  .svg-container{
+	line-height: 31px !important;
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+}

@@ -1,11 +1,11 @@
-const totalPaginas = 10;
+const totalPaginas = 22;
 let paginaAtual = parseInt(localStorage.getItem("paginaAtual")) || 1;
 
 async function carregarPagina(numero) {
   try {
     const resposta = await fetch(`paginas_unidade1/pagina${numero}.html`);
     const html = await resposta.text();
-    const container = document.getElementById("conteudo"); // <- esta linha estava faltando
+    const container = document.getElementById("conteudo");
     container.innerHTML = html;
 
 
@@ -19,8 +19,7 @@ async function carregarPagina(numero) {
       }
     });
 
-    document.getElementById("prevBtn").disabled = numero === 1;
-    document.getElementById("nextBtn").disabled = numero === totalPaginas;
+    document.getElementById("nextBtn").hidden = numero === totalPaginas;
   } catch (erro) {
     document.getElementById("conteudo").innerHTML = "<p>Erro ao carregar a página.</p>";
     console.error("Erro ao carregar página:", erro);
@@ -32,6 +31,10 @@ document.getElementById("prevBtn").addEventListener("click", () => {
     paginaAtual--;
     localStorage.setItem("paginaAtual", paginaAtual); // salva página
     carregarPagina(paginaAtual);
+  }
+  if (paginaAtual === 1) {
+    localStorage.setItem("paginaAtual", paginaAtual);
+    voltarCapa()
   }
 });
 
@@ -52,4 +55,8 @@ async function loadSVG(_svgFilePath, _id) {
   } catch (error) {
     console.error("Erro ao carregar o arquivo SVG:", error);
   }
+}
+
+function voltarCapa() {
+  window.location.href = "capa.html";
 }
