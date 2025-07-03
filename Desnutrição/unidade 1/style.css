@@ -75,20 +75,14 @@ header {
   cursor: pointer;
   user-select: none;
   z-index: 20;
-  color: #333;
-}
-
-.seta:disabled {
-  opacity: 0.3;
-  cursor: default;
 }
 
 .esquerda {
-  left: 20px;
+  left: 50px;
 }
 
 .direita {
-  right: 20px;
+  right: 50px;
 }
 
 h1 {
