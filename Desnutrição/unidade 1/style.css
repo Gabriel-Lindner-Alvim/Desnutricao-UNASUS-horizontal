@@ -6,7 +6,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: white;
   position: relative;
-  overflow-y: hidden;
 }
 
 .capa {
@@ -46,6 +45,40 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  height: 10vh;
+}
+
+.titulotesteira{
+    color: white;
+		margin-bottom: -20px;
+		font-size: 18px !important;
+    float: left;
+    padding-left: 3%; 
+    text-align: left;
+}
+
+.svg-container{
+line-height: 31px !important;
+padding-top: 20px !important;
+padding-bottom: 20px !important;
+}
+
+.pnan{
+  float: left; 
+  padding-left: 3%; 
+  margin-top: 3vh; 
+  height: 5vh;
+}
+
+.flor-header{
+  float: left; 
+  height: 10vh;
+}
+
+header b {
+  font-family: 'Montserrat', 
+  sans-serif; 
+  font-size: 24px;
 }
 
 .container-flex {
@@ -58,11 +91,17 @@ header {
 
 .pagina {
   width: 80%;
-  height: 80%;
+  height: 100%;
   box-sizing: border-box;
   overflow-y: auto;
   position: relative;
   z-index: 1;
+}
+
+.pagina.tem-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .seta {
@@ -273,19 +312,6 @@ p {
 	line-height: 140% !important;
 	font-family: 'montserrat', sans-serif;
 	color: #242628;
-}
-
-.titulotesteira{
-		margin-top: 36px !important;
-		margin-bottom:-20px;
-		font-size: 18px !important;
-
-	}
-
-  .svg-container{
-	line-height: 31px !important;
-	padding-top: 20px !important;
-	padding-bottom: 20px !important;
 }
 
 .imagem-fixa {

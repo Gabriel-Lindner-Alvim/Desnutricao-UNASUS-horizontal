@@ -6,18 +6,29 @@ async function carregarPagina(numero) {
     const resposta = await fetch(`paginas_unidade1/pagina${numero}.html`);
     const html = await resposta.text();
     const container = document.getElementById("conteudo");
+
+    // 1. Remove classe tem-svg da .pagina ANTES de trocar o conteúdo
+    const pagina = document.querySelector('.pagina');
+    pagina?.classList.remove('tem-svg');
+
+    // 2. Carrega o novo conteúdo HTML na div conteudo
     container.innerHTML = html;
 
-
-    // Carregar SVGs após o conteúdo ser inserido
+    // 3. Carrega todos os SVGs da página atual
     const svgContainers = container.querySelectorAll("[data-svg]");
-    svgContainers.forEach(div => {
+    const svgPromises = Array.from(svgContainers).map(div => {
       const file = div.getAttribute("data-svg");
       const id = div.id;
-      if (file && id) {
-        loadSVG(file, id);
-      }
+      return loadSVG(file, id);
     });
+
+    await Promise.all(svgPromises); // Espera todos os SVGs carregarem
+
+    // 4. Verifica se deve aplicar .tem-svg na nova página
+    if (pagina && pagina.querySelector('.svg-container') && !pagina.querySelector('p')) {
+      pagina.classList.add('tem-svg');
+    }
+
 
     document.getElementById("nextBtn").hidden = numero === totalPaginas;
   } catch (erro) {
@@ -27,12 +38,12 @@ async function carregarPagina(numero) {
 }
 
 document.getElementById("prevBtn").addEventListener("click", () => {
-  if (paginaAtual > 1) {
+  if (paginaAtual >= 1) {
     paginaAtual--;
     localStorage.setItem("paginaAtual", paginaAtual); // salva página
     carregarPagina(paginaAtual);
   }
-  if (paginaAtual === 1) {
+  if (paginaAtual === 0) {
     localStorage.setItem("paginaAtual", paginaAtual);
     voltarCapa()
   }
