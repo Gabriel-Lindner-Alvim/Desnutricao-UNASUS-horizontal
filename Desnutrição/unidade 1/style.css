@@ -6,6 +6,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: white;
   position: relative;
+  overflow-x: hidden;
 }
 
 .capa {
@@ -51,10 +52,21 @@ header {
 .titulotesteira{
     color: white;
 		margin-bottom: -20px;
-		font-size: 18px !important;
+		font-size: 1.5vh !important;
     float: left;
     padding-left: 3%; 
     text-align: left;
+    padding-top: 2vh;
+}
+
+.hamburguertesteira{
+    color: white;
+		margin-bottom: -20px;
+		font-size: 1.5vh !important;
+    float: left;
+    padding-left: 3%; 
+    text-align: left;
+    padding-top: 2vh;
 }
 
 .svg-container{
@@ -78,7 +90,7 @@ padding-bottom: 20px !important;
 header b {
   font-family: 'Montserrat', 
   sans-serif; 
-  font-size: 24px;
+  font-size: 2vh;
 }
 
 .container-flex {
@@ -114,6 +126,15 @@ header b {
   cursor: pointer;
   user-select: none;
   z-index: 20;
+}
+
+.seta svg {
+  transition: fill 0.3s ease;
+}
+
+#seta-direita:hover rect,
+#seta-esquerda:hover rect {
+  fill: #082D49;
 }
 
 .esquerda {
