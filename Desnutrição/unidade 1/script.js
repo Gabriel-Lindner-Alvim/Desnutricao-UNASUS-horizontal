@@ -12,9 +12,6 @@ const configuracoesPagina = {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat"
   },
-  2: {
-    backgroundColor: "#f0f0f0"
-  },
   3: {
     backgroundImage: "url('img/un1/banana plate.svg')",
     backgroundSize: "cover",

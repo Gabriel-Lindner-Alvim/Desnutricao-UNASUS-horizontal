@@ -343,3 +343,64 @@ p {
   height: auto;
   z-index: 1000; /* garante que fique por cima de outros elementos */
 }
+
+
+.degrade-1 {
+  background: linear-gradient(to right, #027EC7, #F4B700); /* azul para amarelo */
+  color: white; /* opcional, ajusta a cor do texto */
+  font-weight: bold;
+  border: none;
+  transition: background 0.3s ease;
+  
+}
+
+.degrade-2 {
+  background: linear-gradient(to left, #027EC7, #F4B700); /* azul para amarelo */
+  color: white; /* opcional, ajusta a cor do texto */
+  font-weight: bold;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.accordion-body {
+  background-color: #FFFBEB;
+  border-radius: 10px;
+
+}
+
+.accordion-item {
+  border: none;
+  background-color: #FFFBEB;
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-button {
+  position: relative;
+  padding-right: 2.5rem; /* espaço pro ícone */
+  color: white !important;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.accordion-button.custom-arrow::before {
+  content: '';
+  background-image: url('../img/Vector.svg'); 
+  background-size: 1rem 1rem;
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+/* Quando expandido (classe removida ao colapsar) */
+.accordion-button:not(.collapsed).custom-arrow::before {
+  transform: translateY(-50%) rotate(180deg); /* gira pra direita */
+}
