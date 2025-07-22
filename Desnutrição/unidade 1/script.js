@@ -16,27 +16,43 @@ const configuracoesPagina = {
     backgroundImage: "url('img/un1/banana plate.svg')",
     backgroundSize: "cover",
     backgroundPosition: "40%",
-    backgroundAttachment: "fixed"
+    backgroundAttachment: "fixed",
+    areaPrincipal: {
+      marginTop: "30vh"
+    }
   }
   // ...adicione mais conforme necessário
 };
 
-// Aplica o estilo de fundo com base no número da página
 function aplicarEstiloDeFundo(numeroPagina) {
-  // Limpa estilos anteriores
-  document.body.style.background = "";
-  document.body.style.backgroundColor = "";
-  document.body.style.backgroundImage = "";
-  document.body.style.backgroundSize = "";
-  document.body.style.backgroundRepeat = "";
-  document.body.style.backgroundPosition = "";
-  document.body.style.backgroundAttachment = "";
+  // Reset estilos do body
+  const propriedadesBody = [
+    "background", "backgroundColor", "backgroundImage", 
+    "backgroundSize", "backgroundRepeat", "backgroundPosition", "backgroundAttachment"
+  ];
+  propriedadesBody.forEach(prop => document.body.style[prop] = "");
+
+  // Reset estilos do area-principal
+  const area = document.getElementById("area-principal");
+  if (area) {
+    area.removeAttribute("style");
+  }
 
   const config = configuracoesPagina[numeroPagina];
 
   if (config) {
+    // Aplica estilos ao body
     for (const propriedade in config) {
-      document.body.style[propriedade] = config[propriedade];
+      if (propriedade !== "areaPrincipal") {
+        document.body.style[propriedade] = config[propriedade];
+      }
+    }
+
+    // Aplica estilos ao area-principal, se existirem
+    if (config.areaPrincipal && area) {
+      for (const propriedade in config.areaPrincipal) {
+        area.style[propriedade] = config.areaPrincipal[propriedade];
+      }
     }
   }
 }
