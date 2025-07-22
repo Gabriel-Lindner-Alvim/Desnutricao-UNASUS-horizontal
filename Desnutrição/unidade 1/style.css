@@ -344,6 +344,21 @@ p {
   z-index: 1000; /* garante que fique por cima de outros elementos */
 }
 
+.imagem-fixa-superior-esquerda {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px; /* ajuste conforme quiser */
+  height: auto;
+}
+
+.imagem-fixa-inferior-esquerda {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 400px; /* ajuste conforme quiser */
+  height: auto;
+}
 
 .degrade-1 {
   background: linear-gradient(to right, #027EC7, #F4B700); /* azul para amarelo */
