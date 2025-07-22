@@ -81,6 +81,12 @@ padding-bottom: 20px !important;
   margin-top: 3vh; 
   height: 5vh;
 }
+.pnan-grande {
+  float: left; 
+  padding-left: 5vw; 
+  margin-top: 2vh; 
+  height: 6vh;
+}
 
 .flor-header{
   float: left; 
@@ -401,4 +407,17 @@ p {
 
 .borda-inicial {
   margin-top: 10vh;
+}
+
+.responsive-svg {
+  width: 100%;
+  height: auto;
+  max-height: 40vh; /* ou ajuste conforme necessário */
+  display: block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.svg-hover:hover .responsive-svg {
+  transform: scale(1.15);
+
 }

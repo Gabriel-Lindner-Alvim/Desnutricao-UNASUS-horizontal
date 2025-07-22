@@ -1,5 +1,5 @@
 const totalPaginas = 22;
-let paginaAtual = parseInt(localStorage.getItem("paginaAtual")) || 0;
+let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
 
 // Configurações por página
 const configuracoesPagina = {
@@ -13,7 +13,7 @@ const configuracoesPagina = {
     backgroundRepeat: "no-repeat"
   },
   3: {
-    backgroundImage: "url('img/un1/banana plate.svg')",
+    backgroundImage: "url('img/un1/banana plate.png')",
     backgroundSize: "cover",
     backgroundPosition: "40%",
     backgroundAttachment: "fixed",
@@ -87,7 +87,7 @@ async function carregarPagina(numero) {
 document.getElementById("prevBtn").addEventListener("click", () => {
   if (paginaAtual > 0) {
     paginaAtual--;
-    localStorage.setItem("paginaAtual", paginaAtual);
+    sessionStorage.setItem("paginaAtual", paginaAtual);
     carregarPagina(paginaAtual);
   }
 });
@@ -95,7 +95,7 @@ document.getElementById("prevBtn").addEventListener("click", () => {
 document.getElementById("nextBtn").addEventListener("click", () => {
   if (paginaAtual < totalPaginas) {
     paginaAtual++;
-    localStorage.setItem("paginaAtual", paginaAtual);
+    sessionStorage.setItem("paginaAtual", paginaAtual);
     carregarPagina(paginaAtual);
   }
 });
@@ -112,3 +112,15 @@ async function loadSVG(_svgFilePath, _id) {
   }
 }
 
+async function goto(event, _selectorHide, _selectorShow){
+  goto2(_selectorHide);
+  goto3(_selectorShow);
+
+  try {
+   event.stopPropagation();
+ } catch (exceptionVar) {
+  return;
+} finally {
+  return;
+}
+};
