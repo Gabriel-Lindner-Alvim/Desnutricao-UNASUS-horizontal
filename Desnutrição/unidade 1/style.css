@@ -81,6 +81,7 @@ padding-bottom: 20px !important;
   margin-top: 3vh; 
   height: 5vh;
 }
+
 .pnan-grande {
   float: left; 
   padding-left: 5vw; 
@@ -91,6 +92,20 @@ padding-bottom: 20px !important;
 .flor-header{
   float: left; 
   height: 10vh;
+}
+
+.hamburguer {
+  float: right; 
+  padding-right: 3%; 
+  margin-top: 4vh; 
+  height: 2vh;
+}
+
+.un {
+  float: right; 
+  padding-right: 0.8%; 
+  margin-top: 3.8vh; 
+
 }
 
 header b {
