@@ -537,3 +537,29 @@ p {
 .svg-destaque:hover {
   color: #D67C09;
 }
+
+.bg-parcial {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70vw; /* 70% da largura da viewport */
+      height: 100vh; /* ou a altura que você desejar */
+      background-image: url('img/un1/garoto\ apontando.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1; /* coloca atrás do conteúdo */
+    }
+
+.bg-parcial-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70vw; /* 70% da largura da viewport */
+      height: 100vh; /* ou a altura que você desejar */
+      background-image: url('img/un1/kid-river.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1; /* coloca atrás do conteúdo */
+    }

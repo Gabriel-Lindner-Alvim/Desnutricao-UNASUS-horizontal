@@ -1,4 +1,4 @@
-const totalPaginas = 22;
+const totalPaginas = 23;
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
 
 // Configurações por página
@@ -6,11 +6,6 @@ const configuracoesPagina = {
   0: {
     backgroundImage: "url(../img/header_titulo.svg)",
     backgroundSize: "cover",
-  },
-  1: {
-    backgroundImage: "url('../img/fundo1.jpg')",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat"
   },
   3: {
     backgroundImage: "url('img/un1/banana plate.png')",
@@ -20,8 +15,11 @@ const configuracoesPagina = {
     areaPrincipal: {
       marginTop: "30vh"
     }
-  }
-  // ...adicione mais conforme necessário
+  },
+  19: {
+    backgroundImage: "url(img/un1/feijao.png)",
+    backgroundSize: "cover",
+  },
 };
 
 function aplicarEstiloDeFundo(numeroPagina) {
