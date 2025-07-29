@@ -1,4 +1,4 @@
-const totalPaginas = 23;
+const totalPaginas = 24;
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
 
 // Configurações por página

@@ -539,27 +539,89 @@ p {
 }
 
 .bg-parcial {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 70vw; /* 70% da largura da viewport */
-      height: 100vh; /* ou a altura que você desejar */
-      background-image: url('img/un1/garoto\ apontando.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      z-index: -1; /* coloca atrás do conteúdo */
-    }
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70vw; /* 70% da largura da viewport */
+  height: 100vh; /* ou a altura que você desejar */
+  background-image: url('img/un1/garoto\ apontando.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1; /* coloca atrás do conteúdo */
+}
 
 .bg-parcial-2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 70vw; /* 70% da largura da viewport */
-      height: 100vh; /* ou a altura que você desejar */
-      background-image: url('img/un1/kid-river.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      z-index: -1; /* coloca atrás do conteúdo */
-    }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70vw; /* 70% da largura da viewport */
+  height: 100vh; /* ou a altura que você desejar */
+  background-image: url('img/un1/kid-river.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1; /* coloca atrás do conteúdo */
+}
+
+
+.custom-dropdown {
+  margin-top: 11vh !important;
+}
+
+.primeira-frase {
+  margin-top: 0 !important;
+}
+
+.linha-com-texto {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.linha-com-texto::before,
+.linha-com-texto::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #0E9FE9;
+  margin: 0;
+}
+
+.linha-com-texto span {
+  font-weight: bold;
+  color: white;
+}
+
+.caixa-texto {
+  background-color: #027EC7;
+  padding: 0.3rem 1rem;
+  border-radius: 10px 10px 10px 3px;
+}
+
+
+.btn-alimentar {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  background-color: #F9D650;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+/* Hover apenas */
+.btn-alimentar:hover {
+  background-color: #F2A71B !important;
+}
+
+/* Evita que o Bootstrap altere a cor ao clicar */
+.btn-alimentar:focus,
+.btn-alimentar:active {
+  background-color: #F9D650 !important;
+  color: black;
+  box-shadow: none;
+}
+
