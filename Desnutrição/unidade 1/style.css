@@ -668,6 +668,12 @@ p {
   z-index: 10;
 }
 
+.overlay img {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+}
+
 .svg-container-hide {
   transform: translateY(-100%);
   transition: transform 0.5s ease;
@@ -696,5 +702,19 @@ p {
 }
 
 .hold-btn:hover img {
-  transform: scale(1.1);
+  transform: scale(1.07);
+}
+
+#contador-slides {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 0.95rem;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
 }
