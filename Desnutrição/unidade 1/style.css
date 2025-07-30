@@ -356,7 +356,7 @@ p {
   right: 0;
   width: 300px; /* ajuste conforme quiser */
   height: auto;
-  z-index: 1000; /* garante que fique por cima de outros elementos */
+  z-index: -1;
 }
 
 .imagem-fixa-superior-esquerda {
@@ -365,6 +365,7 @@ p {
   left: 0;
   width: 200px; /* ajuste conforme quiser */
   height: auto;
+  z-index: -1;
 }
 
 .imagem-fixa-inferior-esquerda {
@@ -373,6 +374,7 @@ p {
   left: 0;
   width: 400px; /* ajuste conforme quiser */
   height: auto;
+  z-index: -1;
 }
 
 .degrade-1 {
@@ -625,3 +627,74 @@ p {
   box-shadow: none;
 }
 
+.img-hover-effect {
+  filter: grayscale(100%) blur(3px);
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1);
+}
+
+.img-hover-effect:hover {
+  filter: grayscale(0%);
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.hold-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.hold-btn:active {
+  filter: blur(3px);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.svg-container-hide {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+}
+
+#btn1:active ~ .overlay-1 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#btn1:active ~ .overlay-1 .svg-container-hide {
+  transform: translateY(0);
+}
+
+#btn2:active ~ .overlay-2 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#btn2:active ~ .overlay-2 .svg-container-hide {
+  transform: translateY(0);
+}
+
+.hold-btn img {
+  transition: transform 0.3s ease;
+}
+
+.hold-btn:hover img {
+  transform: scale(1.1);
+}
