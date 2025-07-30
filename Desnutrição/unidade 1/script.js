@@ -20,6 +20,7 @@ const configuracoesPagina = {
     backgroundImage: "url(img/un1/feijao.png)",
     backgroundSize: "cover",
   },
+  
 };
 
 function aplicarEstiloDeFundo(numeroPagina) {
