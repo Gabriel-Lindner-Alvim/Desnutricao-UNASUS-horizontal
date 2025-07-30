@@ -540,6 +540,38 @@ p {
   color: #D67C09;
 }
 
+.svg-saiba-mais {
+  color: #027EC7;
+  transition: color 0.3s ease;
+}
+
+.svg-saiba-mais:hover .responsive-svg {
+  transform: scale(1.03);
+}
+.svg-saiba-mais:hover {
+  color: #075585;
+}
+
+.svg-desnutricao-moderada-azul {
+  color: #38B8F8;
+  transition: color 0.3s ease;
+}
+
+.svg-desnutricao-moderada-azul:hover {
+  color: #027EC7;
+
+}
+
+.svg-desnutricao-moderada-amarelo {
+  color: #EAC130;
+  transition: color 0.3s ease;
+}
+
+.svg-desnutricao-moderada-amarelo:hover {
+  color: #F2A71B;
+
+}
+
 .bg-parcial {
   position: absolute;
   top: 0;

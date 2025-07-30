@@ -1,0 +1,26 @@
+<svg width="1144" height="325" viewBox="0 0 1144 325" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Modal">
+<rect width="1144" height="325" rx="16" fill="white"/>
+<g id="Group 1127">
+<path id="Rectangle 186" d="M1084.33 66.2354C1093.88 66.2355 1101.62 73.9766 1101.62 83.5254V242.184C1101.62 257.968 1088.83 270.764 1073.04 270.765H108.384C98.8353 270.765 91.0941 263.023 91.094 253.475V83.5254C91.0941 73.9766 98.8353 66.2354 108.384 66.2354H1084.33Z" stroke="#7DCFFC" stroke-width="3.52853"/>
+<rect id="Rectangle 187" x="75.683" y="53.8243" width="1009.35" height="203.351" rx="24.3469" stroke="#027EC7" stroke-width="6.35136"/>
+<g id="Group 1118">
+<text id="SAIBA MAIS" fill="#027EC7" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="33.8739" font-weight="bold" letter-spacing="0em"><tspan x="159.23" y="137.661">SAIBA MAIS</tspan></text>
+<g id="Clique aqui e veja como fazer recomenda&#195;&#167;&#195;&#181;es para uma alimenta&#195;&#167;&#195;&#163;o adequada e saud&#195;&#161;vel na gesta&#195;&#167;&#195;&#163;o, acessando o Protocolo de Uso do Guia Alimentar.">
+<text fill="#2A2828" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="19" font-weight="500" letter-spacing="0em"><tspan x="271.414" y="195.284"> e veja como fazer recomenda&#xe7;&#xf5;es para uma alimenta&#xe7;&#xe3;o adequada e saud&#xe1;vel </tspan><tspan x="162.053" y="218.284">na gesta&#xe7;&#xe3;o, acessando o Protocolo de Uso do Guia Alimentar.&#13;</tspan></text>
+<text fill="#2A2828" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="19" font-weight="500" letter-spacing="0em" text-decoration="underline"><tspan x="162.053" y="195.284"><a href="http://189.28.128.100/dab/docs/portaldab/publicacoes/protocolo_guia_alimentar_fasciculo3.pdf" target="_blank">Clique aqui</a></tspan></text>
+</g>
+</g>
+<g id="Group 1120">
+<g id="Group 1119">
+<rect id="Rectangle 188" x="61.137" y="109.223" width="38.1082" height="126.322" rx="19.0541" fill="white"/>
+<path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M78.5479 127.987L49.4375 138.903C45.6502 140.324 43.1411 143.943 43.1411 147.988L43.1411 175.227C43.1412 192.492 67.4134 209.757 77.5694 216.225C80.2863 217.956 83.6717 218.036 86.4531 216.412C96.6745 210.441 120.769 194.34 120.769 175.227V147.988C120.769 143.943 118.26 140.324 114.473 138.903L85.3621 127.987C83.1654 127.163 80.7446 127.163 78.5479 127.987ZM87.1528 151.222L67.7012 169.754C67.1789 170.251 67.3628 171.124 68.0414 171.369L79.3443 175.443C79.8484 175.625 80.1098 176.181 79.9281 176.685L75.0698 190.162C74.7226 191.126 75.9107 191.9 76.652 191.194L96.1037 172.663C96.626 172.165 96.442 171.292 95.7634 171.047L84.4606 166.973C83.9564 166.791 83.6951 166.235 83.8768 165.731L88.735 152.254C89.0822 151.291 87.8942 150.516 87.1528 151.222Z" fill="#027EC7"/>
+</g>
+</g>
+</g>
+<g id="material-symbols:close-rounded"  style="cursor: pointer;" onclick="bootstrap.Modal.getInstance(document.getElementById('meuModal')).hide();">
+<rect x="1099.14" y="20" width="24" height="24" rx="12" fill="#075585"/>
+<path id="Vector" d="M1111.14 33.4008L1106.24 38.3008C1106.06 38.4841 1105.82 38.5758 1105.54 38.5758C1105.26 38.5758 1105.02 38.4841 1104.84 38.3008C1104.66 38.1174 1104.57 37.8841 1104.57 37.6008C1104.57 37.3174 1104.66 37.0841 1104.84 36.9008L1109.74 32.0008L1104.84 27.1008C1104.66 26.9174 1104.57 26.6841 1104.57 26.4008C1104.57 26.1174 1104.66 25.8841 1104.84 25.7008C1105.02 25.5174 1105.26 25.4258 1105.54 25.4258C1105.82 25.4258 1106.06 25.5174 1106.24 25.7008L1111.14 30.6008L1116.04 25.7008C1116.22 25.5174 1116.46 25.4258 1116.74 25.4258C1117.02 25.4258 1117.26 25.5174 1117.44 25.7008C1117.62 25.8841 1117.72 26.1174 1117.72 26.4008C1117.72 26.6841 1117.62 26.9174 1117.44 27.1008L1112.54 32.0008L1117.44 36.9008C1117.62 37.0841 1117.72 37.3174 1117.72 37.6008C1117.72 37.8841 1117.62 38.1174 1117.44 38.3008C1117.26 38.4841 1117.02 38.5758 1116.74 38.5758C1116.46 38.5758 1116.22 38.4841 1116.04 38.3008L1111.14 33.4008Z" fill="white"/>
+</g>
+</g>
+</svg>
