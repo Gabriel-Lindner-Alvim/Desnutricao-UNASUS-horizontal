@@ -65,6 +65,8 @@ async function carregarPagina(numero) {
 
     area.innerHTML = html;
 
+    atualizarContadorSlides();
+
     const svgContainers = area.querySelectorAll("[data-svg]");
     const svgPromises = Array.from(svgContainers).map(div => {
       const file = div.getAttribute("data-svg");
@@ -122,3 +124,15 @@ async function goto(event, _selectorHide, _selectorShow){
   return;
 }
 };
+
+function atualizarContadorSlides() {
+  const contador = document.getElementById("contador-slides");
+  const spanAtual = document.getElementById("pagina-atual");
+
+  if (paginaAtual === 0) {
+    contador.style.display = "none";
+  } else {
+    contador.style.display = "block";
+    spanAtual.textContent = paginaAtual;
+  }
+}
