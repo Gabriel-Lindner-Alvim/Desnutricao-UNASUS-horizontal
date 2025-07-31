@@ -1,5 +1,8 @@
 const totalPaginas = 24;
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
+const cachePaginas = {};
+const imagensPrecarregadas = new Set();
+
 
 // Configurações por página
 const configuracoesPagina = {
@@ -57,12 +60,18 @@ function aplicarEstiloDeFundo(numeroPagina) {
 
 async function carregarPagina(numero) {
   try {
-    aplicarEstiloDeFundo(numero); // Aplica o fundo aqui
+    aplicarEstiloDeFundo(numero);
 
-    const resposta = await fetch(`paginas_unidade1/pagina${numero}.html`);
-    const html = await resposta.text();
+    let html;
+    if (cachePaginas[numero]) {
+      html = cachePaginas[numero];
+    } else {
+      const resposta = await fetch(`paginas_unidade1/pagina${numero}.html`);
+      html = await resposta.text();
+      cachePaginas[numero] = html;
+    }
+
     const area = document.getElementById("area-principal");
-
     area.innerHTML = html;
 
     atualizarContadorSlides();
@@ -78,11 +87,23 @@ async function carregarPagina(numero) {
 
     document.getElementById("nextBtn").hidden = numero === totalPaginas;
     document.getElementById("prevBtn").hidden = numero === 0;
+
+
+    if (numero + 1 <= totalPaginas && !cachePaginas[numero + 1]) {
+      const respostaProx = await fetch(`paginas_unidade1/pagina${numero + 1}.html`);
+      const htmlProx = await respostaProx.text();
+      cachePaginas[numero + 1] = htmlProx;
+
+      preloadImagens(htmlProx);
+      preloadSVGs(htmlProx);
+    }
+
   } catch (erro) {
     document.getElementById("area-principal").innerHTML = "<p>Erro ao carregar a página.</p>";
     console.error("Erro ao carregar página:", erro);
   }
 }
+
 
 document.getElementById("prevBtn").addEventListener("click", () => {
   if (paginaAtual > 0) {
@@ -135,4 +156,33 @@ function atualizarContadorSlides() {
     contador.style.display = "block";
     spanAtual.textContent = paginaAtual;
   }
+}
+
+function preloadImagens(html) {
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = html;
+  const imagens = tempDiv.querySelectorAll("img");
+
+  imagens.forEach(img => {
+    const src = img.getAttribute("src");
+    if (src && !imagensPrecarregadas.has(src)) {
+      const imagem = new Image();
+      imagem.src = src;
+      imagensPrecarregadas.add(src);
+    }
+  });
+}
+
+function preloadSVGs(html) {
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = html;
+  const svgs = tempDiv.querySelectorAll("[data-svg]");
+
+  svgs.forEach(div => {
+    const file = div.getAttribute("data-svg");
+    if (file && !imagensPrecarregadas.has(file)) {
+      fetch(file); // navegador irá guardar no cache
+      imagensPrecarregadas.add(file);
+    }
+  });
 }
