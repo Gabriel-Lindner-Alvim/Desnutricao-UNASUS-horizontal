@@ -218,6 +218,14 @@ h3, li{
 	background-repeat: no-repeat;
   }
 
+  ul li.bullet-claro::before {
+  background-image: url('../img/bullet-claro.svg');
+}
+
+.branco {
+  color: white;
+}
+
   ul li.bullet-top-15::before {
 	top: 10%;
 	font-weight: normal; 
@@ -377,6 +385,16 @@ p {
   z-index: -1;
 }
 
+.imagem-fixa-superior-direita {
+  position: fixed;
+  top: 5vh;
+  right: 0;
+  width: 30vw;
+  height: auto;
+  z-index: -1;
+
+}
+
 .degrade-1 {
   background: linear-gradient(to right, #027EC7, #F4B700); /* azul para amarelo */
   color: white; /* opcional, ajusta a cor do texto */
@@ -487,7 +505,7 @@ p {
 
 
 .borda-inicial {
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 
 .responsive-svg {
@@ -664,6 +682,7 @@ p {
   background-color: #027EC7;
   padding: 0.3rem 1rem;
   border-radius: 10px 10px 10px 3px;
+  font-size: 24px;
 }
 
 
@@ -717,6 +736,16 @@ p {
   filter: grayscale(0%);
   transform: scale(1.15);
 
+}
+
+.img-ajustavel {
+
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.img-ajustavel:hover {
+  transform: scale(1.05);
 }
 
 
@@ -832,3 +861,47 @@ p {
   z-index: 3;
 }
 
+.maincontainer {
+  position: relative;
+  width: 400px;
+  height: 350px;
+
+}
+
+.thecard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #E0F1FE;
+  color: #333;
+  text-align: center;
+  border-radius: 12px;
+  border: 2px solid #027EC7;
+}
+
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #E0F1FE;
+  color: #333;
+  transform: rotateY(180deg);
+  text-align: center;
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid #027EC7;
+}
