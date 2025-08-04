@@ -77,6 +77,13 @@ async function carregarPagina(numero) {
     const area = document.getElementById("area-principal");
     area.innerHTML = html;
 
+    
+    area.querySelectorAll('.thecard').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('flipped');
+        });
+      });
+
     atualizarContadorSlides();
 
     const svgContainers = area.querySelectorAll("[data-svg]");
