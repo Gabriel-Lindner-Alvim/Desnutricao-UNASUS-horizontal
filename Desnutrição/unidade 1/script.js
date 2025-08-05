@@ -77,6 +77,15 @@ async function carregarPagina(numero) {
     const area = document.getElementById("area-principal");
     area.innerHTML = html;
 
+    const elementosParaAnimarDireita = area.querySelectorAll(".animar-slide-direita");
+      elementosParaAnimarDireita.forEach(el => {
+        el.classList.add("slide-in-right");
+      });
+    
+    const elementosParaAnimarEsquerda = area.querySelectorAll(".animar-slide-esquerda");
+    elementosParaAnimarEsquerda.forEach(el => {
+      el.classList.add("slide-in-left");
+    });
     
     area.querySelectorAll('.thecard').forEach(card => {
         card.addEventListener('click', () => {
