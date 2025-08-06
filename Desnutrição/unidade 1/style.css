@@ -965,3 +965,12 @@ p {
 .slide-in-left {
   animation: slideInFromLeft 0.6s ease forwards;
 }
+
+.aumentar {
+  transition: transform 0.3s ease;
+}
+
+
+.aumentar:hover {
+  transform: scale(1.05);
+}
