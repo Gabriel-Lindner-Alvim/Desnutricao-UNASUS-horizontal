@@ -17,15 +17,101 @@
 
       <p style="font-size: 30PX; font-weight: bold; color: #0367A5;">Nesta unidade, você irá:</p>
 
-      <img src="img/un1/nesta-unidade/Component 1.svg">
+      <div class="d-flex justify-content-center flex-wrap gap-3">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCompreender" style="background: none; border: none; padding: 0;">
+          <img src="img/un1/nesta-unidade/Component 1.svg" class="img-fluid">
+        </button>
 
-      <img src="img/un1/nesta-unidade/Component 2.svg">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#ModalClassificar" style="background: none; border: none; padding: 0;">
+          <img src="img/un1/nesta-unidade/Component 2.svg" class="img-fluid">
+        </button>
 
-      <img src="img/un1/nesta-unidade/Component 5.svg">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#ModalAnalisar" style="background: none; border: none; padding: 0;">
+          <img src="img/un1/nesta-unidade/Component 5.svg" class="img-fluid">
+        </button>
 
-      <img src="img/un1/nesta-unidade/Component 3.svg">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#ModalExplorar" style="background: none; border: none; padding: 0;">
+          <img src="img/un1/nesta-unidade/Component 3.svg" class="img-fluid">
+        </button>
+      </div>
 
   </div>
 </div>
 
 
+<div class="modal fade" id="ModalCompreender" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/un1/nesta-unidade/compreender-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCompreender')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="ModalClassificar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/un1/nesta-unidade/classificar-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalClassificar')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalAnalisar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/un1/nesta-unidade/analisar-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalAnalisar')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalExplorar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/un1/nesta-unidade/explorar-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalExplorar')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

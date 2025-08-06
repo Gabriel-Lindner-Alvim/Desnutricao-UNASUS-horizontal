@@ -1,0 +1,28 @@
+<svg width="551" height="192" viewBox="0 0 551 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Property 1=Group 1291">
+<g id="Frame 837">
+<rect y="62" width="551" height="130" rx="12" fill="#FFFBEB"/>
+<text id="Voc&#195;&#170; aprender&#195;&#161; sobre a classifica&#195;&#167;&#195;&#163;o em leve, moderada e grave, analisando as especificidades de cada tipo." fill="#082D49" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="18" letter-spacing="0em"><tspan x="72.042" y="123.953">Voc&#xea; aprender&#xe1; sobre a classifica&#xe7;&#xe3;o em leve, </tspan><tspan x="57.2324" y="148.953">moderada e grave, analisando as especificidades </tspan><tspan x="215.523" y="173.953">de cada tipo.&#13;</tspan></text>
+</g>
+<g id="Group 1142" filter="url(#filter0_d_647_303)">
+<path id="Rectangle 203" d="M0 12C0 5.37258 5.37258 0 12 0H539C545.627 0 551 5.37258 551 12V65C551 71.6274 545.627 77 539 77H4.00001C1.79087 77 0 75.2091 0 73V12Z" fill="url(#paint0_linear_647_303)"/>
+<text id="Classificar os n&#195;&#173;veis de desnutri&#195;&#167;&#195;&#163;o" fill="white" xml:space="preserve" style="white-space: pre" font-family="'Montserrat',sans-serif" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="134.69" y="32.9921">Classificar os n&#xed;veis de </tspan><tspan x="200.514" y="61.9921">desnutri&#xe7;&#xe3;o</tspan></text>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_647_303" x="-4" y="0" width="559" height="85" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_647_303"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_647_303" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_647_303" x1="551" y1="39" x2="1.8294e-06" y2="39" gradientUnits="userSpaceOnUse">
+<stop stop-color="#027EC7"/>
+<stop offset="1" stop-color="#F4B700"/>
+</linearGradient>
+</defs>
+</svg>
