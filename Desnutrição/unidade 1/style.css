@@ -727,16 +727,18 @@ p {
 }
 
 .img-hover-effect {
-  filter: grayscale(100%) blur(3px);
-  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 10px; /* spacing between cards */
   transform: scale(1);
 }
 
-.img-hover-effect:hover {
-  filter: grayscale(0%);
-  transform: scale(1.15);
-
+.img-hover-effect.active {
+  transform: scale(1.2);
+  z-index: 2;
 }
+
 
 .img-ajustavel {
 
@@ -831,17 +833,21 @@ p {
 }
 
 .img-slide {
-  max-height: 30vh;
+  max-height: 40vh;
   position: absolute;
-  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease, z-index 0.1s;
-  filter: grayscale(100%) blur(3px);
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  filter: saturate(30%) brightness(70%);
+  transform: scale(1);
+  z-index: 1;
+  cursor: pointer;
 }
 
-.img-slide:hover {
-  filter: grayscale(0%) blur(0);
-  transform: scale(1.15);
+.img-slide.active {
+  filter: saturate(100%) brightness(100%);
+  transform: scale(1.2);
   z-index: 10;
 }
+
 
 .img-1 {
   top: 0;

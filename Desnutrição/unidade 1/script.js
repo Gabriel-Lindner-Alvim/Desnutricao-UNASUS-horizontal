@@ -93,6 +93,21 @@ async function carregarPagina(numero) {
         });
       });
 
+    const imagensCards = area.querySelectorAll('.img-hover-effect');
+      
+          const cardInicial = area.querySelector('.img-3');
+      if (cardInicial) {
+        cardInicial.classList.add('active');
+      }
+
+
+    imagensCards.forEach(card => {
+      card.addEventListener('click', () => {
+        imagensCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+
     atualizarContadorSlides();
 
     const svgContainers = area.querySelectorAll("[data-svg]");
