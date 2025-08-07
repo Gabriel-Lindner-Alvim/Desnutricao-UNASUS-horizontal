@@ -987,15 +987,8 @@ p {
   left: 0;
   width: 90vw;
   height: 85vh;
-  z-index: -2;
+  z-index: -3;
   pointer-events: none;
-
-  /* Gradiente da esquerda (opaco) para a direita (transparente) */
-  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
 }
 
 .oval-wrapper {
@@ -1005,7 +998,7 @@ p {
   transform: translate(-50%, -50%);
   margin-left: 10vw; /* adjust as needed */
   pointer-events: none;
-  z-index: -1;
+  z-index: -2;
 }
 
 .diagonal-oval {
@@ -1014,4 +1007,33 @@ p {
   background: #F2A71B;
   border-radius: 50%;
   transform: rotate(45deg);
+}
+
+.flor-capa {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25vw; /* ajuste conforme quiser */
+  height: auto;
+  z-index: -1;
+}
+
+.centro-subunidade {
+  position: absolute;
+  top: 40%;
+  left: 40%; /* This becomes the starting point */
+  z-index: 10;
+  font-size: 3rem;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  margin-right: 12vw;
+}
+
+.numero-subunidade {
+  display: inline-block; /* <== This makes the width fit the content */
+  border: 2px solid white; 
+  border-radius: 10px; 
+  padding: 10px; 
+  color: white;
 }
