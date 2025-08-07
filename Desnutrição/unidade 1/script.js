@@ -1,4 +1,4 @@
-const totalPaginas = 19;
+const totalPaginas = 20;
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
 const cachePaginas = {};
 const imagensPrecarregadas = new Set();
@@ -25,6 +25,9 @@ const configuracoesPagina = {
   15: {
     backgroundImage: "url(img/un1/feijao.png)",
     backgroundSize: "cover",
+  },
+  20: {
+    backgroundColor: "#DD5219",
   },
 };
 

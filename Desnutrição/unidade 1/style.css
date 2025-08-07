@@ -980,3 +980,38 @@ p {
 .aumentar:hover {
   transform: scale(1.05);
 }
+
+.bg-capa-subunidade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90vw;
+  height: 85vh;
+  z-index: -2;
+  pointer-events: none;
+
+  /* Gradiente da esquerda (opaco) para a direita (transparente) */
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.oval-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 10vw; /* adjust as needed */
+  pointer-events: none;
+  z-index: -1;
+}
+
+.diagonal-oval {
+  width: max(75vw, 60vh);   /* guarantees it overflows horizontally on tall screens */
+  height: max(120vw, 130vh);  /* guarantees it overflows vertically on wide screens */
+  background: #F2A71B;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
