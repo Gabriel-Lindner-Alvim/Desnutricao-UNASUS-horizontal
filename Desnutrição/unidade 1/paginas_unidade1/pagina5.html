@@ -7,31 +7,46 @@
       <p>A desnutrição pode ser classificada em (Brasil, 2023a): </p>
     </div>
 
-    <div class="col-lg-7 borda-inicial animar-slide-direita" id="col-imgs">
+    <div class="col-lg-7 borda-inicial" id="col-imgs">
       <div style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <div style="padding: 10px;">  
-          <img 
-              src="img/un1/Primaria.svg" 
-              alt="Primária" 
-              class="img-ajustavel"
-              id="img1"
-              onmouseover="this.src='img/un1/Primaria-hover.svg'" 
-              onmouseout="this.src='img/un1/Primaria.svg'" 
-              style="width: auto; max-width: 100%;"
-              draggable="false"
-            >
-        </div>
         <div style="padding: 10px;">
+          <img
+            src="img/un1/Frame-5.svg"
+            alt="Mostrar detalhes"
+            class="img-ajustavel"
+            id="img-reveal"
+            data-target="#box-reveal"
+            style="width:auto; max-width:100%; cursor:pointer"
+            onmouseover="this.src='img/un1/Frame-5-hover.svg'" 
+                onmouseout="this.src='img/un1/Frame-5.svg'" 
+            draggable="false"
+          >
+        </div>
+        <div id="box-reveal" class="reveal" aria-hidden="true">
+          <div style="padding: 10px;">  
             <img 
-              src="img/un1/Secundaria.svg" 
-              alt="Secundária" 
-              class="img-ajustavel"
-              id="img2"
-              onmouseover="this.src='img/un1/Secundaria-hover.svg'" 
-              onmouseout="this.src='img/un1/Secundaria.svg'" 
-              style="width: auto; max-width: 100%;"
-              draggable="false"
-            >
+                src="img/un1/Primaria.svg" 
+                alt="Primária" 
+                class="img-ajustavel"
+                id="img1"
+                onmouseover="this.src='img/un1/Primaria-hover.svg'" 
+                onmouseout="this.src='img/un1/Primaria.svg'" 
+                style="width: auto; max-width: 100%;"
+                draggable="false"
+              >
+          </div>
+          <div style="padding: 10px;">
+              <img 
+                src="img/un1/Secundaria.svg" 
+                alt="Secundária" 
+                class="img-ajustavel"
+                id="img2"
+                onmouseover="this.src='img/un1/Secundaria-hover.svg'" 
+                onmouseout="this.src='img/un1/Secundaria.svg'" 
+                style="width: auto; max-width: 100%;"
+                draggable="false"
+              >
+          </div>
         </div>
       </div>
     </div>

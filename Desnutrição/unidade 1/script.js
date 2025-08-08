@@ -39,6 +39,9 @@ const configuracoesPagina = {
     backgroundImage: "url(img/un1/feijao.png)",
     backgroundSize: "cover",
   },
+  21: {
+    backgroundColor: "#027EC7",
+  },
 };
 
 function aplicarEstiloDeFundo(numeroPagina) {
@@ -89,6 +92,22 @@ async function carregarPagina(numero) {
 
     const area = document.getElementById("area-principal");
     area.innerHTML = html;
+
+    const trigger = area.querySelector('#img-reveal');
+    if (trigger) {
+      const targetSel = trigger.getAttribute('data-target');
+      const target = area.querySelector(targetSel);
+      if (target) {
+        trigger.addEventListener('click', () => {
+          target.classList.toggle('is-open');
+          const open = target.classList.contains('is-open');
+          target.setAttribute('aria-hidden', String(!open));
+
+          // Esconde a imagem depois do clique
+          trigger.style.display = "none";
+        });
+      }
+    }
 
     const elementosParaAnimarDireita = area.querySelectorAll(".animar-slide-direita");
       elementosParaAnimarDireita.forEach(el => {

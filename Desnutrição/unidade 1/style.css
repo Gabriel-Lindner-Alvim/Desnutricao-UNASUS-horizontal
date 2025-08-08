@@ -669,7 +669,7 @@ p {
 .linha-com-texto::after {
   content: "";
   flex: 1;
-  border-bottom: 2px solid #0E9FE9;
+  border-bottom: 2px solid #F08A47;
   margin: 0;
 }
 
@@ -679,7 +679,7 @@ p {
 }
 
 .caixa-texto {
-  background-color: #027EC7;
+  background-color: #F08A47;
   padding: 0.3rem 1rem;
   border-radius: 10px 10px 10px 3px;
   font-size: 24px;
@@ -747,7 +747,7 @@ p {
 }
 
 .img-ajustavel:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 
@@ -1077,4 +1077,55 @@ p {
   text-align: left;
   font-weight: bold;
   margin-right: 12vw;
+}
+
+.reveal {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .35s ease, opacity .35s ease;
+}
+
+.reveal.is-open {
+  max-height: 1000px; /* grande o bastante pro seu conteúdo */
+  opacity: 1;
+}
+
+.num-3d {
+  --face: #f9d1bf;   /* yellow face */
+  --shade: #C14C17;  /* side shade */
+  --edge:  black;  /* dark edge */
+
+  font: 900 clamp(64px, 12vw, 180px)/1 "Montserrat", system-ui, sans-serif;
+  color: var(--face);
+  letter-spacing: .02em;
+  display: inline-block;
+
+  /* subtle bevel highlight on the face */
+  background: linear-gradient( to bottom left, #fff8, transparent 40% );
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3D extrusion via stacked shadows */
+  text-shadow:
+    1px 1px 0 var(--shade),
+    2px 2px 0 var(--shade),
+    3px 3px 0 var(--shade),
+    4px 4px 0 var(--shade),
+    5px 5px 0 var(--shade),
+    6px 6px 0 var(--shade),
+    7px 7px 0 var(--shade),
+    8px 8px 0 var(--shade),
+    9px 9px 0 var(--shade),
+    10px 10px 0 var(--edge); /* darker end for depth */
+  
+  filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.4));
+  margin-right: 2vw;
+
+}
+
+/* Optional: tilt for extra 3D vibes */
+.num-3d.tilt {
+  transform: perspective(800px) rotateY(-12deg) rotateX(3deg);
+  transform-origin: left center;
 }
