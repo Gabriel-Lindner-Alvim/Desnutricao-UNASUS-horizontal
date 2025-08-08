@@ -1,83 +1,54 @@
-<div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;" >
-    <div class="row">
-      <div class="col-md-12 borda-inicial" >
-          
-        <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
-          <img src="img/un1/Frame 845.svg" draggable="false">
-        </div>
+<div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
+  <div class="row">
+    
+    <div class="col-lg-5 borda-inicial">
+      <p class="primeira-frase">A desnutrição é uma condição na qual um ou mais nutrientes estão em quantidade insuficiente para o funcionamento adequado do organismo. Esse comprometimento pode gerar alterações metabólicas, impactando a função de diversos órgãos do corpo. Quando ocorre na primeira infância, a desnutrição está associada à maior mortalidade, recorrência de doenças infecciosas, prejuízos no desenvolvimento psicomotor, redução do aproveitamento escolar e redução da capacidade produtiva, condições que podem perdurar até a fase adulta. Nos países em desenvolvimento, a desnutrição constitui-se um importante problema de saúde pública (Brasil, 2024).
+</p>
+      <p>A desnutrição pode ser classificada em (Brasil, 2023a): </p>
+    </div>
 
-        <h3>1.1.1 Desnutrição leve</h3>
-
-        <p>A desnutrição leve ocorre quando o organismo não recebe nutrientes suficientes para funcionar adequadamente. Essa condição pode desencadear sintomas como falta de apetite, fadiga e perda de peso (Brasil, 2022a). Apesar de apresentar sinais discretos, a desnutrição leve merece atenção, pois reflete um estado nutricional inadequado. </p>
-      
-        <p>De acordo com Black et al. (2013), os sinais e sintomas da desnutrição leve podem variar entre crianças e gestantes:</p>
-      </div>
-
-      <div class="col-md-6" style=" text-align: center;">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding: 0;">
+    <div class="col-lg-7 borda-inicial animar-slide-direita" id="col-imgs">
+      <div style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="padding: 10px;">  
           <img 
-              src="img/un1/criancas-gestantes/criancas.svg" 
-              alt="Icon" 
-              onmouseover="this.src='img/un1/criancas-gestantes/criancas-hover.svg'" 
-              onmouseout="this.src='img/un1/criancas-gestantes/criancas.svg'"
-              style="max-width: 100%;"
+              src="img/un1/Primaria.svg" 
+              alt="Primária" 
               class="img-ajustavel"
+              id="img1"
+              onmouseover="this.src='img/un1/Primaria-hover.svg'" 
+              onmouseout="this.src='img/un1/Primaria.svg'" 
+              style="width: auto; max-width: 100%;"
               draggable="false"
             >
-        </button>    
-      </div>
-
-      <div class="col-md-6" style=" text-align: center;">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#ModalGestantes" style="background: none; border: none; padding: 0;">
-          <img 
-              src="img/un1/criancas-gestantes/gestantes.svg" 
-              alt="Icon" 
-              onmouseover="this.src='img/un1/criancas-gestantes/gestantes-hover.svg'" 
-              onmouseout="this.src='img/un1/criancas-gestantes/gestantes.svg'"
-              style="max-width: 100%;"
+        </div>
+        <div style="padding: 10px;">
+            <img 
+              src="img/un1/Secundaria.svg" 
+              alt="Secundária" 
               class="img-ajustavel"
+              id="img2"
+              onmouseover="this.src='img/un1/Secundaria-hover.svg'" 
+              onmouseout="this.src='img/un1/Secundaria.svg'" 
+              style="width: auto; max-width: 100%;"
               draggable="false"
-           >
-        </button>
-      </div>
-    
-  </div>
-</div>
-
-<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content" style="background: transparent; border: none;">
-      <div class="modal-body position-relative p-0" style="text-align: center;">
-
-        <!-- Container for image and overlay -->
-        <div style="position: relative; display: inline-block;">
-          <img src="img/un1/criancas-gestantes/criancas-modal.svg" class="img-fluid">
-          
-          <!-- Close button in top-right of image -->
-          <img src="../img/botao-x.svg" 
-               style="position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
-               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+            >
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
-<div class="modal fade" id="ModalGestantes" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content" style="background: transparent; border: none;">
-      <div class="modal-body position-relative p-0" style="text-align: center;">
+<script>
+  function ajustarAlturaDasImagens() {
+    const col = document.getElementById("col-imgs");
+    const alturaColuna = col.offsetHeight;
 
-        <!-- Container for image and overlay -->
-        <div style="position: relative; display: inline-block;">
-          <img src="img/un1/criancas-gestantes/gestantes-modal.svg" class="img-fluid">
-          
-          <!-- Close button in top-right of image -->
-          <img src="../img/botao-x.svg" 
-               style="position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
-               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalGestantes')).hide();">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    document.getElementById("img1").style.height = (alturaColuna / 2) + "px";
+    document.getElementById("img2").style.height = (alturaColuna / 2) + "px";
+  }
+
+  // Chama ao carregar e ao redimensionar a janela
+  window.addEventListener("load", ajustarAlturaDasImagens);
+  window.addEventListener("resize", ajustarAlturaDasImagens);
+</script>

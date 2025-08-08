@@ -1,4 +1,4 @@
-const totalPaginas = 20;
+const totalPaginas = 22;
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
 const cachePaginas = {};
 const imagensPrecarregadas = new Set();
@@ -22,12 +22,22 @@ const configuracoesPagina = {
       marginTop: "30vh"
     }
   },
-  15: {
-    backgroundImage: "url(img/un1/feijao.png)",
+  4: {
+    backgroundColor: "#DD5219",
+  },
+  10: {
+    backgroundImage: "url(img/un1/capas-unidade/maca.png)",
     backgroundSize: "cover",
   },
-  20: {
-    backgroundColor: "#DD5219",
+  15: {
+    backgroundImage: "url(img/un1/capas-unidade/beans.png)",
+    backgroundSize: "cover ",
+    backgroundPosition: "-120px center",
+    
+  },
+  18: {
+    backgroundImage: "url(img/un1/feijao.png)",
+    backgroundSize: "cover",
   },
 };
 
