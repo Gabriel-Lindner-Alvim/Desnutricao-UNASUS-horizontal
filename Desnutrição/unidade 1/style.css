@@ -431,6 +431,17 @@ p {
   background-color: #FEF6EE !important;
 }
 
+.fundo-amarelo {
+  background-color: #F9D650 !important;
+}
+
+.amarelo {
+  background: #F9D650 !important;
+  border: none;
+  color: black;
+  transition: background 0.3s ease;
+}
+
 .accordion-body {
   background-color: #FFFBEB;
   border-radius: 10px;
@@ -480,6 +491,25 @@ p {
 
 /* Quando expandido (classe removida ao colapsar) */
 .accordion-button:not(.collapsed).custom-arrow::before {
+  transform: translateY(-50%) rotate(180deg); /* gira pra direita */
+}
+
+.accordion-button.custom-arrow-2::before {
+  content: '';
+  background-image: url('../img/seta2.svg'); 
+  background-size: 1rem 1rem;
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+/* Quando expandido (classe removida ao colapsar) */
+.accordion-button:not(.collapsed).custom-arrow-2::before {
   transform: translateY(-50%) rotate(180deg); /* gira pra direita */
 }
 
