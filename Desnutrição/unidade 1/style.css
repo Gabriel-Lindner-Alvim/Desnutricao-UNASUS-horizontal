@@ -367,6 +367,15 @@ p {
   z-index: -1;
 }
 
+.imagem-fixa-slide-22 {
+  position: fixed;
+  bottom: 0;
+  right: 10vw;
+  width: 30vw; /* ajuste conforme quiser */
+  height: auto;
+  z-index: -1;
+}
+
 .imagem-fixa-superior-esquerda {
   position: fixed;
   top: 0;
