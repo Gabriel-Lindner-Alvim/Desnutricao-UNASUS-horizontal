@@ -1,7 +1,8 @@
 const totalPaginas = 23;
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
 const cachePaginas = {};
-const imagensPrecarregadas = new Set();
+const imagensPrecarregadas = window.imagensPrecarregadas || new Set();
+window.imagensPrecarregadas = imagensPrecarregadas;
 
 
 // Configurações por página
@@ -179,6 +180,8 @@ async function carregarPagina(numero) {
       const htmlProx = await respostaProx.text();
       cachePaginas[numero + 1] = htmlProx;
 
+      await preloadImagens(htmlProx, respostaProx.url, { fetchExternalCSS: true });
+
       preloadImagens(htmlProx);
       preloadSVGs(htmlProx);
     }
@@ -243,41 +246,118 @@ function atualizarContadorSlides() {
   }
 }
 
-function preloadImagens(html) {
-  const tempDiv = document.createElement("div");
-  tempDiv.innerHTML = html;
+function toAbsolute(url, baseHref) {
+  try { return new URL(url, baseHref).href; }
+  catch { return url; }
+}
 
-  // Set para evitar imagens repetidas
+function coletarUrlsDeSrcset(srcset) {
+  if (!srcset) return [];
+  return srcset
+    .split(',')
+    .map(p => p.trim().split(/\s+/)[0])
+    .filter(Boolean);
+}
+
+function coletarUrlsDeCssTexto(cssText) {
+  const urls = [];
+  // captura url("..."), url('...') e url(...)
+  const re = /url\(\s*(?:'([^']*)'|"([^"]*)"|([^'")]+))\s*\)/g;
+  let m;
+  while ((m = re.exec(cssText)) !== null) {
+    const u = m[1] || m[2] || m[3];
+    if (u && !u.startsWith('data:')) urls.push(u.trim());
+  }
+  return urls;
+}
+
+// --- Principal ---
+// options.fetchExternalCSS: também busca <link rel="stylesheet"> e varre url() do CSS
+async function preloadImagens(html, baseHref = document.baseURI, options = { fetchExternalCSS: false }) {
+  const temp = document.createElement('div');
+
+  // Ajuda a resolver URLs relativas do HTML futuro
+  const base = document.createElement('base');
+  base.href = baseHref;
+  temp.appendChild(base);
+
+  const content = document.createElement('div');
+  content.innerHTML = html;
+  temp.appendChild(content);
+
   const urls = new Set();
 
-  // 1) Imagens normais <img>
-  const imagens = tempDiv.querySelectorAll("img");
-  imagens.forEach(img => {
-    const src = img.getAttribute("src");
-    if (src) urls.add(src);
+  // 1) <img src> e <img srcset>
+  content.querySelectorAll('img').forEach(img => {
+    const src = img.getAttribute('src');
+    if (src) urls.add(toAbsolute(src, baseHref));
+    const srcset = img.getAttribute('srcset');
+    coletarUrlsDeSrcset(srcset).forEach(u => urls.add(toAbsolute(u, baseHref)));
   });
 
-  // 2) Background images inline
-  const bgElements = tempDiv.querySelectorAll("[style*='background']");
-  bgElements.forEach(el => {
-    const style = el.getAttribute("style");
-    const matches = style.match(/url\((['"]?)(.*?)\1\)/g);
-    if (matches) {
-      matches.forEach(m => {
-        const url = m.replace(/url\((['"]?)(.*?)\1\)/, "$2");
-        if (url) urls.add(url);
-      });
+  // 2) <source srcset> (picture etc.)
+  content.querySelectorAll('source[srcset]').forEach(s => {
+    coletarUrlsDeSrcset(s.getAttribute('srcset'))
+      .forEach(u => urls.add(toAbsolute(u, baseHref)));
+  });
+
+  // 3) Lazy attrs (data-src, data-srcset)
+  content.querySelectorAll('[data-src]').forEach(el => {
+    urls.add(toAbsolute(el.getAttribute('data-src'), baseHref));
+  });
+  content.querySelectorAll('[data-srcset]').forEach(el => {
+    coletarUrlsDeSrcset(el.getAttribute('data-srcset'))
+      .forEach(u => urls.add(toAbsolute(u, baseHref)));
+  });
+
+  // 4) Background-image em style inline
+  content.querySelectorAll('[style]').forEach(el => {
+    const style = el.getAttribute('style') || '';
+    coletarUrlsDeCssTexto(style).forEach(u => urls.add(toAbsolute(u, baseHref)));
+  });
+
+  // 5) <style> embutido (background em classes inline no próprio HTML)
+  content.querySelectorAll('style').forEach(styleEl => {
+    const cssText = styleEl.textContent || '';
+    coletarUrlsDeCssTexto(cssText).forEach(u => urls.add(toAbsolute(u, baseHref)));
+  });
+
+  // 6) SVG <image href / xlink:href>
+  content.querySelectorAll('svg image[href], svg image[xlink\\:href]').forEach(img => {
+    const raw = img.getAttribute('href') || img.getAttribute('xlink:href');
+    if (raw) urls.add(toAbsolute(raw, baseHref));
+  });
+
+  // 7) (Opcional) CSS externos linkados neste HTML
+  if (options.fetchExternalCSS) {
+    const linkHrefs = Array.from(
+      content.querySelectorAll('link[rel~="stylesheet"][href]')
+    ).map(l => toAbsolute(l.getAttribute('href'), baseHref));
+
+    // Baixa e varre url(...) dos CSS
+    const cssTexts = await Promise.allSettled(
+      linkHrefs.map(href => fetch(href).then(r => r.ok ? r.text() : ''))
+    );
+    cssTexts.forEach(res => {
+      if (res.status === 'fulfilled' && res.value) {
+        coletarUrlsDeCssTexto(res.value).forEach(u => urls.add(toAbsolute(u, baseHref)));
+      }
+    });
+  }
+
+  // Dispara o aquecimento da cache de imagens
+  urls.forEach(u => {
+    if (!imagensPrecarregadas.has(u)) {
+      const img = new Image();
+      img.decoding = 'async';
+      img.loading = 'eager';
+      img.src = u;
+      imagensPrecarregadas.add(u);
     }
   });
 
-  // 3) Dispara o preload para tudo que não foi carregado antes
-  urls.forEach(src => {
-    if (!imagensPrecarregadas.has(src)) {
-      const imagem = new Image();
-      imagem.src = src;
-      imagensPrecarregadas.add(src);
-    }
-  });
+  // retorna a lista (útil para debugar)
+  return Array.from(urls);
 }
 
 
