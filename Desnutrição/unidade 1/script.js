@@ -118,6 +118,11 @@ async function carregarPagina(numero) {
       elementosParaAnimarDireita.forEach(el => {
         el.classList.add("slide-in-right");
       });
+
+      const elementosParaFadeIn = area.querySelectorAll(".animar-fade-in");
+      elementosParaFadeIn.forEach(el => {
+        el.classList.add("fade-in");
+      });
     
     const elementosParaAnimarEsquerda = area.querySelectorAll(".animar-slide-esquerda");
     elementosParaAnimarEsquerda.forEach(el => {

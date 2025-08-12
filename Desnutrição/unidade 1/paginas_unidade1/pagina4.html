@@ -12,21 +12,7 @@
 
     <div class="col-lg-7 borda-inicial" id="col-imgs">
       <div style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <div style="padding: 10px;">
-          <img
-            src="img/un1/Frame-5.svg"
-            alt="Mostrar detalhes"
-            class="img-ajustavel"
-            id="img-reveal"
-            data-target="#box-reveal"
-            style="width:auto; max-width:100%; cursor:pointer"
-            onmouseover="this.src='img/un1/Frame-5-hover.svg'" 
-                onmouseout="this.src='img/un1/Frame-5.svg'" 
-            draggable="false"
-          >
-        </div>
-        <div id="box-reveal" class="reveal" aria-hidden="true">
-          <div style="padding: 10px;">  
+          <div style="padding: 10px;" class="animar-slide-direita">  
             <img 
                 src="img/un1/Primaria.svg" 
                 alt="Primária" 
@@ -38,7 +24,7 @@
                 draggable="false"
               >
           </div>
-          <div style="padding: 10px;">
+          <div style="padding: 10px; animation-delay: 1.5s;" class="animar-slide-direita">
               <img 
                 src="img/un1/Secundaria.svg" 
                 alt="Secundária" 
@@ -50,7 +36,7 @@
                 draggable="false"
               >
           </div>
-        </div>
+
       </div>
     </div>
 

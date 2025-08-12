@@ -182,7 +182,7 @@ article p {
 	hyphens: auto;
     text-align: justify;
 	color: #212121;
-	font-size: 22px;
+	font-size: 18px;
 
 }
 
@@ -352,7 +352,7 @@ h4 {
 }
 
 p {
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 140% !important;
 	font-family: 'montserrat', sans-serif;
 	color: #242628;
@@ -1004,11 +1004,28 @@ p {
 
 .slide-in-right {
   animation: slideInFromRight 1.5s ease forwards;
+  animation-fill-mode: backwards;
 }
 
 .slide-in-left {
   animation: slideInFromLeft 1.5s ease forwards;
+  animation-fill-mode: backwards;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+
 
 .aumentar {
   transition: transform 0.3s ease;
