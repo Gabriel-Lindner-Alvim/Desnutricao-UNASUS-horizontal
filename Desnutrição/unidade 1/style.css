@@ -517,9 +517,9 @@ p {
   transition: transform 0.3s ease;
 }
 
-/* Quando expandido (classe removida ao colapsar) */
-.accordion-button:not(.collapsed).custom-arrow-2::before {
-  transform: translateY(-50%) rotate(180deg); /* gira pra direita */
+/* Quando aberto */
+.accordion-button.custom-arrow-2[aria-expanded="true"]::before {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .accordion-button-svg {
