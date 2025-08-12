@@ -909,25 +909,15 @@ p {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .thecard.flipped {
   transform: rotateY(180deg);
 }
 
-.thefront {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background: #E0F1FE;
-  color: #333;
-  text-align: center;
-  border-radius: 12px;
-  border: 2px solid #027EC7;
-}
-
+/* Frente e verso com mesma transição de cor */
+.thefront,
 .theback {
   position: absolute;
   width: 100%;
@@ -935,11 +925,20 @@ p {
   backface-visibility: hidden;
   background: #E0F1FE;
   color: #333;
-  transform: rotateY(180deg);
   text-align: center;
   border-radius: 12px;
-  padding: 20px;
   border: 2px solid #027EC7;
+  transition: background-color 0.3s ease;
+}
+
+.thecard:hover .thefront,
+.thecard:hover .theback {
+  background: #7DCFFC; /* nova cor no hover */
+}
+
+.theback {
+  transform: rotateY(180deg);
+  padding: 20px;
 }
 
 .accordion-wrapper {
@@ -1158,4 +1157,11 @@ p {
 .num-3d.tilt {
   transform: perspective(800px) rotateY(-12deg) rotateX(3deg);
   transform-origin: left center;
+}
+
+/* Por padrão, a imagem aparece */
+.accordion-footer-img { 
+  display: block;
+  /* opcional: remove “gap” entre bordas do accordion e a imagem */
+  margin-top: -1px;
 }

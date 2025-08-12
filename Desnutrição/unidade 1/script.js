@@ -31,9 +31,7 @@ const configuracoesPagina = {
   },
   16: {
     backgroundImage: "url(img/un1/capas-unidade/beans.png)",
-    backgroundSize: "cover ",
-    backgroundPosition: "-120px center",
-    
+    backgroundSize: "cover ",    
   },
   19: {
     backgroundImage: "url(img/un1/feijao.png)",
@@ -92,6 +90,27 @@ async function carregarPagina(numero) {
 
     const area = document.getElementById("area-principal");
     area.innerHTML = html;
+
+    // dentro do carregarPagina, logo após area.innerHTML = html;
+
+    const accordionButtons = area.querySelectorAll('.accordion-button');
+    accordionButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const wrapper = btn.closest('.accordion-with-image');
+        if (!wrapper) return;
+
+        const imgWrap = wrapper.querySelector('.accordion-footer-img');
+        if (!imgWrap) return;
+
+        // alterna visibilidade manualmente
+        if (imgWrap.style.display === 'none') {
+          imgWrap.style.display = 'block';
+        } else {
+          imgWrap.style.display = 'none';
+        }
+      });
+    });
+
 
     const trigger = area.querySelector('#img-reveal');
     if (trigger) {
