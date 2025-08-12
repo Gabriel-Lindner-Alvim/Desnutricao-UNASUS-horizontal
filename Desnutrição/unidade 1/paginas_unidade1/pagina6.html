@@ -1,13 +1,89 @@
 <div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;" >
     <div class="row" style="margin-bottom: 5vh;">
-        <div class="col-md-12 borda-inicial">
-            <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
-                <img src="img/un1/Frame 845.svg" draggable="false">
-            </div>
+      <div class="col-md-6 borda-inicial">
 
-            <div style="display: flex; align-items: center; justify-content: center; width: 100%;margin-top: 30px;">
-                <img src="img/un1/Group 1311.svg" draggable="false">
-            </div>
+        <div style="display: flex; align-items: flex-end; flex-wrap: nowrap;">
+          <img src="img/un1/num/1.svg" 
+              style="padding-right: 15px; height: auto; max-width: 15%; min-width: 40px;">
+          <h2 class="primeira-frase" 
+              style="background-color: #F9D650; padding: 10px; border-radius: 2px; margin: 0; white-space: nowrap;">
+            Desnutrição leve
+          </h2>
         </div>
+
+        <p>A desnutrição leve ocorre quando o organismo não recebe nutrientes suficientes para funcionar adequadamente. Essa condição pode desencadear sintomas como falta de apetite, fadiga e perda de peso (Brasil, 2022a). Apesar de apresentar sinais discretos, a desnutrição leve merece atenção, pois reflete um estado nutricional inadequado. </p>
+
+        <p>De acordo com Black et al. (2013), os sinais e sintomas da desnutrição leve podem variar entre crianças e gestantes:</p>
+
+      </div>
+
+
+
+      <div class="col-md-6 borda-inicial" style=" text-align: center;">
+        <div style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding: 0;">
+            <img 
+                src="img/un1/criancas-gestantes/criancas.svg" 
+                alt="Icon" 
+                onmouseover="this.src='img/un1/criancas-gestantes/criancas-hover.svg'" 
+                onmouseout="this.src='img/un1/criancas-gestantes/criancas.svg'"
+                style="max-width: 100%;"
+                class="img-ajustavel"
+                draggable="false"
+              >
+          </button>    
+        
+          <button type="button" data-bs-toggle="modal" data-bs-target="#ModalGestantes" style="background: none; border: none; padding: 0;">
+            <img 
+                src="img/un1/criancas-gestantes/gestantes.svg" 
+                alt="Icon" 
+                onmouseover="this.src='img/un1/criancas-gestantes/gestantes-hover.svg'" 
+                onmouseout="this.src='img/un1/criancas-gestantes/gestantes.svg'"
+                style="max-width: 100%;"
+                class="img-ajustavel"
+                draggable="false"
+            >
+          </button>
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/un1/criancas-gestantes/criancas-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalGestantes" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/un1/criancas-gestantes/gestantes-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalGestantes')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
