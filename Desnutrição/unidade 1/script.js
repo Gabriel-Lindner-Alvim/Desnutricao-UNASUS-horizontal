@@ -246,17 +246,40 @@ function atualizarContadorSlides() {
 function preloadImagens(html) {
   const tempDiv = document.createElement("div");
   tempDiv.innerHTML = html;
-  const imagens = tempDiv.querySelectorAll("img");
 
+  // Set para evitar imagens repetidas
+  const urls = new Set();
+
+  // 1) Imagens normais <img>
+  const imagens = tempDiv.querySelectorAll("img");
   imagens.forEach(img => {
     const src = img.getAttribute("src");
-    if (src && !imagensPrecarregadas.has(src)) {
+    if (src) urls.add(src);
+  });
+
+  // 2) Background images inline
+  const bgElements = tempDiv.querySelectorAll("[style*='background']");
+  bgElements.forEach(el => {
+    const style = el.getAttribute("style");
+    const matches = style.match(/url\((['"]?)(.*?)\1\)/g);
+    if (matches) {
+      matches.forEach(m => {
+        const url = m.replace(/url\((['"]?)(.*?)\1\)/, "$2");
+        if (url) urls.add(url);
+      });
+    }
+  });
+
+  // 3) Dispara o preload para tudo que não foi carregado antes
+  urls.forEach(src => {
+    if (!imagensPrecarregadas.has(src)) {
       const imagem = new Image();
       imagem.src = src;
       imagensPrecarregadas.add(src);
     }
   });
 }
+
 
 function preloadSVGs(html) {
   const tempDiv = document.createElement("div");
