@@ -1,16 +1,15 @@
-<svg width="663" height="265" viewBox="0 0 663 265" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Property 1=default">
-<path id="Vector" d="M223.201 88H23.2007V187H223.201V88Z" fill="#FDF5EF"/>
-<path id="Vector_2" d="M646.218 5H243.218V260H646.218V5Z" fill="#A2E3E9"/>
+<svg width="661" height="265" viewBox="0 0 661 265" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Component 32">
+<path id="Vector" d="M233.983 88H33.9829V187H233.983V88Z" fill="#FDF5EF"/>
+<path id="Vector_2" d="M657 5H254V260H657V5Z" fill="#A2E3E9"/>
 <g id="Group">
 <g id="Group_2">
-<path id="Vector_3" d="M31.6063 88V170.407H50.7091V187H-7.15679V170.407H11.946V111.425L-4.08944 118.815L-10.7822 102.362L20.8699 88H31.6063Z" fill="white"/>
-<path id="Vector_4" d="M29.7805 89.8258V170.407C29.7805 171.416 30.5978 172.233 31.6063 172.233H48.8832V185.174H-5.33098V172.233H11.946C12.9545 172.233 13.7718 171.416 13.7718 170.407V111.425C13.7718 110.802 13.4547 110.223 12.9307 109.888C12.6319 109.697 12.2899 109.599 11.946 109.599C11.6861 109.599 11.4256 109.655 11.1816 109.767L-3.11811 116.357L-8.42998 103.299L21.2643 89.8252L29.7805 89.8258ZM31.6063 88H20.8693L-10.7822 102.362L-4.08883 118.815L11.946 111.425V170.407H-7.15679V187H50.7097V170.407H31.6069L31.6063 88Z" fill="#065281"/>
+<path id="Vector_3" d="M42.3885 88V170.407H61.4913V187H3.62544V170.407H22.7282V111.425L6.69279 118.815L0 102.362L31.6521 88H42.3885Z" fill="white"/>
+<path id="Vector_4" d="M40.5627 89.8258V170.407C40.5627 171.416 41.38 172.233 42.3885 172.233H59.6655V185.174H5.45124V172.233H22.7282C23.7367 172.233 24.554 171.416 24.554 170.407V111.425C24.554 110.802 24.2369 110.223 23.7129 109.888C23.4141 109.697 23.0721 109.599 22.7282 109.599C22.4684 109.599 22.2079 109.655 21.9638 109.767L7.66412 116.357L2.35224 103.299L32.0465 89.8252L40.5627 89.8258ZM42.3885 88H31.6515L0 102.362L6.6934 118.815L22.7282 111.425V170.407H3.62544V187H61.4919V170.407H42.3891L42.3885 88Z" fill="#065281"/>
 </g>
 </g>
-<text id="Prim&#195;&#161;ria" fill="#075585" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="76.6865" y="146.604">Prim&#xe1;ria</tspan></text>
-<text id="Causada pela ingest&#195;&#163;o inadequada de nutrientes, atrelada a condi&#195;&#167;&#195;&#181;es ambientais e socioecon&#195;&#180;micas desfavor&#195;&#161;veis, como quadros infecciosos e epis&#195;&#179;dios diarreicos." fill="#242628" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="297.218" y="60.17">Causada pela ingest&#xe3;o </tspan><tspan x="297.218" y="88.17">inadequada de nutrientes, </tspan><tspan x="297.218" y="116.17">atrelada a condi&#xe7;&#xf5;es </tspan><tspan x="297.218" y="144.17">ambientais e socioecon&#xf4;micas </tspan><tspan x="297.218" y="172.17">desfavor&#xe1;veis, como quadros </tspan><tspan x="297.218" y="200.17">infecciosos e epis&#xf3;dios </tspan><tspan x="297.218" y="228.17">diarreicos.</tspan></text>
-<path id="Polygon 1" d="M287.218 138L221.218 210.746L221.218 65.2539L287.218 138Z" fill="#CBF8FC"/>
+<text id="Prim&#195;&#161;ria" fill="#075585" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="87.457" y="146.604">Prim&#xe1;ria</tspan></text>
+<text id="Causada pela ingest&#195;&#163;o inadequada de nutrientes, atrelada a condi&#195;&#167;&#195;&#181;es ambientais e socioecon&#195;&#180;micas desfavor&#195;&#161;veis, como quadros infecciosos e epis&#195;&#179;dios diarreicos." fill="#242628" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="308" y="60.17">Causada pela ingest&#xe3;o </tspan><tspan x="308" y="88.17">inadequada de nutrientes, </tspan><tspan x="308" y="116.17">atrelada a condi&#xe7;&#xf5;es </tspan><tspan x="308" y="144.17">ambientais e socioecon&#xf4;micas </tspan><tspan x="308" y="172.17">desfavor&#xe1;veis, como quadros </tspan><tspan x="308" y="200.17">infecciosos e epis&#xf3;dios </tspan><tspan x="308" y="228.17">diarreicos.</tspan></text>
+<path id="Polygon 1" d="M298 138L232 210.746L232 65.2539L298 138Z" fill="#CBF8FC"/>
 </g>
 </svg>
-

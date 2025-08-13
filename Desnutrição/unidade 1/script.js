@@ -129,11 +129,44 @@ async function carregarPagina(numero) {
       el.classList.add("slide-in-left");
     });
     
-    area.querySelectorAll('.thecard').forEach(card => {
-        card.addEventListener('click', () => {
-          card.classList.toggle('flipped');
-        });
-      });
+    // 1) Toggle por clique continua funcionando
+area.querySelectorAll('.thecard').forEach(card => {
+  // evita listeners duplicados se você recarrega a página dinamicamente
+  card._clickBound || card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+  });
+  card._clickBound = true;
+});
+
+  // 2) Flip automático quando a animação de entrada pela esquerda terminar
+  area.querySelectorAll('.animar-slide-esquerda').forEach(wrapper => {
+    const card = wrapper.querySelector('.thecard');
+    if (!card) return;
+
+    // respeita usuários com "reduzir animações"
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    // só roda uma vez por wrapper inserido
+    const onEnd = (e) => {
+      // garante que é a animação esperada e no elemento certo
+      if (e.target !== wrapper) return;
+      if (e.animationName !== 'slideInFromLeft') return;
+
+      // pequeno atraso pra evitar "soluço" visual no fim da animação
+      setTimeout(() => {
+        // marca pra não repetir (caso re-render dispare outro animationend)
+        if (!card.dataset.autoflipped) {
+          card.classList.add('flipped');
+          card.dataset.autoflipped = '1';
+        }
+      }, 120);
+    };
+
+    // {once:true} garante que será chamado uma única vez
+    wrapper.addEventListener('animationend', onEnd, { once: true });
+  });
+
 
     const imagensCards = area.querySelectorAll('.img-hover-effect');
       
