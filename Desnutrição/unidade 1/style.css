@@ -908,8 +908,8 @@ p {
 
 .maincontainer {
   position: relative;
-  width: 450px;
-  height: 400px;
+  width: 400px;
+  height: 350px;
   cursor: pointer;
 }
 
