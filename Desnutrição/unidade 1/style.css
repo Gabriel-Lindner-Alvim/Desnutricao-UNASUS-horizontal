@@ -1198,3 +1198,8 @@ p {
   float: right;
   margin-right: 4vw;
 }
+
+.col-imgs {
+  position: relative;
+  z-index: 1; /* imagens por baixo */
+}

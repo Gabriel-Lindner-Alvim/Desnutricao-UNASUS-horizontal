@@ -310,7 +310,7 @@ area.addEventListener('animationend', (e) => {
   setTimeout(() => {
     card.classList.add('flipped');
     card.dataset.autoflipped = '1';
-  }, 120);
+  }, 1500);
 }, { passive: true });
 
 /* ================== Controles prev/next ================== */
