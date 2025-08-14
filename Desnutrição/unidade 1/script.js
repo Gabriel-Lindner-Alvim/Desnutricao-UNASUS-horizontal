@@ -65,6 +65,43 @@ function coletarUrlsDeCssTexto(cssText) {
   return urls;
 }
 
+function extractBackgroundUrlsFromConfig(config, baseHref = document.baseURI) {
+  const urls = new Set();
+
+  // Considera tanto 'backgroundImage' quanto 'background'
+  ['backgroundImage', 'background'].forEach(prop => {
+    const val = config?.[prop];
+    if (val) {
+      // Reaproveita o parser de url(...) que você já tem
+      coletarUrlsDeCssTexto(String(val)).forEach(u => {
+        urls.add(toAbsolute(u, baseHref));
+      });
+    }
+  });
+
+  return Array.from(urls);
+}
+
+function preloadBackgroundImagesFromConfig(pageNumber, baseHref = document.baseURI) {
+  const config = configuracoesPagina[pageNumber];
+  if (!config) return [];
+
+  const urls = extractBackgroundUrlsFromConfig(config, baseHref);
+
+  urls.forEach(u => {
+    if (!imagensPrecarregadas.has(u)) {
+      const img = new Image();
+      img.decoding = 'async';
+      img.loading  = 'eager';
+      img.src = u;
+      imagensPrecarregadas.add(u);
+    }
+  });
+
+  return urls;
+}
+
+
 /* ================== Pré-carregamento ================== */
 // options.fetchExternalCSS: também busca <link rel="stylesheet"> e varre url() do CSS (use com parcimônia)
 async function preloadImagens(html, baseHref = document.baseURI, options = { fetchExternalCSS: false }) {
@@ -174,6 +211,8 @@ async function carregarPagina(numero) {
   currentController = new AbortController();
 
   try {
+    preloadBackgroundImagesFromConfig(numero);
+
     aplicarEstiloDeFundo(numero);
 
     const html = await getPaginaHTML(numero, `paginas_unidade1/pagina${numero}.html`, currentController.signal);
@@ -210,8 +249,9 @@ async function carregarPagina(numero) {
             const htmlProx = await respProx.text();
             cachePaginas.set(proxNum, htmlProx);
             // pré-carrega imagens e svgs da próxima página (sem duplicar)
-            await preloadImagens(htmlProx, respProx.url, { fetchExternalCSS: false });
+            await preloadImagens(htmlProx, respProx.url, { fetchExternalCSS: true });
             preloadSVGs(htmlProx);
+            preloadBackgroundImagesFromConfig(proxNum);
           }
         } catch (e) { /* silencioso em idle */ }
       });
