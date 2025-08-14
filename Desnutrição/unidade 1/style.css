@@ -1181,10 +1181,19 @@ p {
   transform-origin: left center;
 }
 
-/* Por padrão, a imagem aparece */
-.accordion-footer-img { 
+
+
+.accordion-footer-img {
   display: block;
-  /* opcional: remove “gap” entre bordas do accordion e a imagem */
+  margin-top: -1px;
+  float: right;
+  margin-right: 4vw;
+
+}
+
+/* quando o JS adiciona .is-open, o elemento aparece */
+.accordion-footer-img.is-open {
+  display: none; /* ou flex/grid, se preferir */
   margin-top: -1px;
   float: right;
   margin-right: 4vw;
