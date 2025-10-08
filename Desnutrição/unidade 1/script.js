@@ -1,6 +1,6 @@
 
 /* ================== Config base ================== */
-const totalPaginas = 19;               // páginas 0..18
+const totalPaginas = 21;               // páginas 0..18
 const LAST_INDEX = totalPaginas;
 
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
@@ -24,7 +24,8 @@ const configuracoesPagina = {
   0: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
   1: { backgroundColor: "#027EC7" },
   3: { backgroundImage: "url('img/un1/banana plate.png')", backgroundSize: "cover", backgroundPosition: "40%", backgroundAttachment: "fixed" },
-  16:{ backgroundImage: "url(img/un1/feijao.png)", backgroundSize: "cover" },
+  20: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
+  21: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
 };
 
 /* ================== Utilidades visuais ================== */
