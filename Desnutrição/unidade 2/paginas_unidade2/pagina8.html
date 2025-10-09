@@ -1,0 +1,59 @@
+<div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
+    <div class="row" style="margin-bottom: 5vh;">
+        <div class="col-md-6 borda-inicial">
+
+
+                <div style="
+                background-color: #FFFBEB;
+                border-radius: 12px;
+                padding: 20px;
+            ">
+                    <h3>Alimentação adequada e saudável para crianças menores de 2 anos</h3>
+                    <p>O período em que a criança inicia a alimentação complementar, a partir do sexto mês de vida, representa uma terceira oportunidade (precedida pela gestação e amamentação) para promover ações que visem à prevenção da desnutrição e, consequentemente, à redução da mortalidade infantil. O “Guia alimentar para crianças brasileiras menores de 2 anos”, oferece um conteúdo abrangente que serve como diretriz para profissionais de saúde e toda população.</p>
+                </div>
+
+
+            <div class="btn-group dropend" style="margin-top: 20px; width: 100%;">
+
+                <button type="button" class="btn dropdown-toggle btn-alimentar" data-bs-toggle="dropdown" aria-expanded="false">
+                No início da introdução alimentar...
+                </button>
+
+                <div>
+                <ul class="dropdown-menu" style="
+                background-color: white;
+                border-radius: 12px;
+                padding: 20px;
+                border: none;
+                text-align: center;
+            ">
+                <p style="margin-bottom: 0;">Na introdução da alimentação complementar, os alimentos devem ser oferecidos ao bebê amassados ou em pedaços que possa segurar, nunca liquidificados ou passados na peneira. E deve ser realizada a introdução de todos os grupos alimentares.</p>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding: 0;">
+                    <img src="../img/atencao.svg" class="img-fluid aumentar" onmouseover="this.src='../img/atencao-hover.svg'" onmouseout="this.src='../img/atencao.svg'">
+                </button>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/atencao-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
