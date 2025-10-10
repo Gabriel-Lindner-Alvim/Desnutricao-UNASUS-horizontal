@@ -43,7 +43,7 @@ header {
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 11;
 
   min-height: 5rem;
 
@@ -633,9 +633,9 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  width: 70vw; /* 70% da largura da viewport */
+  width: 60vw; /* 70% da largura da viewport */
   height: 100vh; /* ou a altura que você desejar */
-  background-image: url('img/un1/garoto\ apontando.png');
+  background-image: url('img/lanche.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -646,9 +646,9 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 70vw; /* 70% da largura da viewport */
+  width: 45vw; /* 70% da largura da viewport */
   height: 100vh; /* ou a altura que você desejar */
-  background-image: url('img/un1/vulnerabilidade.svg');
+  background-image: url('img/febre.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

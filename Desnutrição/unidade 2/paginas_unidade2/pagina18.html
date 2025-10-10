@@ -1,7 +1,106 @@
 <div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
     <div class="row" style="margin-bottom: 5vh;">
-        <div class="col-md-12 borda-inicial">
+        <div class="col-md-12 borda-inicial" style="text-align: center;">
+            <p style="text-align: center;">Além das características atuais, é importante levantar alguns antecedentes da criança, para melhor compreensão do seu quadro clínico, tais como (Brasil, 2023b):</p>
             
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalAlimentar" style="background: none; border: none; padding-left: 60px;">
+                <img src="img/slide18/alimentar.svg" class="img-fluid aumentar" onmouseover="this.src='img/slide18/alimentar-hover.svg'" onmouseout="this.src='img/slide18/alimentar.svg'">
+            </button>
+
+            <p style="text-align: center;">Para conhecer a história alimentar e nutricional da criança, devem ser investigados aspectos pregressos e atuais, conforme os itens elencados a seguir (Brasil, 2023b).</p>
+
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding-left: 60px;">
+                <img src="img/slide18/crianca.svg" class="img-fluid aumentar" onmouseover="this.src='img/slide18/crianca-hover.svg'" onmouseout="this.src='img/slide18/crianca.svg'">
+            </button>
+
+            <p style="text-align: center;">A investigação dos aspectos sociais e das condições da família da criança são relevantes para compreender o contexto em que ela vive. Sugere-se observar os seguintes pontos (Brasil, 2023b):</p>
+            
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalFamilia" style="background: none; border: none; padding-left: 60px;">
+                <img src="img/slide18/familia.svg" class="img-fluid aumentar" onmouseover="this.src='img/slide18/familia-hover.svg'" onmouseout="this.src='img/slide18/familia.svg'">
+            </button>
+            
+            <p style="text-align: center;">Para a realização do exame físico das crianças, devem ser registrados, no mínimo, os seguintes dados (BRASIL, 2023b):</p>
+            
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalExame" style="background: none; border: none; padding-left: 60px;">
+                <img src="img/slide18/exame.svg" class="img-fluid aumentar" onmouseover="this.src='img/slide18/exame-hover.svg'" onmouseout="this.src='img/slide18/exame.svg'">
+            </button>
+        
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="ModalAlimentar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/slide18/alimentar-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalAlimentar')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/slide18/crianca-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalFamilia" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/slide18/familia-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalFamilia')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalExame" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/slide18/exame-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalExame')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
