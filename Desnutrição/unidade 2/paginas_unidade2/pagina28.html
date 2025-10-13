@@ -1,7 +1,54 @@
 <div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
     <div class="row" style="margin-bottom: 5vh;">
-        <div class="col-md-12 borda-inicial">
-            
+        <div class="col-md-12 borda-inicial" style="text-align: center; margin-bottom: 5vh;">
+            <img src="img/laranja.svg" width="100%"">
         </div>
+
+        <div class="col-md-6">
+            <p>Para crianças acima de 2 anos, deve ser observado se há consumo de feijão, frutas frescas, verduras e/ou legumes, os quais devem ser incentivados. Enquanto o consumo de bebidas adoçadas, hambúrgueres e embutidos, macarrão instantâneo, salgadinhos ou biscoitos de pacote, bem como doces e guloseimas devem ser evitados.</p>
+        </div>
+        <div class="col-md-6">
+            <p>Um estudo transversal que analisou os fatores associados ao consumo alimentar, com base nos marcadores do SISVAN, identificou que baixa renda familiar, situação de desemprego, introdução da alimentação complementar inadequada e idade materna inferior a 20 anos estão associados ao consumo de alimentos não saudáveis (Oliveira, 2019). </p>
+        </div>
+
+        <div class="col-md-12" style="text-align: center;">
+            <div style="background-color: #0C476E; border-radius: 20px; padding: 20px; margin-bottom: 5vh">
+                <p style="margin: 0; color: white;">Para a investigação e intervenção adequadas nos casos de desnutrição, também é essencial observar os aspectos quantitativos da alimentação da criança, a fim de verificar se ela está ingerindo quantidade suficiente de alimentos para sua idade. No “Guia alimentar para crianças brasileiras menores de 2 anos” há uma referência com quantidades aproximadas a serem consumidas nas refeições principais, conforme a faixa etária (Brasil, 2019), como apresentado a seguir:</p>
+            </div>
+
+            <img src="img/Frame 1313.svg" width="100%" style="max-width: 1300px; margin-bottom: 5vh;">
+        </div>
+
+
+        <div class="col-md-8">
+            <p>Essas quantidades servem como referência para a família, sem a necessidade de seguimento rígido. Cada criança tem suas características individuais, que devem ser respeitadas. Após os 2 anos de idade, o parâmetro pode ser definido com base na aceitação usual das quantidades de alimentos pela própria criança, até atingir a saciedade durante as refeições — sempre considerando a curva de crescimento e os indicadores antropométricos dentro da normalidade. <br> <b>Clique no botão “destaque” para saber mais.</b></p>
+        </div>
+
+        <div class="col-md-4" style="display: flex; justify-content: center; align-items: center;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding-left: 60px;">
+                <img src="../img/saiba-mais.svg" class="img-fluid aumentar" onmouseover="this.src='../img/saiba-mais-hover.svg'" onmouseout="this.src='../img/saiba-mais.svg'">
+            </button>
+        </div>
+
     </div>
+</div>
+
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/saibamais-modal2.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

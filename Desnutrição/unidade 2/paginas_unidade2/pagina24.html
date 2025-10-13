@@ -1,7 +1,93 @@
 <div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
     <div class="row" style="margin-bottom: 5vh;">
         <div class="col-md-12 borda-inicial">
-            
+            <p>Clique nos botões a seguir para visualizar exemplos dos gráficos de acompanhamento do IMC para crianças de 0 a 2 anos.</p>
+        </div>
+
+        <div class="col-md-6" style="text-align: center;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalMenina" style="background: none; border: none; padding-left: 60px;">
+                <img src="img/Frame 1621.svg" class="img-fluid">
+            </button>
+        </div>
+
+
+        <div class="col-md-6" style="text-align: center;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalMenino" style="background: none; border: none; padding-left: 60px;">
+                <img src="img/Frame 1622.svg" class="img-fluid">
+            </button>
+        </div>
+
+
+        <div class="col-md-6">
+            <p>Observe que a criança em crescimento adequado deve se aproximar da linha verde, podendo estar acima ou abaixo dela, entre as linhas verde e laranja. Quando estiver entre as linhas laranja (-1) e vermelha (-2), embora o diagnóstico ainda seja de eutrofia, o profissional deve se manter em alerta e monitorar a evolução. Se estiver na linha vermelha ou abaixo, trata-se de desnutrição. Abaixo da linha preta, classifica-se como desnutrição grave (Brasil, 2023c).</p>
+        </div>
+        <div class="col-md-6">
+            <p>Mudanças bruscas que alterem a curva da criança para baixo (redução do peso) ou que mantenham um traço horizontal ao longo do tempo (ganho de peso e crescimento inadequados para a idade) devem ser observadas com atenção. Nesses casos, é fundamental investigar possíveis condições de saúde e situações de insegurança alimentar, pois representam um sinal de alerta para desnutrição (Brasil, 2023c).</p>
+        </div>
+
+        <div class="col-md-6 ms-auto" style="display: flex; align-items: center; justify-content: center;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding: 0;">
+                <img src="../img/saiba-mais.svg" class="img-fluid aumentar" onmouseover="this.src='../img/saiba-mais-hover.svg'" onmouseout="this.src='../img/saiba-mais.svg'">
+            </button>
         </div>
     </div>
+</div>
+
+    <img src="img/flor-fundo.svg " class="imagem-fixa-slide-24" draggable="false">
+
+    <div class="modal fade" id="ModalMenina" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/meninas-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalMenina')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalMenino" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/meninos-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalMenino')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/saibamais-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

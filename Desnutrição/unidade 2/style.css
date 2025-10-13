@@ -211,6 +211,10 @@ h3, li{
   background-image: url('../img/bullet-claro.svg');
 }
 
+ul li.bullet-amarelo::before {
+  background-image: url('../img/bullet-amarelo.svg');
+}
+
 .branco {
   color: white;
 }
@@ -358,9 +362,30 @@ p {
 
 .imagem-fixa-slide-22 {
   position: fixed;
-  bottom: 0;
-  right: 10vw;
+  top: 30vh;
+  left: -8.2vw;
   width: 30vw; /* ajuste conforme quiser */
+  height: auto;
+  z-index: -1;
+  transform: rotate(90deg);
+}
+
+.imagem-fixa-slide-22-2 {
+  position: fixed;
+  top: 70vh;
+  right: -8.2vw;
+  width: 25vw; /* ajuste conforme quiser */
+  height: auto;
+  z-index: -1;
+  transform: rotate(270deg);
+}
+
+
+.imagem-fixa-slide-24 {
+  position: fixed;
+  bottom: 0;
+  left: 8vw;
+  width: 25vw; /* ajuste conforme quiser */
   height: auto;
   z-index: -1;
 }
@@ -661,7 +686,7 @@ p {
   right: 0;
   width: 53vw; /* 70% da largura da viewport */
   height: 100vh; /* ou a altura que você desejar */
-  background-image: url('img/un1/gravida-lado.png');
+  background-image: url('img/soro.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
