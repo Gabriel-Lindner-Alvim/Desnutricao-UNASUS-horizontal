@@ -469,8 +469,19 @@ p {
   background-color: #F9D650 !important;
 }
 
+.fundo-palha {
+  background-color: #FFFBEB !important;
+}
+
 .amarelo {
   background: #F9D650 !important;
+  border: none;
+  color: black;
+  transition: background 0.3s ease;
+}
+
+.palha {
+  background: #FFFBEB !important;
   border: none;
   color: black;
   transition: background 0.3s ease;
@@ -1227,4 +1238,20 @@ p {
 .col-imgs {
   position: relative;
   z-index: 1; /* imagens por baixo */
+}
+
+.footer-img-left {
+  display: block;
+  margin-top: -1px;
+  float: left;
+  margin-left: 4vw;
+
+}
+
+.footer-img-right {
+  display: block;
+  margin-top: -15px;
+  float: right;
+  margin-left: 4vw;
+
 }

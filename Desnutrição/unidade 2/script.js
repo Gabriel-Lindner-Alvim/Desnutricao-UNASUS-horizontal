@@ -1,6 +1,6 @@
 
 /* ================== Config base ================== */
-const totalPaginas = 40;               // páginas 0..18
+const totalPaginas = 42;               // páginas 0..18
 const LAST_INDEX = totalPaginas;
 
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
