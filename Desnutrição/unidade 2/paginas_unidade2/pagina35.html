@@ -1,7 +1,80 @@
 <div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
     <div class="row" style="margin-bottom: 5vh;">
         <div class="col-md-12 borda-inicial">
-            
+            <h2>Avaliação do consumo alimentar</h2>
+        </div>
+
+        <div class="col-md-6">
+            <p>O padrão de consumo alimentar durante a gestação se reflete positiva ou negativamente na saúde do bebê e da pessoa gestante, a depender da qualidade da alimentação disponível. Os marcadores de consumo preconizados no SUS e aplicado às gestantes são iguais para todos os indivíduos acima de 2 anos de idade. Eles são baseados no Guia Alimentar para a população brasileira para identificar padrões de consumo de alimentos saudáveis ou não saudáveis.</p>
+        </div>
+        <div class="col-md-6">
+            <p>São marcadores saudáveis o consumo de frutas, verduras e feijão, enquanto os não saudáveis são o consumo de embutidos, bebidas adoçadas, macarrão instantâneo e biscoitos salgados, doces, guloseimas e biscoitos recheados. A aplicação desses marcadores auxilia na análise qualitativa da alimentação na fase gestacional.</p>
+        </div>
+
+        <div class="col-md-12" style="text-align: center;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCalculo" style="background: none; border: none; padding: 0;">
+                <img src="img/lupa.svg" class="img-fluid aumentar" onmouseover="this.src='img/lupa-hover.svg'" onmouseout="this.src='img/lupa.svg'" style="margin-bottom: 6vh; width: 100%;">
+            </button>
+
+            <p>Ao monitorar o estado nutricional da pessoa gestante que iniciou a gravidez com baixo IMC, é necessário que você investigue a sua história alimentar. Os hábitos alimentares devem ser investigados com base nos marcadores de consumo alimentar e registrados no módulo de marcadores de consumo alimentar por meio do Prontuário Eletrônico do Cidadão (PEC) ou na ficha CDS (Cadastro de Dados Simples) do e-SUS APS. Além disso, é importante perguntar sobre:</p>
+        </div>
+
+        <div class="col-md-6">
+            <div style="background-color: #FBE88C; border-radius: 20px; padding: 20px;">
+                <ul >
+                    <li class="bullet-amarelo" style="font-size: 18px;">Presença de náuseas ou vômitos.</li>
+                    <li class="bullet-amarelo" style="font-size: 18px;">Número de refeições realizadas por dia.</li>
+                    <li class="bullet-amarelo" style="font-size: 18px;">Quantidade de horas de sono noturno.</li>
+                    <li class="bullet-amarelo" style="font-size: 18px;">Quem prepara as refeições.</li>
+                    <li class="bullet-amarelo" style="font-size: 18px;">Frequência de alimentação fora de casa.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6" style="text-align: center;">
+            <p>A atenção à qualidade da alimentação, aos comportamentos de risco e à frequência das refeições permite um acompanhamento mais completo e eficaz, promovendo o bem-estar da pessoa gestante e contribuindo para o desenvolvimento saudável do bebê. <br><b>Clique no botão abaixo para saber mais.</b></p>
+        
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding-left: 60px;">
+                <img src="../img/saiba-mais.svg" class="img-fluid aumentar" onmouseover="this.src='../img/saiba-mais-hover.svg'" onmouseout="this.src='../img/saiba-mais.svg'">
+            </button>
         </div>
     </div>
+</div>
+
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/saibamais-modal4.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalCalculo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/lupa-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 13px; right: 13px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCalculo')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

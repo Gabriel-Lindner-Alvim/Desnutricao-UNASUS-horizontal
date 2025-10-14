@@ -6,5 +6,30 @@
         <div class="col-md-8">
             <p>Além disso, o leite materno oferece proteção contra infecções intestinais e respiratórias — doenças que estão entre as principais causas de desnutrição e do agravamento do estado nutricional nos primeiros anos de vida.   <a style="color: #B1570C; font-weight: bold;">Clique no botão ao lado para mais informações.</a></p>
         </div>
+
+        <div class="col-md-4" style="display: flex; justify-content: center; align-items: center;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding-left: 60px;">
+                <img src="../img/destaque.svg" class="img-fluid aumentar" onmouseover="this.src='../img/destaque-hover.svg'" onmouseout="this.src='../img/destaque.svg'">
+            </button>
+        </div>
     </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/destaque-modal5.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
