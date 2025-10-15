@@ -243,6 +243,51 @@ async function carregarPagina(numero) {
     const svgContainers = area.querySelectorAll("[data-svg]");
     await Promise.all(Array.from(svgContainers).map(div => loadSVG(div.getAttribute("data-svg"), div.id)));
 
+
+    const modal = document.getElementById("ModalCriancas");
+    if (modal) {
+      let currentPage = 1;
+      const totalPages = 2;
+
+      const showPage = (page) => {
+        // Alterna as páginas
+        for (let i = 1; i <= totalPages; i++) {
+          const el = modal.querySelector(`#modalPage${i}`);
+          if (el) el.classList.toggle("d-none", i !== page);
+        }
+
+        // Controla visibilidade das setas
+        const prev = modal.querySelector("#modalPrev");
+        const next = modal.querySelector("#modalNext");
+
+        if (prev && next) {
+          prev.style.display = (page === 1) ? "none" : "block";
+          next.style.display = (page === totalPages) ? "none" : "block";
+        }
+      };
+
+      modal.querySelector("#modalPrev")?.addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          showPage(currentPage);
+        }
+      });
+
+      modal.querySelector("#modalNext")?.addEventListener("click", () => {
+        if (currentPage < totalPages) {
+          currentPage++;
+          showPage(currentPage);
+        }
+      });
+
+      modal.addEventListener("shown.bs.modal", () => {
+        currentPage = 1;
+        showPage(currentPage);
+      });
+    }
+    
+
+
     // Prefetch da próxima página em idle (se existir)
     if (numero < LAST_INDEX) {
       rIC(async () => {

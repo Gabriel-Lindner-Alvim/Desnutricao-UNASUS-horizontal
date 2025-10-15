@@ -746,7 +746,7 @@ p {
 .linha-com-texto::after {
   content: "";
   flex: 1;
-  border-bottom: 2px solid #F08A47;
+  border-bottom: 2px solid #0E9FE9;
   margin: 0;
 }
 
@@ -756,7 +756,7 @@ p {
 }
 
 .caixa-texto {
-  background-color: #F08A47;
+  background-color: #027EC7;
   padding: 0.3rem 1rem;
   border-radius: 10px 10px 10px 3px;
   font-size: 24px;
