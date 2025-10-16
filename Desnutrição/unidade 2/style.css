@@ -495,14 +495,42 @@ p {
 
 }
 
+.accordion-body-2 {
+  background-color: transparent;
+  border-radius: 10px;
+
+}
+
 .accordion-body p {
   text-align: center;
+}
+
+.accordion-body-2 p {
+  text-align: left;
+  margin: 0 o !important;
 }
 
 .accordion-item {
   border: none;
   background-color: #FFFBEB;
 }
+
+.accordion-item-2 {
+  border: none;
+  background-color: transparent;
+}
+
+.accordion-img-btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .accordion-img-btn img {
+    display: block;
+    width: 100%; /* ajuste conforme sua necessidade */
+  }
 
 .accordion-button::after {
   display: none;
@@ -1257,3 +1285,49 @@ p {
   margin-left: 4vw;
 
 }
+
+.popup-dropright {
+  position: absolute;
+  top: 0;
+  left: 105%;
+  width: 30vw;
+  max-width: 600px;
+  min-width: 200px;
+  background: #7DCFFC;
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 999;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.popup-dropleft {
+  position: absolute;
+  top: 0;
+  right: 105%; /* muda para o lado esquerdo */
+  width: 30vw;
+  max-width: 600px;
+  background: #7DCFFC;
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 999;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.popup-dropright:not(.d-none),
+.popup-dropleft:not(.d-none) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.popup-dropright.d-none {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.popup-dropleft.d-none {
+  opacity: 0;
+  transform: translateX(10px); /* animação inversa */
+}
+

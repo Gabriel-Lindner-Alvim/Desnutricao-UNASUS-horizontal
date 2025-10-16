@@ -286,6 +286,37 @@ async function carregarPagina(numero) {
       });
     }
     
+    // === Interatividade das imagens clicáveis ===
+    const imagens = area.querySelectorAll(".img-interativa");
+    let imagemAtiva = null; // controle global para desativar outras
+
+    imagens.forEach(img => {
+      img.addEventListener("click", () => {
+        // Se clicar novamente na mesma imagem → fecha tudo
+        if (imagemAtiva === img) {
+          img.src = img.dataset.inactive;
+          const popup = img.parentElement.querySelector(".popup-dropright, .popup-dropleft");
+          popup?.classList.add("d-none");
+          imagemAtiva = null;
+          return;
+        }
+
+        // Desativa qualquer outra imagem ativa
+        if (imagemAtiva) {
+          imagemAtiva.src = imagemAtiva.dataset.inactive;
+          const popupAtivo = imagemAtiva.parentElement.querySelector(".popup-dropright, .popup-dropleft");
+          popupAtivo?.classList.add("d-none");
+        }
+
+        // Ativa a nova imagem e mostra o popup correspondente
+        img.src = img.dataset.active;
+        const popup = img.parentElement.querySelector(".popup-dropright, .popup-dropleft");
+        popup?.classList.remove("d-none");
+        imagemAtiva = img;
+      });
+    });
+
+
 
 
     // Prefetch da próxima página em idle (se existir)
