@@ -1331,3 +1331,133 @@ p {
   transform: translateX(10px); /* animação inversa */
 }
 
+
+/* Container */
+.quiz {
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+/* Pergunta */
+.quiz h3 {
+  margin-bottom: 20px;
+}
+
+/* Opções */
+.opcao {
+  display: flex;
+  align-items: flex-start; /* impede que a caixa estique junto com o texto */
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.opcao input[type="radio"] {
+  display: none;
+}
+
+/* Caixa quadrada fixa */
+.opcao span.caixa {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #EC6E28;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex-shrink: 0; /* impede que a caixa mude de tamanho */
+  position: relative;
+  margin-top: 3px; /* ajusta alinhamento vertical com o texto */
+}
+
+.opcao input:checked + span.caixa::after {
+  content: "✔";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  color: #EC6E28;
+  font-size: 18px;
+}
+
+
+/* Botão */
+.button-responder {
+  background: #EC6E28;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.button-responder:hover {
+  background: #cf5c1f;
+}
+
+/* Feedback */
+.feedback {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+}
+.feedback.correta {
+  color: #0367A5;
+}
+.feedback.errada {
+  color: #B73D17;
+}
+
+/* Feedback */
+.feedback-reflexao {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+}
+.feedback-reflexao.correta {
+  color: black;
+}
+
+.button-responder2 {
+  background: #027EC7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.button-responder2:hover {
+  background: #0267a1;
+}
+
+
+/* Opções */
+.opcao2 {
+  display: flex;
+  align-items: flex-start; /* impede que a caixa estique junto com o texto */
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.opcao2 input[type="radio"] {
+  display: none;
+}
+
+/* Caixa quadrada fixa */
+.opcao2 span.caixa {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #027EC7;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex-shrink: 0; /* impede que a caixa mude de tamanho */
+  position: relative;
+  margin-top: 3px; /* ajusta alinhamento vertical com o texto */
+}
+
+.opcao2 input:checked + span.caixa::after {
+  content: "✔";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  color: #027EC7;
+  font-size: 18px;
+}

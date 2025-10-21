@@ -1,6 +1,6 @@
 
 /* ================== Config base ================== */
-const totalPaginas = 42;               // páginas 0..18
+const totalPaginas = 45;               // páginas 0..18
 const LAST_INDEX = totalPaginas;
 
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
@@ -317,6 +317,46 @@ async function carregarPagina(numero) {
     });
 
 
+    // === BLOCO NOVO: Quiz com várias questões e feedbacks individuais ===
+    const quiz = area.querySelector('.quiz');
+    if (quiz) {
+      const questoes = quiz.querySelectorAll('.questao');
+      const botao = quiz.querySelector('#enviar');
+
+      // Esconde feedback sempre que usuário troca de alternativa
+      questoes.forEach(q => {
+        const feedback = q.querySelector('.feedback');
+        const radios = q.querySelectorAll('input[type="radio"]');
+        radios.forEach(radio => {
+          radio.addEventListener('change', () => {
+            feedback.style.display = 'none';
+          });
+        });
+      });
+
+      // Ao clicar em "Submeter"
+      botao.addEventListener('click', () => {
+        questoes.forEach(q => {
+          const selecionado = q.querySelector('input[type="radio"]:checked');
+          const feedback = q.querySelector('.feedback');
+
+          if (!selecionado) {
+            feedback.textContent = "Selecione uma alternativa antes de responder.";
+            feedback.className = "feedback errada";
+          } else {
+            const texto = selecionado.dataset.feedback || "";
+            if (selecionado.value === "correta") {
+              feedback.textContent = texto;
+              feedback.className = "feedback correta";
+            } else {
+              feedback.textContent = texto;
+              feedback.className = "feedback errada";
+            }
+          }
+          feedback.style.display = "block";
+        });
+      });
+    }
 
 
     // Prefetch da próxima página em idle (se existir)
