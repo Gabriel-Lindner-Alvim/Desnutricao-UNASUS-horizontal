@@ -1,6 +1,5 @@
-
 /* ================== Config base ================== */
-const totalPaginas = 45;               // páginas 0..18
+const totalPaginas = 35;               // páginas 0..18
 const LAST_INDEX = totalPaginas;
 
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
@@ -200,7 +199,7 @@ async function loadSVG(_svgFilePath, _id) {
 let loadToken = 0;               // garante que só o último load vale
 let currentController = null;    // aborta fetch anterior
 
-async function getPaginaHTML(numero, baseUrl = `paginas_unidade2/pagina${numero}.html`, signal) {
+async function getPaginaHTML(numero, baseUrl = `paginas_unidade4/pagina${numero}.html`, signal) {
   if (cachePaginas.has(numero)) return cachePaginas.get(numero);
   const resp = await fetch(baseUrl, { signal });
   const html = await resp.text();
@@ -220,7 +219,7 @@ async function carregarPagina(numero) {
 
     aplicarEstiloDeFundo(numero);
 
-    const html = await getPaginaHTML(numero, `paginas_unidade2/pagina${numero}.html`, currentController.signal);
+    const html = await getPaginaHTML(numero, `paginas_unidade4/pagina${numero}.html`, currentController.signal);
     if (myToken !== loadToken) return; // carregamento ultrapassado
 
     area.innerHTML = html;
@@ -365,7 +364,7 @@ async function carregarPagina(numero) {
         try {
           const proxNum = numero + 1;
           if (!cachePaginas.has(proxNum)) {
-            const respProx = await fetch(`paginas_unidade2/pagina${proxNum}.html`);
+            const respProx = await fetch(`paginas_unidade4/pagina${proxNum}.html`);
             if (!respProx.ok) return;
             const htmlProx = await respProx.text();
             cachePaginas.set(proxNum, htmlProx);
