@@ -1,0 +1,64 @@
+<div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
+    <div class="row" style="margin-bottom: 5vh;">
+        <div class="col-md-12 borda-inicial">
+            <div style="background-color: #D67C09; border-radius: 20px; box-shadow: 10px 5px 5px gray; padding: 20px; margin: 30px; margin-bottom: 5vh;">
+                <p style="color: white;">Nas diferentes etapas do ciclo de vida, o acompanhamento do estado nutricional nos fornece indicativos da utilização biológica dos alimentos e do resultado do balanço energético positivo ou negativo. Em uma visão simplista ou biomédica, o diagnóstico de desnutrição indicaria a orientação para o aumento do consumo de alimentos em volume e densidade energética, uma intervenção que apresenta resultados, porém não resolve o problema do ponto de vista epidemiológico. Apesar da desnutrição ter como fator causal direto a baixa ingestão de alimentos, o modelo explicativo da doença é bastante complexo.</p>
+            </div>
+            
+            <p style="text-align: center;">Para entender as causas da desnutrição materno-infantil e os determinantes sociais que vão além da biologia, <b> clique no botão a seguir.</b> </p>
+        
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding: 0; margin-bottom: 5vh;">
+                <img src="img/determinantes.svg" class="img-fluid aumentar" onmouseover="this.src='img/determinantes-hover.svg'" onmouseout="this.src='img/determinantes.svg'">
+            </button>
+        </div>
+
+        <div class="col-md-8">
+            <p>Entre as crianças, além de todas as causas socioeconômicas em comum com as condições maternas, a duração do aleitamento materno, o momento e a qualidade da introdução complementar, o ganho de peso e a estatura durante a infância, interferem no risco de adoecimento por causas infecciosas e consequentemente no número de internações, agravando os quadros de desnutrição. </p>
+        </div>
+
+        <div class="col-md-4" style="display: flex; justify-content: center; align-items: center;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalAtencao" style="background: none; border: none; padding-left: 60px;">
+                <img src="../img/atencao.svg" class="img-fluid aumentar" onmouseover="this.src='../img/atencao-hover.svg'" onmouseout="this.src='../img/atencao.svg'">
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/determinantes-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 25px; right: 40px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalAtencao" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/slide5-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalAtencao')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

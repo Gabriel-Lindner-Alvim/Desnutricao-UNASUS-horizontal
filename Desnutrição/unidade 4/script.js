@@ -24,7 +24,6 @@ const configuracoesPagina = {
   1: { backgroundColor: "#027EC7" },
   2: { backgroundColor: "#d3efffff" },
   3: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
-  4: { backgroundImage: "url(../img/fundoqueimado.svg)", backgroundSize: "cover" },
   8: { backgroundImage: "url('img/fruta.svg')", backgroundSize: "cover", backgroundAttachment: "fixed" },
   14: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
   31: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
