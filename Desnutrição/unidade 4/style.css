@@ -795,7 +795,7 @@ p {
   font-size: 18px;
   font-weight: bold;
   color: black;
-  background-color: #F9D650;
+  background-color: #FFFBEB;
   border-radius: 12px;
   padding: 20px;
   width: 100%;
@@ -812,13 +812,13 @@ p {
 
 /* Hover apenas */
 .btn-alimentar:hover {
-  background-color: #F2A71B !important;
+  background-color: #FBE88C !important;
 }
 
 /* Active e Focus: mantém estilo base, mas SEM !important */
 .btn-alimentar:focus,
 .btn-alimentar:active {
-  background-color: #F9D650;
+  background-color: #FFFBEB;
   color: black;
   box-shadow: none;
   outline: none;
@@ -827,7 +827,7 @@ p {
 /* Quando o dropdown está aberto */
 .btn-alimentar.show,
 .show > .btn-alimentar {
-  background-color: #F9D650;
+  background-color: #FFFBEB;
   color: black;
 }
 
