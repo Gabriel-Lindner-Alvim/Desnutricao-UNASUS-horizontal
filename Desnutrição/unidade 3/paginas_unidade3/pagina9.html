@@ -1,0 +1,70 @@
+<div class="container text-start" style="margin-top: 3vh;">
+  <div class="row">
+    <div class="col-md-12 borda-inicial">
+      <h3 style="color: rgba(70, 68, 69, 1);">Acompanhamento para recuperação e reabilitação do estado nutricional</h3>
+    </div>
+    <div class="col-8">
+      <p>O acompanhamento contínuo e próximo da criança com desnutrição leve ou moderada é fundamental para garantir a
+        recuperação nutricional. Para isso, a equipe de saúde deve acompanhar de perto, com retornos mais frequentes,
+        observando, a cada consulta, a evolução do tratamento nas curvas de Peso/Idade (P/I), Estatura/Idade (E/I) e
+        Índice de Massa Corporal/Idade (IMC/I). Considera-se a evolução favorável quando, mesmo que a criança permaneça
+        em estado de desnutrição, a inclinação da curva estiver maior do que a esperada para o período, indicando
+        progresso no tratamento.
+        <b style="color: rgba(183, 61, 23, 1);">Clique no botão ao lado para mais informações.</b>
+      </p>
+    </div>
+    <div class="col-4">
+      <img data-bs-toggle="modal" data-bs-target="#ModalCriancas" src="../img/atencao.svg" alt=""
+        style="margin-top: 20px; cursor:pointer" onmouseover="this.src='../img/atencao-hover.svg'"
+        onmouseout="this.src='../img/atencao.svg'">
+    </div>
+
+  </div>
+  <div class="row" style="background-color: rgba(221, 82, 25, 1); border-radius: 24px; padding: 30px;">
+    <div class="col-6">
+      <p style="color: white;">Essa busca ativa é importante para identificar e corrigir possíveis dificuldades,
+        prevenindo recaídas que podem prejudicar a saúde e o desenvolvimento da criança. </p>
+    </div>
+    <div class="col-6">
+      <p style="color: #ffffff;">Ao identificar qualquer problema, a equipe pode dar suporte e ajustar o plano de
+        tratamento, buscando garantir que a criança receba o aporte nutricional necessário para sua recuperação.
+      </p>
+    </div>
+  </div>
+  <div class="row align-items-center" style="margin-top: 20px;">
+    <div class="col-6">
+      <p>A família ou pessoa responsável precisa estar engajada e ser colaborativa no processo, devendo receber
+        informações sobre a evolução, seja ela favorável ou desfavorável, e ainda receber orientações claras sobre onde
+        os cuidados podem ser aprimorados e o que está funcionando bem. Esse contato com a família deve ser feito de
+        forma empática, sem julgamentos, focando na escuta ativa buscando entender suas limitações e exaltando os pontos
+        positivos desse cuidado.
+      </p>
+      <p>Entender as limitações da família, sobretudo do ponto de vista social, é necessário para garantir acolhimento e
+        encaminhar aos serviços necessários com o objetivo de amenizar a situação de vulnerabilidade, quando possível.
+      </p>
+    </div>
+    <div class="col-6 text-center">
+      <img src="img/image 14.svg" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0"
+        style="text-align: center; background-color: #ffffff; border-radius:24px; padding: 24px !important;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+
+          <img src="img/modal.png" alt="">
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x2.svg"
+            style="position: absolute; top: -10px; right: -10px; width: 32px; height: 32px; cursor: pointer;"
+            onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

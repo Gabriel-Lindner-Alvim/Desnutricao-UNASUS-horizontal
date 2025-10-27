@@ -1,0 +1,121 @@
+<div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
+    <div class="row" style="margin-bottom: 5vh;">
+        <div class="col-md-12 borda-inicial" style="background-color: white;">
+            <p>Clique nos botões a seguir para visualizar exemplos dos gráficos de acompanhamento do IMC para crianças de 0 a 2 anos.</p>
+        </div>
+
+        <div class="col-md-6" style="text-align: center; background-color: white;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalMenina" style="background: none; border: none; padding-left: 60px;">
+                <img src="img/Frame 1621.svg" class="img-fluid">
+            </button>
+        </div>
+
+
+        <div class="col-md-6" style="text-align: center; background-color: white;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalMenino" style="background: none; border: none; padding-left: 60px;">
+                <img src="img/Frame 1622.svg" class="img-fluid">
+            </button>
+        </div>
+
+
+        <div class="col-md-6" style="background-color: white;">
+            <p>Observe que a criança em crescimento adequado deve se aproximar da linha verde, podendo estar acima ou abaixo dela, entre as linhas verde e laranja. Quando estiver entre as linhas laranja (-1) e vermelha (-2), embora o diagnóstico ainda seja de eutrofia, o profissional deve se manter em alerta e monitorar a evolução. Se estiver na linha vermelha ou abaixo, trata-se de desnutrição. Abaixo da linha preta, classifica-se como desnutrição grave (Brasil, 2023c).</p>
+        </div>
+        <div class="col-md-6" style="background-color: white;">
+            <p>Mudanças bruscas que alterem a curva da criança para baixo (redução do peso) ou que mantenham um traço horizontal ao longo do tempo (ganho de peso e crescimento inadequados para a idade) devem ser observadas com atenção. Nesses casos, é fundamental investigar possíveis condições de saúde e situações de insegurança alimentar, pois representam um sinal de alerta para desnutrição (Brasil, 2023c).</p>
+        </div>
+
+        <div class="col-md-6 ms-auto" style="display: flex; align-items: center; justify-content: center;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding: 0;">
+                <img src="../img/saiba-mais.svg" class="img-fluid aumentar" onmouseover="this.src='../img/saiba-mais-hover.svg'" onmouseout="this.src='../img/saiba-mais.svg'">
+            </button>
+        </div>
+    </div>
+</div>
+
+    <img src="img/flor-fundo.svg " class="imagem-fixa-slide-24" draggable="false">
+
+    <div class="modal fade" id="ModalMenina" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/meninas-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalMenina')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalMenino" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/meninos-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalMenino')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <svg width="1144" height="325" viewBox="0 0 1144 325" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="Modal">
+          <rect width="1144" height="325" rx="16" fill="white"/>
+          <g id="material-symbols:close-rounded">
+          <rect x="1099.14" y="20" width="24" height="24" rx="12" fill="#075585"/>
+          <path id="Vector" d="M1111.14 33.4008L1106.24 38.3008C1106.06 38.4841 1105.82 38.5758 1105.54 38.5758C1105.26 38.5758 1105.02 38.4841 1104.84 38.3008C1104.66 38.1174 1104.57 37.8841 1104.57 37.6008C1104.57 37.3174 1104.66 37.0841 1104.84 36.9008L1109.74 32.0008L1104.84 27.1008C1104.66 26.9174 1104.57 26.6841 1104.57 26.4008C1104.57 26.1174 1104.66 25.8841 1104.84 25.7008C1105.02 25.5174 1105.26 25.4258 1105.54 25.4258C1105.82 25.4258 1106.06 25.5174 1106.24 25.7008L1111.14 30.6008L1116.04 25.7008C1116.22 25.5174 1116.46 25.4258 1116.74 25.4258C1117.02 25.4258 1117.26 25.5174 1117.44 25.7008C1117.62 25.8841 1117.72 26.1174 1117.72 26.4008C1117.72 26.6841 1117.62 26.9174 1117.44 27.1008L1112.54 32.0008L1117.44 36.9008C1117.62 37.0841 1117.72 37.3174 1117.72 37.6008C1117.72 37.8841 1117.62 38.1174 1117.44 38.3008C1117.26 38.4841 1117.02 38.5758 1116.74 38.5758C1116.46 38.5758 1116.22 38.4841 1116.04 38.3008L1111.14 33.4008Z" fill="white"/>
+          </g>
+          <g id="Frame 831">
+          <g id="Group 1127">
+          <path id="Rectangle 186" d="M1083.47 66.2354C1093.02 66.2355 1100.76 73.9766 1100.76 83.5254V243.184C1100.76 258.968 1087.97 271.764 1072.18 271.765H107.525C97.9766 271.765 90.2354 264.023 90.2354 254.475V83.5254C90.2354 73.9766 97.9766 66.2354 107.525 66.2354H1083.47Z" stroke="#7DCFFC" stroke-width="3.52853"/>
+          <rect id="Rectangle 187" x="74.8243" y="53.8243" width="1009.35" height="204.351" rx="24.3469" stroke="#027EC7" stroke-width="6.35136"/>
+          <g id="Group 1118">
+          <text id="SAIBA MAIS" fill="#027EC7" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="33.8739" font-weight="bold" letter-spacing="0em"><tspan x="158.089" y="137.661">SAIBA MAIS</tspan></text>
+          <g id="Para conhecer as orienta&#195;&#167;&#195;&#181;es detalhadas para a coleta e an&#195;&#161;lise de dados antropom&#195;&#169;tricos, acesse o Guia para a Organiza&#195;&#167;&#195;&#163;o da Vigil&#195;&#162;ncia Alimentar e Nutricional na Aten&#195;&#167;&#195;&#163;o Prim&#195;&#161;ria &#195;&#160; Sa&#195;&#186;de, 1aed.revisada, 2023.">
+          <text fill="#2A2828" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="19" font-weight="500" letter-spacing="0em"><tspan x="160.912" y="195.284">Para conhecer as orienta&#xe7;&#xf5;es detalhadas para a coleta e an&#xe1;lise de dados antropom&#xe9;tricos, </tspan><tspan x="227.968" y="218.284"> o Guia para a Organiza&#xe7;&#xe3;o da Vigil&#xe2;ncia Alimentar e Nutricional na Aten&#xe7;&#xe3;o Prim&#xe1;ria </tspan><tspan x="160.912" y="241.284">&#xe0; Sa&#xfa;de, 1aed.revisada, 2023.</tspan></text>
+          <text fill="#2A2828" xml:space="preserve" style="white-space: pre" font-family="'Montserrat', sans-serif" font-size="19" font-weight="bold" letter-spacing="0em" text-decoration="underline"><tspan x="160.912" y="218.284"><a target="_blank" href="https://bvsms.saude.gov.br/bvs/publicacoes/guia_organizacao_vigilancia_alimentar_nutricional.pdf">acesse</a></tspan></text>
+          </g>
+          </g>
+          <g id="Group 1120">
+          <g id="Group 1119">
+          <rect id="Rectangle 188" x="59.9957" y="109.223" width="38.1082" height="126.322" rx="19.0541" fill="white"/>
+          <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M77.4068 127.987L48.2963 138.903C44.5091 140.324 42 143.943 42 147.988L42 175.227C42.0001 192.492 66.2723 209.757 76.4283 216.225C79.1452 217.956 82.5305 218.036 85.312 216.412C95.5334 210.441 119.628 194.34 119.628 175.227V147.988C119.628 143.943 117.119 140.324 113.331 138.903L84.221 127.987C82.0243 127.163 79.6035 127.163 77.4068 127.987ZM86.0117 151.222L66.5601 169.754C66.0378 170.251 66.2217 171.124 66.9003 171.369L78.2032 175.443C78.7073 175.625 78.9687 176.181 78.787 176.685L73.9287 190.162C73.5815 191.126 74.7695 191.9 75.5109 191.194L94.9626 172.663C95.4848 172.165 95.3009 171.292 94.6223 171.047L83.3195 166.973C82.8153 166.791 82.5539 166.235 82.7357 165.731L87.5939 152.254C87.9411 151.291 86.7531 150.516 86.0117 151.222Z" fill="#027EC7"/>
+          </g>
+          </g>
+          </g>
+          </g>
+          </g>
+          </svg>
+
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
+    <div class="row" style="margin-bottom: 5vh;">
+        <div class="col-md-8 borda-inicial">
+            <p>O peso é a medida mais sensível para identificar a desnutrição, pois é o primeiro parâmetro afetado em casos de falta de alimentos ou de doenças que aumentam o gasto energético. A circunferência do braço também é relevante, especialmente em grupos de risco para desnutrição, pois em casos de edema — sinal clínico de desnutrição grave — o peso pode estar aumentado, comprometendo a precisão do diagnóstico nutricional (Brasil, 2023a). A circunferência do braço deve ser medida no ponto médio entre o ombro e o cotovelo, com o braço relaxado ao lado do corpo. A fita métrica inelástica deve ser posicionada horizontalmente, ajustada sem compressão, e a medida registrada em centímetros. <br> <b>Clique no botão ao lado para saber mais.</b></p>
+        </div>
+
+        <div class="col-md-4 borda-inicial" style="display: flex; justify-content: center; align-items: center; text-align: center">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding-left: 60px;">
+                <img src="../img/destaque.svg" class="img-fluid aumentar" onmouseover="this.src='../img/destaque-hover.svg'" onmouseout="this.src='../img/destaque.svg'">
+            </button>
+        </div>
+
+        <div class="col-md-12" style="text-align: center;">
+            <div style="border: 2px solid; border-radius: 20px; border-color: #F2A71B; padding: 10px; display: inline-block; margin-top: 5vh; margin-bottom: 5vh;">
+                <p style="margin: 0;">Os gráficos de crescimento disponíveis na Caderneta da Criança, utilizam os seguintes índices antropométricos: </p>
+            </div>
+        </div>
+
+        <div class="col-md-6" style="margin-top: 3vh;">
+            <div style="background-color: #FBE88C; border-radius: 20px; padding: 20px;">
+                <ul >
+                    <li class="bullet-amarelo" style="font-size: 18px;">peso/Idade (P/I),</li>
+                    <li class="bullet-amarelo" style="font-size: 18px;">estatura/Idade (E/I) e</li>
+                    <li class="bullet-amarelo" style="font-size: 18px;">Índice de Massa Corporal/Idade (IMC/I).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6" style="margin-top: 3vh; display: flex; justify-content: center; align-items: center;">
+            <p>As curvas foram propostas pela Organização Mundial da Saúde (OMS), em 2006 para crianças menores de 5 anos e em 2007 para aquelas entre 5 e 10 anos (WHO, 2006; 2007). Para a obtenção do IMC, deve-se utilizar a seguinte fórmula (Brasil, 2011): </p>
+        </div>
+
+        <div class="col-md-12" style="margin-top: 6vh;">
+            <div style="background-color: #F2A71B; border-radius: 20px; padding: 20px; text-align: center;">
+                <h3>Índice de Massa Corporal (IMC) = Peso (kg)/Estatura² (m2)</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/destaque-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
