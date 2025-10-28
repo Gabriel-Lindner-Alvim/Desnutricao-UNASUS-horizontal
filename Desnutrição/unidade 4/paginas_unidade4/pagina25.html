@@ -1,11 +1,68 @@
-<div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
+<div class="container-fluid text-start">
     <div class="row" style="margin-bottom: 5vh;">
-        <div class="col-md-12 borda-inicial" style="text-align: center;">
-            <p>Para enfrentar de forma eficaz a desnutrição, é crucial compreendê-la como um fenômeno complexo, demandando uma abordagem abrangente que englobe diversos setores e políticas públicas. A desnutrição é multifacetada e não se limita ao acesso à alimentação adequada; envolve também fatores socioeconômicos, culturais, educacionais e de saúde. Dessa forma, não basta que diferentes setores ajam de maneira isolada para combater a desnutrição. Uma resposta verdadeiramente resolutiva exige estratégias planejadas e executadas de forma articulada entre setores como saúde, educação, assistência social e agricultura (Carmo; Guizardi, 2017).</p>
+        <div style="background-color: #E0F1FE;">
+            <div class="col-md-12 borda-inicial" style="padding-left: 12vw; padding-right: 12vw;">
+                <h3>Ações no âmbito da Assistência Social</h3>
 
-            <img src="./img/Group 1463.svg" class="img-fluid" style="max-width: 1300px; width: 100%;">
+                <p>A desnutrição é um problema de saúde que afeta principalmente as populações em situação de vulnerabilidade social, caracterizadas por condições precárias de moradia, baixa renda e falta de acesso a serviços básicos de garantia de direitos e proteção social, entre outros fatores. Nesse contexto, a interação entre o SUS e o SUAS desempenha um papel fundamental no combate à desnutrição.</p>
 
-            <p>A seguir, serão exploradas as principais oportunidades de interlocução intersetorial entre o setor saúde e os setores e políticas públicas de assistência social, educação e segurança alimentar e nutricional.</p>
+                <p>O SUAS atua diretamente na identificação e acompanhamento das famílias em situação de vulnerabilidade por meio dos Centros de Referência de Assistência Social (CRAS) e dos Centros de Referência Especializados de Assistência Social (CREAS). A rede socioassistencial do SUAS é fundamental na garantia do direito à alimentação e, portanto, no enfrentamento da desnutrição. </p>
+            </div>
+        </div>
+
+        <div class="col-md-6 ms-auto" style="margin-top: -2vh; padding-right: 12vw; margin-bottom: 3vh;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding-left: 60px;">
+                <img src="./img/isso.svg" class="img-fluid " onmouseover="this.src='./img/isso-hover.svg'" onmouseout="this.src='./img/isso.svg'">
+            </button>
+        </div>
+
+        <div class="col-md-12" style="padding-left: 12vw; padding-right: 12vw;">
+            <p>É fundamental destacar que o SUAS adota uma abordagem que considera não apenas aspectos econômicos, mas também sociais, culturais e ambientais relacionados à vulnerabilidade das famílias. Portanto, as ações do SUAS para o enfrentamento da desnutrição não se limitam a mitigar os efeitos desse problema, mas também buscam prevenir e fortalecer as capacidades das famílias para garantir sua segurança alimentar e nutricional a longo prazo. Dessa forma, o SUS e o SUAS possuem responsabilidades complementares na promoção da saúde e no atendimento às necessidades das populações em situação de vulnerabilidade, o que reforça a necessidade de que a interação entre esses dois sistemas ocorra de maneira colaborativa.</p>
+        </div>
+
+        <div class="col-md-6 ms-auto" style="padding-right: 12vw; text-align: center;">
+            <p style="text-align: center; font-weight: bold;">Comparativo das ações do SUAS e do SUS.</p>
+
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalGraf" style="background: none; border: none; padding-left: 60px;">
+                <img src="./img/Group 1662.svg" class="img-fluid">
+            </button>
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/Frame 1629.svg" class="img-fluid">
+
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalGraf" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/Frame 1630.svg" class="img-fluid">
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalGraf')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

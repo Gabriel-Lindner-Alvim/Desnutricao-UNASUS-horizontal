@@ -1,7 +1,39 @@
 <div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
     <div class="row" style="margin-bottom: 5vh;">
         <div class="col-md-12 borda-inicial">
+            <h3 style="color: #92321A;">Avaliação da criança com desnutrição e critérios para internação</h3>
+
+            <p>Embora muitos exames de rotina em serviços de saúde possam identificar problemas relacionados à desnutrição, a interpretação deles é desafiadora devido à influência do próprio agravo sobre os resultados. Portanto, não se recomenda realizar uma bateria completa de exames em crianças com desnutrição, mas sim solicitar exames específicos conforme necessário para esclarecer sintomas observados no exame clínico.</p>
         
+            <div style="text-align: center;">    
+                <img src="./img/Group 1541.svg" class="img-fluid" style="max-width: 1300px;" width="100%">
+            </div>
+        </div>
+
+        <div class="col-md-5 ms-auto" style="margin-top: 10vh;">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding-left: 60px;">
+                <img src="../img/destaque.svg" class="img-fluid aumentar" onmouseover="this.src='../img/destaque-hover.svg'" onmouseout="this.src='../img/destaque.svg'">
+            </button>
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+        <a href="https://www.scielosp.org/pdf/csp/v25n9/15.pdf" target="_blank">
+          <img src="img/slide19-modal.svg" class="img-fluid">
+        </a>
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

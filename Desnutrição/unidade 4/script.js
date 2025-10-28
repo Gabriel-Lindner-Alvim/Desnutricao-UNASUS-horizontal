@@ -1,5 +1,5 @@
 /* ================== Config base ================== */
-const totalPaginas = 37;               // páginas 0..18
+const totalPaginas = 38;               // páginas 0..18
 const LAST_INDEX = totalPaginas;
 
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
@@ -24,9 +24,11 @@ const configuracoesPagina = {
   1: { backgroundColor: "#027EC7" },
   2: { backgroundColor: "#d3efffff" },
   3: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
-  14: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
-  24: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
-  27: { backgroundImage: "url(./img/atendimento.svg)", backgroundSize: "cover" },
+  13: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
+  14: { backgroundImage: "url(../img/fundoqueimado.svg)", backgroundSize: "cover" },
+  15: { backgroundImage: "url(../img/fundoqueimado.svg)", backgroundSize: "cover" },
+  23: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
+  26: { backgroundImage: "url(./img/atendimento.svg)", backgroundSize: "cover" },
 
 };
 
@@ -223,6 +225,32 @@ async function carregarPagina(numero) {
 
     area.innerHTML = html;
 
+    function ajustarAlturaFullBleed() {
+      const fullBleed = document.querySelector('.full-bleed');
+      if (!fullBleed) return;
+
+      // remove altura extra antes de recalcular
+      fullBleed.style.minHeight = "";  
+
+      // posição inferior atual da div em relação ao topo da página
+      const bottomDiv = fullBleed.getBoundingClientRect().bottom + window.scrollY;
+
+      // altura total do body/documento
+      const alturaPagina = document.body.scrollHeight;
+
+      // quanto falta para o final da página
+      const faltante = alturaPagina - bottomDiv;
+
+      // aplica a nova altura mínima (conteúdo + espaço faltante)
+      fullBleed.style.minHeight = (fullBleed.scrollHeight + Math.max(faltante, 0)) + "px";
+    }
+
+    // chama no load inicial
+    window.addEventListener("load", ajustarAlturaFullBleed);
+    // chama no resize (tela maior → menor ou menor → maior)
+    window.addEventListener("resize", ajustarAlturaFullBleed);
+    ajustarAlturaFullBleed();
+
     // Ativa animações adicionando classes (uma vez, no frame atual)
     area.querySelectorAll(".animar-slide-direita").forEach(el => el.classList.add("slide-in-right"));
     area.querySelectorAll(".animar-fade-in").forEach(el => el.classList.add("fade-in"));
@@ -244,14 +272,16 @@ async function carregarPagina(numero) {
 
     const modal = document.getElementById("ModalCriancas");
     if (modal) {
-      let currentPage = 1;
-      const totalPages = 2;
+    let currentPage = 1;
 
-      const showPage = (page) => {
+    // Verifica se a página HTML definiu o número total de páginas (via atributo data-total-pages)
+    const totalPages = parseInt(modal.getAttribute("data-total-pages")) || 7;
+
+    const showPage = (page) => {
         // Alterna as páginas
         for (let i = 1; i <= totalPages; i++) {
-          const el = modal.querySelector(`#modalPage${i}`);
-          if (el) el.classList.toggle("d-none", i !== page);
+        const el = modal.querySelector(`#modalPage${i}`);
+        if (el) el.classList.toggle("d-none", i !== page);
         }
 
         // Controla visibilidade das setas
@@ -259,30 +289,37 @@ async function carregarPagina(numero) {
         const next = modal.querySelector("#modalNext");
 
         if (prev && next) {
-          prev.style.display = (page === 1) ? "none" : "block";
-          next.style.display = (page === totalPages) ? "none" : "block";
+        prev.style.display = (page === 1) ? "none" : "block";
+        next.style.display = (page === totalPages) ? "none" : "block";
         }
-      };
+    };
 
-      modal.querySelector("#modalPrev")?.addEventListener("click", () => {
+    // Eventos das setas
+    modal.querySelector("#modalPrev")?.addEventListener("click", () => {
         if (currentPage > 1) {
-          currentPage--;
-          showPage(currentPage);
+        currentPage--;
+        showPage(currentPage);
         }
-      });
+    });
 
-      modal.querySelector("#modalNext")?.addEventListener("click", () => {
+    modal.querySelector("#modalNext")?.addEventListener("click", () => {
         if (currentPage < totalPages) {
-          currentPage++;
-          showPage(currentPage);
+        currentPage++;
+        showPage(currentPage);
         }
-      });
+    });
 
-      modal.addEventListener("shown.bs.modal", () => {
+    // Sempre que o modal for aberto, volta pra página 1
+    modal.addEventListener("shown.bs.modal", () => {
         currentPage = 1;
         showPage(currentPage);
-      });
+    });
+
+    // 🔁 Sempre que a página for recarregada via carregarPagina(), reseta também o currentPage
+    currentPage = 1;
+    showPage(currentPage);
     }
+
     
     // === Interatividade das imagens clicáveis ===
     const imagens = area.querySelectorAll(".img-interativa");

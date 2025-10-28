@@ -1,13 +1,50 @@
-<div class="container-fluid" style="padding-left: 12vw; padding-right: 12vw;">
+<div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
+    <div class="row" style="margin-bottom: 5vh;">
+      <div class="col-md-12 borda-inicial">
+        <img src="./img/Frame 1679.svg" class="img-fluid" width="100%" style="max-width: 1300px;">
+      </div>
+        <div class="col-md-6">
+            <div class="btn-group dropend" style="margin-top: 20px; width: 100%;">
 
-    <div class="oval-wrapper">
-    <div class="diagonal-oval"></div>
+                <button type="button" class="btn dropdown-toggle btn-alimentar" data-bs-toggle="dropdown" aria-expanded="false">
+                Os casos de desnutrição grave necessitam...
+                </button>
+
+                <div>
+                <ul class="dropdown-menu" style="
+                background-color: white;
+                border-radius: 12px;
+                padding: 20px;
+                border: none;
+                text-align: center;
+            ">
+                <p style="margin-bottom: 0;">Os casos de desnutrição grave necessitam de apoio especializado, com intervenções de maior complexidade e em tempo oportuno para a recuperação nutricional. Após a intervenção na APS, sem melhoria nos parâmetros nutricionais ou ganho de peso após determinado período, os serviços da atenção secundária, Centros de Referência de Recuperação Nutricional ou unidades hospitalares gerais e pediátricas devem ser acionados para a continuidade do cuidado.</p>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding: 0;">
+                    <img src="../img/destaque.svg" class="img-fluid aumentar" onmouseover="this.src='../img/destaque-hover.svg'" onmouseout="this.src='../img/destaque.svg'">
+                </button>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
+</div>
 
-    <img src="../img/Flor superior esquerda.png" class="imagem-fixa-meio-esquerda">
-  <img src="../img/flor.svg " class="flor-capa" draggable="false">
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
 
-  <div class="centro-subunidade">
-    <h2 style="color: white; text-align: left; font-weight: bolder;">ABORDAGEM DA <br> DESNUTRIÇÃO NA <br> ATENÇÃO <br> ESPECIALIZADA</h2>
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/modal-slide14.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
   </div>
 </div>

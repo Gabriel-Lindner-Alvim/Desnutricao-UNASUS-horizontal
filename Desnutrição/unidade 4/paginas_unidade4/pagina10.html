@@ -1,7 +1,76 @@
-<div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
-    <div class="row" style="margin-bottom: 5vh;">
-        <div class="col-md-12 borda-inicial">
+<div class="container-fluid text-start">
+    <div class="row">
+        <div class="col-md-12 borda-inicial" style="padding-left: 12vw; padding-right: 12vw;">
             <p>Paralelamente, deve-se avaliar os <b> hábitos alimentares </b> da criança por meio de marcadores de consumo alimentar e identificar a situação de insegurança alimentar e nutricional no domicílio. Somando a isso, <b> exames clínicos e bioquímicos</b>, incluindo a dosagem de hemoglobina sérica, são realizados para investigar possíveis anemias e outras condições relacionadas. Ao identificar desnutrição ou ganho ponderal insuficiente, é necessário identificar as causas desse agravo, que podem ser, desde falta de acesso a alimentos até doenças infecciosas e parasitárias. Nesse contexto, medidas corretivas devem ser implementadas, incluindo a prescrição de suplementos, quando necessário.</p>
         </div>
+
+        <div class="full-bleed" style="background-color: #E0F1FE;">
+            <div class="row">
+                <div class="col-md-6" style="padding-left: 12vw;">
+                    <p>Nos casos mais graves, como aqueles com edema, emagrecimento acentuado, atrofia muscular, entre outros, devem ser encaminhados para a atenção especializada em nível secundário ou terciário, de acordo com a gravidade da condição e a presença de intercorrências.</p>
+                </div>
+                <div class="col-md-6" style="padding-right: 12vw;">
+                    <p>Nos casos mais graves, como aqueles com edema, emagrecimento acentuado, atrofia muscular, entre outros, devem ser encaminhados para a atenção especializada em nível secundário ou terciário, de acordo com a gravidade da condição e a presença de intercorrências.</p>
+                </div>
+                <div class="col-md-12" style="padding-left: 12vw; padding-right: 12vw; text-align: center;">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding: 0;">
+                        <img src="./img/etapas.svg" class="img-fluid" onmouseover="this.src='./img/etapas-hover.svg'" onmouseout="this.src='./img/etapas.svg'">
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+<!-- Modal Bootstrap -->
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true" data-total-pages="7">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+
+        <!-- Container das páginas -->
+        <div id="modalPages">
+          <div class="modal-page" id="modalPage1" style="position: relative; display: inline-block;">
+            <img src="img/modal101.svg" class="img-fluid">
+          </div>
+
+          <div class="modal-page d-none" id="modalPage2" style="position: relative; display: inline-block;">
+            <img src="img/modal102.svg" class="img-fluid">
+          </div>
+
+          <div class="modal-page d-none" id="modalPage3" style="position: relative; display: inline-block;">
+            <img src="img/modal103.svg" class="img-fluid">
+          </div>
+
+          <div class="modal-page d-none" id="modalPage4" style="position: relative; display: inline-block;">
+            <img src="img/modal104.svg" class="img-fluid">
+          </div>
+
+          <div class="modal-page d-none" id="modalPage5" style="position: relative; display: inline-block;">
+            <img src="img/modal105.svg" class="img-fluid">
+          </div>
+          
+          <div class="modal-page d-none" id="modalPage6" style="position: relative; display: inline-block;">
+            <img src="img/modal106.svg" class="img-fluid">
+          </div>
+
+          <div class="modal-page d-none" id="modalPage7" style="position: relative; display: inline-block;">
+            <img src="img/modal107.svg" class="img-fluid">
+          </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <img src="img/seta-voltar.svg" id="modalPrev" class="modal-arrow"
+             style="position: absolute; left: 23px; bottom: 23px; transform: translateY(-50%); cursor: pointer; width: 40px;">
+        <img src="img/seta-avancar.svg" id="modalNext" class="modal-arrow"
+             style="position: absolute; right: 23px; bottom: 23px; transform: translateY(-50%); cursor: pointer; width: 40px;">
+
+        <!-- Botão de fechar -->
+        <img src="../img/botao-x.svg"
+             style="position: absolute; top: 20px; right: 20px; width: 32px; height: 32px; cursor: pointer;"
+             onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+      </div>
+    </div>
+  </div>
 </div>

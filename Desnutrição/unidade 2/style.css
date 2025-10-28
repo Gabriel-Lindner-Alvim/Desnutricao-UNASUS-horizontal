@@ -1461,3 +1461,12 @@ p {
   color: #027EC7;
   font-size: 18px;
 }
+
+.full-bleed {
+  margin-top: 5vh;
+  width: 100vw;
+  background: #448F96;       /* cor que você quiser */
+  padding: 24px 0;           /* opcional: respiro vertical */
+  border-radius: 0;          /* se não quiser cantos arredondados */
+
+}
