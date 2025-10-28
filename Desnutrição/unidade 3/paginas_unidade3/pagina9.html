@@ -1,4 +1,4 @@
-<div class="container text-start" style="margin-top: 3vh;">
+<div class="container text-start">
   <div class="row">
     <div class="col-md-12 borda-inicial">
       <h3 style="color: rgba(70, 68, 69, 1);">Acompanhamento para recuperação e reabilitação do estado nutricional</h3>
@@ -13,10 +13,22 @@
         <b style="color: rgba(183, 61, 23, 1);">Clique no botão ao lado para mais informações.</b>
       </p>
     </div>
-    <div class="col-4">
+    <div class="col-4" style="position: relative;">
       <img data-bs-toggle="modal" data-bs-target="#ModalCriancas" src="../img/atencao.svg" alt=""
-        style="margin-top: 20px; cursor:pointer" onmouseover="this.src='../img/atencao-hover.svg'"
-        onmouseout="this.src='../img/atencao.svg'">
+        style="margin-top: 60px; cursor:pointer; position: relative; z-index: 2;"
+        onmouseover="this.src='../img/atencao-hover.svg'" onmouseout="this.src='../img/atencao.svg'">
+
+
+
+      <img src="img/flor-dropdown.svg" class="img-fluid" draggable="false" style="
+      position: absolute;
+      top: -10px;        
+      left:190px ;
+      transform: translateX(-50%) rotate(180deg);  
+      width: 180px;       
+      z-index: 1;        
+      opacity: 0.9;      
+    ">
     </div>
 
   </div>
@@ -39,7 +51,8 @@
         forma empática, sem julgamentos, focando na escuta ativa buscando entender suas limitações e exaltando os pontos
         positivos desse cuidado.
       </p>
-      <p>Entender as limitações da família, sobretudo do ponto de vista social, é necessário para garantir acolhimento e
+      <p style="margin-top: -20px;">Entender as limitações da família, sobretudo do ponto de vista social, é necessário
+        para garantir acolhimento e
         encaminhar aos serviços necessários com o objetivo de amenizar a situação de vulnerabilidade, quando possível.
       </p>
     </div>
