@@ -1,6 +1,6 @@
 
 /* ================== Config base ================== */
-const totalPaginas = 24;               // páginas 0..18
+const totalPaginas = 25;               // páginas 0..18
 const LAST_INDEX = totalPaginas;
 
 let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
@@ -232,7 +232,6 @@ async function carregarPagina(numero) {
     if (cardInicial) cardInicial.classList.add('active');
 
     // Contador + botões
-    prevBtn.hidden = (numero <= 0);
     nextBtn.hidden = (numero >= LAST_INDEX);
     atualizarContadorSlides();
 
@@ -363,6 +362,8 @@ prevBtn.addEventListener("click", () => {
     paginaAtual--;
     sessionStorage.setItem("paginaAtual", paginaAtual);
     carregarPagina(paginaAtual);
+  } else if (paginaAtual === 0) {
+    window.location.href = "../moodleface.html"
   }
 });
 nextBtn.addEventListener("click", () => {

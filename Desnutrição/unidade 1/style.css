@@ -458,7 +458,7 @@ p {
 }
 
 .accordion-body p {
-  text-align: center;
+  text-align: left;
 }
 
 .accordion-item {
