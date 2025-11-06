@@ -1,9 +1,15 @@
 
 /* ================== Config base ================== */
-const totalPaginas = 30;               // páginas 0..18
+const unidade = "un3"; // <── altere conforme a unidade atual (ex: un1, un2, un3...)
+const storageKey = `paginaAtual_${unidade}`; // chave exclusiva da unidade
+
+const totalPaginas = 29;
 const LAST_INDEX = totalPaginas;
 
-let paginaAtual = parseInt(sessionStorage.getItem("paginaAtual")) || 0;
+// cada unidade agora mantém sua própria "paginaAtual"
+let paginaAtual = parseInt(sessionStorage.getItem(storageKey)) || 0;
+
+
 const cachePaginas = new Map();        // HTML cache
 const svgCache = new Map();            // SVG cache
 const imagensPrecarregadas = window.imagensPrecarregadas || new Set();
@@ -235,7 +241,6 @@ async function carregarPagina(numero) {
     if (cardInicial) cardInicial.classList.add('active');
 
     // Contador + botões
-    prevBtn.hidden = (numero <= 0);
     nextBtn.hidden = (numero >= LAST_INDEX);
     atualizarContadorSlides();
 
@@ -444,16 +449,46 @@ area.addEventListener('animationend', (e) => {
 prevBtn.addEventListener("click", () => {
   if (paginaAtual > 0) {
     paginaAtual--;
-    sessionStorage.setItem("paginaAtual", paginaAtual);
+    sessionStorage.setItem(storageKey, paginaAtual);
     carregarPagina(paginaAtual);
+  } else if (paginaAtual === 0) {
+    // Vai para unidade anterior
+    const unidadeAnterior = "un2";
+    const storageKeyAnterior = `paginaAtual_${unidadeAnterior}`;
+    sessionStorage.setItem(storageKeyAnterior, 45); // ex: última página da un2
+    window.location.href = `../Unidade 2/${unidadeAnterior}.html`;
   }
 });
+
 nextBtn.addEventListener("click", () => {
   if (paginaAtual < LAST_INDEX) {
     paginaAtual++;
-    sessionStorage.setItem("paginaAtual", paginaAtual);
+    sessionStorage.setItem(storageKey, paginaAtual);
     carregarPagina(paginaAtual);
   }
+});
+
+
+/* ================== Reset da página ao trocar de unidade ================== */
+// Este bloco garante que qualquer link <a> com uma imagem ir_unX (ir_un1, ir_un2, etc.)
+// sempre resete a paginaAtual antes do redirecionamento.
+area.addEventListener('click', (ev) => {
+  const linkUn = ev.target.closest('a.ir-unidade');
+  if (linkUn && linkUn.querySelector("img[src*='ir_un']")) {
+    // Detecta automaticamente o número da unidade alvo
+    const href = linkUn.getAttribute('href');
+    const match = href.match(/unidade\s*(\d+)/i);
+    if (match) {
+      const destino = `un${match[1]}`;
+      const destinoKey = `paginaAtual_${destino}`;
+      sessionStorage.setItem(destinoKey, 0); // reseta destino
+    }
+
+    currentController?.abort();
+    return; // deixa o <a> seguir o fluxo normal
+  }
+
+  // (restante da sua delegação de eventos)
 });
 
 /* ================== Start ================== */
