@@ -16,11 +16,11 @@
                     saúde
                     deve conhecer as recomendações alimentares e identificar possibilidades de contribuir para cuidado
                     nutricional da população.</p>
-                <p style="font-size: 24px; text-align: center; color: white;">Agora, vamos conhecer mais sobre a
+                <a type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas"><p style="font-size: 24px; text-align: center; color: #FBE88C;">Agora, vamos conhecer mais sobre a
                     abordagem
                     dietética na
                     desnutrição leve ou moderada. Acompanhe o
-                    conteúdo a seguir.</p>
+                    conteúdo a seguir.</p> </a>
             </div>
             <img id="img-reveal" data-target="#info1734" src="img/Group 1734.svg" alt=""
                 style="margin-top: 20px; cursor:pointer" onmouseover="this.src='img/Group 1734-hover.svg'"
@@ -46,4 +46,23 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+         <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/modal4.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
