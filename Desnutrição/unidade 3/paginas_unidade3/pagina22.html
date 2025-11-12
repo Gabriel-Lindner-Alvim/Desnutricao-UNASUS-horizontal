@@ -57,21 +57,21 @@
           </div>
           <div class="row">
             <div class="col-6 text-center">
-              <img data-bs-toggle="modal" data-bs-target="#ModalCriancas3" src="img/Property 1=Default.svg" alt=""
+              <img data-bs-toggle="modal" data-bs-target="#submodal" src="img/Property 1=Default.svg" alt=""
                 style="margin-top: 20px; cursor:pointer;" onmouseover="this.src='img/Property 1=Variant2.svg'"
                 onmouseout="this.src='img/Property 1=Default.svg'">
-              <img data-bs-toggle="modal" data-bs-target="#ModalCriancas4" src="img/Property 1=Default (1).svg" alt=""
+              <img data-bs-toggle="modal" data-bs-target="#submodal2" src="img/Property 1=Default (1).svg" alt=""
                 style="margin-top: 20px; cursor:pointer;" onmouseover="this.src='img/Property 1=Variant2 (1).svg'"
                 onmouseout="this.src='img/Property 1=Default (1).svg'">
-              <img data-bs-toggle="modal" data-bs-target="#ModalCriancas5" src="img/Property 1=Default (2).svg" alt=""
+              <img data-bs-toggle="modal" data-bs-target="#submodal3" src="img/Property 1=Default (2).svg" alt=""
                 style="margin-top: 20px; cursor:pointer;" onmouseover="this.src='img/Property 1=Variant2 (2).svg'"
                 onmouseout="this.src='img/Property 1=Default (2).svg'">
             </div>
             <div class="col-6 text-center">
-              <img data-bs-toggle="modal" data-bs-target="#ModalCriancas6" src="img/Property 1=Default (3).svg" alt=""
+              <img data-bs-toggle="modal" data-bs-target="#submodal4" src="img/Property 1=Default (3).svg" alt=""
                 style="margin-top: 20px; cursor:pointer;" onmouseover="this.src='img/Property 1=Variant2 (3).svg'"
-                onmouseout="this.src='img/Property 1=Default (3).svg'"> <img data-bs-toggle="modal"
-                data-bs-target="#ModalCriancas7" src="img/Property 1=Default (4).svg" alt=""
+                onmouseout="this.src='img/Property 1=Default (3).svg'"> 
+                <img data-bs-toggle="modal" data-bs-target="#submodal5" src="img/Property 1=Default (4).svg" alt=""
                 style="margin-top: 20px; cursor:pointer;" onmouseover="this.src='img/Property 1=Variant2 (4).svg'"
                 onmouseout="this.src='img/Property 1=Default (4).svg'">
             </div>
@@ -91,7 +91,7 @@
 </div>
 
 
-<div class="modal fade" id="ModalCriancas3" tabindex="-1" aria-hidden="true">
+<div class="modal fade submodal" id="submodal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content" style="background: transparent; border: none;">
       <div class="modal-body position-relative p-0"
@@ -107,7 +107,11 @@
           </ul> <!-- Close button in top-right of image -->
           <img src="../img/botao-x2.svg"
             style="position: absolute; top: 5px; right: 0px; width: 32px; height: 32px; cursor: pointer;"
-            onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas3')).hide();">
+            onclick="
+            const sub = bootstrap.Modal.getInstance(document.getElementById('submodal'));
+            if (sub) sub.hide();
+            const subModal = new bootstrap.Modal(document.getElementById('ModalCriancas2'));
+            subModal.show();">
         </div>
       </div>
     </div>
@@ -115,7 +119,7 @@
 </div>
 
 
-<div class="modal fade" id="ModalCriancas4" tabindex="-1" aria-hidden="true">
+<div class="modal fade submodal" id="submodal2" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content" style="background: transparent; border: none;">
       <div class="modal-body position-relative p-0"
@@ -131,7 +135,11 @@
           </ul> <!-- Close button in top-right of image -->
           <img src="../img/botao-x2.svg"
             style="position: absolute; top: 5px; right: 0px; width: 32px; height: 32px; cursor: pointer;"
-            onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas4')).hide();">
+            onclick="
+            const sub2 = bootstrap.Modal.getInstance(document.getElementById('submodal2'));
+            if (sub2) sub2.hide();
+            const subModal2 = new bootstrap.Modal(document.getElementById('ModalCriancas2'));
+            subModal2.show();">
         </div>
       </div>
     </div>
@@ -140,7 +148,7 @@
 
 
 
-<div class="modal fade" id="ModalCriancas5" tabindex="-1" aria-hidden="true">
+<div class="modal fade submodal" id="submodal3" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content" style="background: transparent; border: none;">
       <div class="modal-body position-relative p-0"
@@ -156,7 +164,11 @@
           </ul> <!-- Close button in top-right of image -->
           <img src="../img/botao-x2.svg"
             style="position: absolute; top: 5px; right: 0px; width: 32px; height: 32px; cursor: pointer;"
-            onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas5')).hide();">
+            onclick="
+            const sub3 = bootstrap.Modal.getInstance(document.getElementById('submodal3'));
+            if (sub3) sub3.hide();
+            const subModal3 = new bootstrap.Modal(document.getElementById('ModalCriancas2'));
+            subModal3.show();">
         </div>
       </div>
     </div>
@@ -164,7 +176,7 @@
 </div>
 
 
-<div class="modal fade" id="ModalCriancas6" tabindex="-1" aria-hidden="true">
+<div class="modal fade submodal" id="submodal4" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content" style="background: transparent; border: none;">
       <div class="modal-body position-relative p-0"
@@ -180,14 +192,18 @@
           </ul> <!-- Close button in top-right of image -->
           <img src="../img/botao-x2.svg"
             style="position: absolute; top: 5px; right: 0px; width: 32px; height: 32px; cursor: pointer;"
-            onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas6')).hide();">
+            onclick="
+            const sub4 = bootstrap.Modal.getInstance(document.getElementById('submodal4'));
+            if (sub4) sub4.hide();
+            const subModal4 = new bootstrap.Modal(document.getElementById('ModalCriancas2'));
+            subModal4.show();">
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="ModalCriancas7" tabindex="-1" aria-hidden="true">
+<div class="modal fade submodal" id="submodal5" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content" style="background: transparent; border: none;">
       <div class="modal-body position-relative p-0"
@@ -203,7 +219,11 @@
           </ul> <!-- Close button in top-right of image -->
           <img src="../img/botao-x2.svg"
             style="position: absolute; top: 0px; right: 0px; width: 32px; height: 32px; cursor: pointer;"
-            onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas7')).hide();">
+            onclick="
+            const sub5 = bootstrap.Modal.getInstance(document.getElementById('submodal5'));
+            if (sub5) sub5.hide();
+            const subModal5 = new bootstrap.Modal(document.getElementById('ModalCriancas2'));
+            subModal5.show();">
         </div>
       </div>
     </div>

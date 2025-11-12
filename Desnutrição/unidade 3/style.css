@@ -233,6 +233,7 @@ ul li.bullet-vermelho::before {
 
 ul li.bullet-laranja::before {
   background-image: url('../img/bullet-laranja.svg');
+  top: 1.1rem;
 }
 .branco {
   color: white;

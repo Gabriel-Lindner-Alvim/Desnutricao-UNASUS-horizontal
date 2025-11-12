@@ -182,16 +182,15 @@ h3, li{
 	margin-bottom: 20px !important;
 }
 
- ul li {
+  ul li {
 	margin: 0;
-	padding-left: 50px;
 	position: relative;
+  padding-left: 50px;
 	font-family: 'Montserrat', sans-serif;
-	font-weight: bold;
-	font-size: 24px;
+	font-size: 18px;
 	line-height: 120% !important;
 	list-style: none;
-	
+	text-align: justify;
   }
   
   ul li::before {
@@ -200,7 +199,7 @@ h3, li{
 	left: 0;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 16px;
+	width: 30px;
 	height: 16px;
 	background-image: url('../img/bullet.svg');
 	background-size: contain;
@@ -213,6 +212,14 @@ h3, li{
 
 ul li.bullet-amarelo::before {
   background-image: url('../img/bullet-amarelo.svg');
+}
+ul li.bullet-vermelho::before {
+  background-image: url('../img/bullet-vermelho.svg');
+}
+
+ul li.bullet-laranja::before {
+  background-image: url('../img/bullet-laranja.svg');
+  top: 0.7rem;
 }
 
 .branco {
@@ -229,18 +236,38 @@ ul li.bullet-amarelo::before {
   .custom-ol {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  font-weight: normal;
   color: #333;
-  list-style: decimal;
-  padding-left: 40px; /* espaço pro número */
+  counter-reset: item; /* inicializa contador */
+  list-style: none; /* remove o marcador padrão */
+  padding-left: 0;
 }
 
-.custom-ol li::marker {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;       /* Tamanho do número */
-  color: #0367a5;         /* Cor do número */
-  font-weight: bold;       /* Negrito */
+.custom-ol li {
+  counter-increment: item; /* incrementa contador */
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 50px; /* espaço pro círculo */
 }
+
+.custom-ol li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 1.1rem;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-color: #0367A5; /* cor azul */
+  color: #fff; /* número branco */
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  border-radius: 50%; /* deixa o fundo circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .custom-ol-2 {
   font-family: 'Montserrat', sans-serif;
@@ -401,10 +428,40 @@ p {
   z-index: -1;
 }
 
+.imagem-fixa-superior-meio-esquerda {
+  position: fixed;
+  top: 0;
+  left: 30%;
+  width: 15vw; /* ajuste conforme quiser */
+  height: auto;
+  z-index: -1;
+  margin-top: 5vh;
+}
+
+.imagem-fixa-superior-direita {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15vw; /* ajuste conforme quiser */
+  height: auto;
+  z-index: -1;
+}
+
 .imagem-fixa-meio-esquerda {
   position: fixed;
   top: 80;
   left: 0;
+  width: 15vw; /* ajuste conforme quiser */
+  height: auto;
+  z-index: -1;
+  transform: rotate(-20deg);
+  margin-left: -3vw;
+}
+
+.imagem-fixa-meio-direita {
+  position: fixed;
+  top: 50;
+  right: 0;
   width: 15vw; /* ajuste conforme quiser */
   height: auto;
   z-index: -1;

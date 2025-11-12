@@ -367,8 +367,11 @@ prevBtn.addEventListener("click", () => {
     sessionStorage.setItem("paginaAtual", paginaAtual);
     carregarPagina(paginaAtual);
   } else if (paginaAtual === 0) {
-    sessionStorage.setItem(storageKey, 0);
-    window.location.href = "../moodleface.html"
+    // Vai para unidade anterior
+    const unidadeAnterior = "partida";
+    const storageKeyAnterior = `paginaAtual_${unidadeAnterior}`;
+    sessionStorage.setItem(storageKeyAnterior, 1); // ex: última página da un2
+    window.location.href = `../partida/${unidadeAnterior}.html`;
   }
 });
 nextBtn.addEventListener("click", () => {
@@ -400,6 +403,30 @@ area.addEventListener('click', (ev) => {
 
   // (restante da sua delegação de eventos)
 });
+
+
+/* ================== Reset da página ao trocar de unidade ================== */
+// Este bloco garante que qualquer link <a> com uma imagem ir_unX (ir_un1, ir_un2, etc.)
+// sempre resete a paginaAtual antes do redirecionamento.
+area.addEventListener('click', (ev) => {
+  const linkUn = ev.target.closest('a.ir-unidade');
+  if (linkUn && linkUn.querySelector("img[src*='ir_un']")) {
+    // Detecta automaticamente o número da unidade alvo
+    const href = linkUn.getAttribute('href');
+    const match = href.match(/unidade\s*(\d+)/i);
+    if (match) {
+      const destino = `un${match[1]}`;
+      const destinoKey = `paginaAtual_${destino}`;
+      sessionStorage.setItem(destinoKey, 0); // reseta destino
+    }
+
+    currentController?.abort();
+    return; // deixa o <a> seguir o fluxo normal
+  }
+
+  // (restante da sua delegação de eventos)
+});
+
 
 /* ================== Start ================== */
 carregarPagina(paginaAtual);
