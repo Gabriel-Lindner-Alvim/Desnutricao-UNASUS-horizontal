@@ -265,7 +265,7 @@ async function carregarPagina(numero) {
     if (cardInicial) cardInicial.classList.add('active');
 
     // Contador + botões
-    nextBtn.hidden = (numero >= LAST_INDEX);
+  
     atualizarContadorSlides();
 
     // Carrega SVGs declarados
@@ -492,6 +492,8 @@ nextBtn.addEventListener("click", () => {
     paginaAtual++;
     sessionStorage.setItem(storageKey, paginaAtual);
     carregarPagina(paginaAtual);
+  } else if (paginaAtual === LAST_INDEX) {
+    window.location.href = "https://unasus-quali.moodle.ufsc.br/course/view.php?id=102";
   }
 });
 
