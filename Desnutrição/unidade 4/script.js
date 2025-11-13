@@ -483,7 +483,7 @@ prevBtn.addEventListener("click", () => {
     const unidadeAnterior = "un3";
     const storageKeyAnterior = `paginaAtual_${unidadeAnterior}`;
     sessionStorage.setItem(storageKeyAnterior, 29); // ex: última página da un2
-    window.location.href = `../Unidade 3/${unidadeAnterior}.html`;
+    window.location.href = `../unidade 3/${unidadeAnterior}.html`;
   }
 });
 
