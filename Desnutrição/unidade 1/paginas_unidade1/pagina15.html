@@ -1,11 +1,31 @@
 <div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw;">
   <div class="row" style="margin-bottom: 5vh;">
-    <div class="col-md-12 borda-inicial">
-
-      <div  style="display: flex; justify-content: center; align-items: center; width: 100%; height: auto;">
-        <img src="img/un1/Frame 889.svg" class="img-fluid" draggable="false">
-      </div>
+    <div class="col-md-12 borda-inicial" style="text-align: center;">
+      <p>Quando analisamos grupos populacionais em situação de vulnerabilidade social, a exemplo de populações indígenas e outros povos e comunidades tradicionais, os dados mostram uma alta prevalência de baixa estatura entre crianças, que é a forma mais comum de desnutrição no Brasil. Neste sentido, destaca-se a importância de reconhecer a desnutrição enquanto resultado da ação de determinantes sinérgicos - fatores que favorecem, ao mesmo tempo, o surgimento de todas as formas de má nutrição – e o desenvolvimento de um olhar interseccional para compreender que a sobreposição de desvantagens e discriminações repercutem sobre a situação alimentar e nutricional das pessoas.</p>
       
+      <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCriancas" style="background: none; border: none; padding: 0;">
+        <img src="./img/un1/slide15.svg" width="100%" style="max-width: 1300px;" class="img-fluid aumentar" onmouseover="this.src='img/un1/slide15-hover.svg'" onmouseout="this.src='img/un1/slide15.svg'">
+      </button>
     </div> 
+  </div>
+</div>
+
+
+<div class="modal fade" id="ModalCriancas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/un1/slide15-modal.svg" class="img-fluid">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; cursor: pointer;"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas')).hide();">
+        </div>
+      </div>
+    </div>
   </div>
 </div>
