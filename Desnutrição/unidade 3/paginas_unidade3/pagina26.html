@@ -52,9 +52,11 @@
                 está conseguindo realizar a recuperação nutricional e fazer projeções.</p>
         </div>
         <div class="col-4 text-center">
+            <a href="https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_gestante_8ed_rev.pdf" target="_blank">
             <img data-bs-toggle="modal" data-bs-target="" src="img/image 26.svg" alt=""
                 style="position:relative;top: -20px; cursor:pointer;" onmouseover="this.src='img/image 26-hover.svg'"
                 onmouseout="this.src='img/image 26.svg'">
+            </a>
         </div>
     </div>
     <div class="row">
@@ -65,7 +67,7 @@
         </div>
 
         <div class="col-md-12" style="text-align: center;">
-          <img src="../img/unfinal.svg" style="max-width: 1300px;" width="100%" class="img-fluid" draggable="false">
+          <img src="../img/unfinal.svg" style="max-width: 1300px; margin-top: -5vh;" width="100%" class="img-fluid" draggable="false">
         </div>
     </div>
 </div>
@@ -82,11 +84,11 @@
 
                     <h3 style="color: #075585;"> ORIENTAÇÕES NUTRICIONAIS PARA GESTANTES</h3>
                     <div class="text-center" style="margin: 30px 0px !important;position: relative;">
-                        <img data-bs-toggle="modal" data-bs-target="#ModalCriancas3" src="img/Group 1746.svg" alt=""
+                        <img data-bs-toggle="modal" data-bs-target="#submodal" src="img/Group 1746.svg" alt=""
                             style=" cursor:pointer; position: relative ;z-index: 2;"
                             onmouseover="this.src='img/Group 1746-hover.svg'"
                             onmouseout="this.src='img/Group 1746.svg'">
-                        <img data-bs-toggle="modal" data-bs-target="#ModalCriancas4" src="img/Group 1686.svg" alt=""
+                        <img data-bs-toggle="modal" data-bs-target="#submodal2" src="img/Group 1686.svg" alt=""
                             style=" cursor:pointer; position: relative;z-index: 2;"
                             onmouseover="this.src='img/Group 1686-hover.svg'"
                             onmouseout="this.src='img/Group 1686.svg'">
@@ -122,7 +124,7 @@
                         que oferecem os nutrientes necessários para uma gestação saudável.</p>
 
                     <div class="text-center" style="position: relative;">
-                        <img data-bs-toggle="modal" data-bs-target="#ModalCriancas5" src="img/Group 1748.svg" alt=""
+                        <img data-bs-toggle="modal" data-bs-target="#submodal3" src="img/Group 1748.svg" alt=""
                             style=" cursor:pointer; position: relative; z-index: 2;right: 50px;"
                             onmouseover="this.src='img/Group 1748-hover.svg'"
                             onmouseout="this.src='img/Group 1748.svg'">
@@ -146,7 +148,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="ModalCriancas3" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="submodal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content" style="background: transparent; border: none;">
             <div class="modal-body position-relative p-0"
@@ -159,7 +161,11 @@
 
                     <img src="../img/botao-x.svg"
                         style="position: absolute; top: -5px; right: -20px; width: 32px; height: 32px; cursor: pointer;"
-                        onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas3')).hide();">
+                        onclick="
+                        const sub = bootstrap.Modal.getInstance(document.getElementById('submodal'));
+                        if (sub) sub.hide();
+                        const subModal = new bootstrap.Modal(document.getElementById('ModalCriancas2'));
+                        subModal.show();">
                 </div>
             </div>
         </div>
@@ -167,7 +173,7 @@
 </div>
 
 
-<div class="modal fade" id="ModalCriancas4" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="submodal2" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content" style="background: transparent; border: none;">
             <div class="modal-body position-relative p-0"
@@ -180,7 +186,11 @@
 
                     <img src="../img/botao-x.svg"
                         style="position: absolute; top: -5px; right: -20px; width: 32px; height: 32px; cursor: pointer;"
-                        onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas4')).hide();">
+                        onclick="
+                        const sub2 = bootstrap.Modal.getInstance(document.getElementById('submodal2'));
+                        if (sub2) sub2.hide();
+                        const subModal2 = new bootstrap.Modal(document.getElementById('ModalCriancas2'));
+                        subModal2.show();">
                 </div>
             </div>
         </div>
@@ -188,7 +198,7 @@
 </div>
 
 
-<div class="modal fade" id="ModalCriancas5" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="submodal3" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content" style="background: transparent; border: none;">
             <div class="modal-body position-relative p-0"
@@ -201,7 +211,11 @@
 
                     <img src="../img/botao-x.svg"
                         style="position: absolute; top: -5px; right: -20px; width: 32px; height: 32px; cursor: pointer;"
-                        onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas5')).hide();">
+                        onclick="
+                        const sub3 = bootstrap.Modal.getInstance(document.getElementById('submodal3'));
+                        if (sub3) sub3.hide();
+                        const subModal3 = new bootstrap.Modal(document.getElementById('ModalCriancas2'));
+                        subModal3.show();">
                 </div>
             </div>
         </div>

@@ -143,7 +143,7 @@
                 valor energético de 75 kcal/100 ml.</p>
             </div>
             <div class="col-6 text-center">
-              <img data-bs-toggle="modal" data-bs-target="#ModalCriancas3" src="img/Group 1626.svg" alt=""
+              <img data-bs-toggle="modal" data-bs-target="#submodal" src="img/Group 1626.svg" alt=""
                 style=" cursor:pointer; margin-top: 20px;" onmouseover="this.src='img/Group 1626.svg'"
                 onmouseout="this.src='img/Group 1626.svg'">
             </div>
@@ -163,7 +163,7 @@
 </div>
 
 
-<div class="modal fade" id="ModalCriancas3" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="submodal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content" style="background: transparent; border: none;">
       <div class="modal-body position-relative p-0"
@@ -182,8 +182,12 @@
 
           <img src="../img/botao-x2.svg"
             style="position: absolute; top: 15px; right: -50px; width: 32px; height: 32px; cursor: pointer;"
-            onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas3')).hide();">
-        </div>
+            onclick="
+            const sub = bootstrap.Modal.getInstance(document.getElementById('submodal'));
+            if (sub) sub.hide();
+            const subModal = new bootstrap.Modal(document.getElementById('ModalCriancas2'));
+            subModal.show();">
+</div>
       </div>
     </div>
   </div>

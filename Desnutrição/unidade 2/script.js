@@ -229,6 +229,15 @@ async function carregarPagina(numero) {
     if (myToken !== loadToken) return; // carregamento ultrapassado
 
     area.innerHTML = html;
+    
+        // --- Força topo após carregar a página dinâmica ---
+    setTimeout(() => {
+      // volta pro topo da área
+      area.scrollTop = 0;
+
+      // volta pro topo da página inteira
+      window.scrollTo(0, 0);
+    }, 0);
 
     // Ativa animações adicionando classes (uma vez, no frame atual)
     area.querySelectorAll(".animar-slide-direita").forEach(el => el.classList.add("slide-in-right"));
@@ -398,18 +407,18 @@ area.addEventListener('click', (ev) => {
     return;
   }
 
-  const trigger = ev.target.closest('#img-reveal');
-  if (trigger) {
-    const targetSel = trigger.getAttribute('data-target');
-    const target = area.querySelector(targetSel);
-    if (target) {
-      target.classList.toggle('is-open');
-      const open = target.classList.contains('is-open');
-      target.setAttribute('aria-hidden', String(!open));
-      trigger.style.display = "none";
-    }
-    return;
+ const trigger = ev.target.closest('#img-reveal');
+if (trigger) {
+  const targetSel = trigger.getAttribute('data-target');
+  const target = area.querySelector(targetSel);
+  if (target) {
+    const isHidden = getComputedStyle(target).display === 'none';
+    // alterna entre mostrar e esconder
+    target.style.display = isHidden ? 'block' : 'none';
+    target.setAttribute('aria-hidden', String(!isHidden));
   }
+  return;
+}
 
   const card = ev.target.closest('.thecard');
   if (card) {

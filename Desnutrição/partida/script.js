@@ -171,7 +171,16 @@ async function carregarPagina(numero) {
     const html = await getPaginaHTML(numero, `paginas_partida/pagina${numero}.html`, currentController.signal);
     if (myToken !== loadToken) return; // carregamento ultrapassado
 
-    area.innerHTML = html;
+     area.innerHTML = html;
+
+        // --- Força topo após carregar a página dinâmica ---
+    setTimeout(() => {
+      // volta pro topo da área
+      area.scrollTop = 0;
+
+      // volta pro topo da página inteira
+      window.scrollTo(0, 0);
+    }, 0);
 
     // Ativa animações adicionando classes (uma vez, no frame atual)
     area.querySelectorAll(".animar-slide-direita").forEach(el => el.classList.add("slide-in-right"));

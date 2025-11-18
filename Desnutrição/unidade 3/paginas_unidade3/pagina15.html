@@ -63,7 +63,7 @@
                 vômitos intensos, íleo paralítico e em outras situações pouco frequentes, a reidratação poderá ser feita
                 por via intravenosa.
                 Nestes casos, recomenda-se usar a mesma proporção de solução salina 0,9% e soro glicosado 10% (1:1). A
-                solução final terá 0,45% de solução salina e 5% de glicose.
+                solução final terá 0,45% de solução salina e 5% de glicose. <b> Clique no botão ao lado para acessar o destaque.</b>
             </p>
         </div>
         <div class="col-4 text-center">
@@ -76,8 +76,8 @@
 
         <div class="col-12"
             style="position: relative;z-index: 2;;background-color: rgba(240, 138, 71, 1); border-radius: 24px; padding: 24px !important; margin:40px 0px; margin-top: 40px !important;">
-            <p style="color: white;"><b>Choque séptico</b></p>
-            <p style="color: white;">O choque séptico é como se fosse uma "pane geral" no corpo causada por uma infecção
+            <p style="color: white; font-weight: 999; margin-bottom: 0; font-size: 20px;">Choque séptico</p>
+            <p style="color: white; margin-bottom: 0;">O choque séptico é como se fosse uma "pane geral" no corpo causada por uma infecção
                 muito forte. </p>
         </div>
 
@@ -198,7 +198,7 @@
                             </p>
                         </div>
                         <div class="col-6 text-center">
-                            <img data-bs-toggle="modal" data-bs-target="#ModalCriancas6" src="img/Frame 1561.svg" alt=""
+                            <img data-bs-toggle="modal" data-bs-target="#submodal" src="img/Frame 1561.svg" alt=""
                                 style="margin-bottom: 20px; cursor:pointer;" onmouseover="this.src='img/Frame 1561.svg'"
                                 onmouseout="this.src='img/Frame 1561.svg'">
                         </div>
@@ -215,17 +215,17 @@
 
                     <div class="row align-items-center">
                         <div class="col-6 text-center">
-                            <img data-bs-toggle="modal" data-bs-target="#ModalCriancas7" src="img/Frame 1562-2.svg"
+                            <img data-bs-toggle="modal" data-bs-target="#submodal2" src="img/Frame 1562-2.svg"
                                 alt="" style="margin-bottom: 20px; cursor:pointer;"
                                 onmouseover="this.src='img/Frame 1562-2.svg'"
                                 onmouseout="this.src='img/Frame 1562-2.svg'">
                         </div>
                         <div class="col-6 text-center">
-                            <img data-bs-toggle="modal" data-bs-target="#ModalCriancas8" src="img/Group 1737.svg" alt=""
+                            <img data-bs-toggle="modal" data-bs-target="#submodal3" src="img/Group 1737.svg" alt=""
                                 style="margin-bottom: 20px; cursor:pointer;"
                                 onmouseover="this.src='img/Group 1737-hover.svg'"
                                 onmouseout="this.src='img/Group 1737.svg'">
-                            <img data-bs-toggle="modal" data-bs-target="#ModalCriancas9" src="img/Group 1733.svg" alt=""
+                            <img data-bs-toggle="modal" data-bs-target="#submodal4" src="img/Group 1733.svg" alt=""
                                 style="margin-bottom: 20px; cursor:pointer;"
                                 onmouseover="this.src='img/Group 1733-hover.svg'"
                                 onmouseout="this.src='img/Group 1733.svg'">
@@ -278,7 +278,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="ModalCriancas6" tabindex="-1" aria-hidden="true">
+<div class="modal fade submodal" id="submodal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content" style="background: transparent; border: none;">
             <div class="modal-body position-relative p-0"
@@ -297,14 +297,18 @@
                     </ul> <!-- Close button in top-right of image -->
                     <img src="../img/botao-x2.svg"
                         style="position: absolute; top: 15px; right: 30px; width: 32px; height: 32px; cursor: pointer;"
-                        onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas6')).hide();">
+                        onclick="
+                        const sub = bootstrap.Modal.getInstance(document.getElementById('submodal'));
+                        if (sub) sub.hide();
+                        const subModal = new bootstrap.Modal(document.getElementById('ModalCriancas4'));
+                        subModal.show();">
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="ModalCriancas7" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="submodal2" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content" style="background: transparent; border: none;">
             <div class="modal-body position-relative p-0"
@@ -323,7 +327,11 @@
                     </ul> <!-- Close button in top-right of image -->
                     <img src="../img/botao-x2.svg"
                         style="position: absolute; top: 15px; right: 30px; width: 32px; height: 32px; cursor: pointer;"
-                        onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas7')).hide();">
+                        onclick="
+                        const sub2 = bootstrap.Modal.getInstance(document.getElementById('submodal2'));
+                        if (sub2) sub2.hide();
+                        const subModal2 = new bootstrap.Modal(document.getElementById('ModalCriancas4'));
+                        subModal2.show();">
                 </div>
             </div>
         </div>
@@ -331,7 +339,7 @@
 </div>
 
 
-<div class="modal fade" id="ModalCriancas8" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="submodal3" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content" style="background: transparent; border: none;">
             <div class="modal-body position-relative p-0"
@@ -383,14 +391,18 @@
                     </ul> <!-- Close button in top-right of image -->
                     <img src="../img/botao-x2.svg"
                         style="position: absolute; top: 15px; right: 30px; width: 32px; height: 32px; cursor: pointer;"
-                        onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas8')).hide();">
+                        onclick="
+                        const sub3 = bootstrap.Modal.getInstance(document.getElementById('submodal3'));
+                        if (sub3) sub3.hide();
+                        const subModal3 = new bootstrap.Modal(document.getElementById('ModalCriancas4'));
+                        subModal3.show();">
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="ModalCriancas9" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="submodal4" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content" style="background: transparent; border: none;">
             <div class="modal-body position-relative p-0"
@@ -436,7 +448,11 @@
                     </ul> <!-- Close button in top-right of image -->
                     <img src="../img/botao-x2.svg"
                         style="position: absolute; top: 15px; right: 30px; width: 32px; height: 32px; cursor: pointer;"
-                        onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCriancas9')).hide();">
+                        onclick="
+                        const sub4 = bootstrap.Modal.getInstance(document.getElementById('submodal4'));
+                        if (sub4) sub4.hide();
+                        const subModal4 = new bootstrap.Modal(document.getElementById('ModalCriancas4'));
+                        subModal4.show();">
                 </div>
             </div>
         </div>

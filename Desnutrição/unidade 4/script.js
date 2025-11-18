@@ -229,6 +229,16 @@ async function carregarPagina(numero) {
 
     area.innerHTML = html;
 
+    
+    // --- Força topo após carregar a página dinâmica ---
+    setTimeout(() => {
+      // volta pro topo da área
+      area.scrollTop = 0;
+
+      // volta pro topo da página inteira
+      window.scrollTo(0, 0);
+    }, 0);
+
     function ajustarAlturaFullBleed() {
       const fullBleed = document.querySelector('.full-bleed');
       if (!fullBleed) return;
