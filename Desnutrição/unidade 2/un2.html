@@ -21,16 +21,73 @@
     <!-- lado direito -->
     <div class="header-container">
       <h5 class="un">Un2</h5>
-      <div class="dropdown">
-        <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="../img/Group 30.svg" class="hamburguer dropdown-toggle" alt="Menu">
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end custom-dropdown">
-          <li class="no-bullet"><a class="dropdown-item" href="#">Livro do curso</a></li>
-          <li class="no-bullet"><a class="dropdown-item" href="#">Tomada de Opinião</a></li>
-        </ul>
+      <div style="position: relative; display: inline-block;">
+  
+        <!-- Botão / Imagem trigger -->
+        <img id="img-reveal" 
+            data-target="#menuReveal"
+            src="../img/Group 30.svg" 
+            class="hamburguer" 
+            alt="Menu"
+            style="width: 40px; cursor: pointer;">
+
+        <!-- Box revelado -->
+        <div id="menuReveal" 
+              aria-hidden="true"
+              style="
+                  display: none;
+                  position: absolute;
+                  top: 50px;
+                  right: 0;
+                  background: white;
+                  border-radius: 14px;
+                  padding: 15px 20px;
+                  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+                  min-width: 240px;
+                  z-index: 9999;
+              ">
+
+            <a href="https://unasus-quali.moodle.ufsc.br/course/view.php?id=102" style="text-decoration:none;color:#0367A5;font-weight:600;display:block;margin-bottom:12px;">
+              Página Inicial
+            </a>
+
+            <a href="../partida/partida.html" style="text-decoration:none;color:#0367A5;font-weight:600;display:block;margin-bottom:12px;">
+              Sobre o Curso
+            </a>
+
+            <a href="../unidade 1/un1.html" style="text-decoration:none;color:#0367A5;font-weight:600;display:block;margin-bottom:12px;">
+              Unidade 1
+            </a>
+
+            <a href="../unidade 2/un2.html" style="text-decoration:none;color:#0367A5;font-weight:600;display:block;margin-bottom:12px;">
+               Unidade 2
+            </a>
+
+            <a href="../unidade 3/un3.html" style="text-decoration:none;color:#0367A5;font-weight:600;display:block;margin-bottom:12px;">
+               Unidade 3
+            </a>
+
+            <a href="../unidade 4/un4.html" style="text-decoration:none;color:#0367A5;font-weight:600;display:block;margin-bottom:12px;">
+               Unidade 4
+            </a>
+
+            <a href="../trilha/trilha.html" style="text-decoration:none;color:#0367A5;font-weight:600;display:block;margin-bottom:12px;">
+               Questões Avaliativas
+            </a>
+
+            <a href="https://unasus-quali.moodle.ufsc.br/mod/questionnaire/view.php?id=1804" style="text-decoration:none;color:#0367A5;font-weight:600;display:block;margin-bottom:12px;">
+               Tomada de Opinião
+            </a>
+
+            <a href="#" style="text-decoration:none;color:#0367A5;font-weight:600;display:block;">
+               Livro do Curso
+            </a>
+
+          </div>
+
       </div>
     </div>
+
   </header>
 
   <button class="seta esquerda" id="prevBtn">

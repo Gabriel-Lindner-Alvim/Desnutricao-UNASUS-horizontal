@@ -2,7 +2,7 @@
 const unidade = "un4"; // <── altere conforme a unidade atual (ex: un1, un2, un3...)
 const storageKey = `paginaAtual_${unidade}`; // chave exclusiva da unidade
 
-const totalPaginas = 37;
+const totalPaginas = 36;
 const LAST_INDEX = totalPaginas;
 
 // cada unidade agora mantém sua própria "paginaAtual"
@@ -275,7 +275,7 @@ async function carregarPagina(numero) {
     if (cardInicial) cardInicial.classList.add('active');
 
     // Contador + botões
-  
+    nextBtn.hidden = (numero >= LAST_INDEX);
     atualizarContadorSlides();
 
     // Carrega SVGs declarados
@@ -502,33 +502,53 @@ nextBtn.addEventListener("click", () => {
     paginaAtual++;
     sessionStorage.setItem(storageKey, paginaAtual);
     carregarPagina(paginaAtual);
-  } else if (paginaAtual === LAST_INDEX) {
-    window.location.href = "https://unasus-quali.moodle.ufsc.br/course/view.php?id=102";
-  }
+  } 
 });
 
 
-/* ================== Reset da página ao trocar de unidade ================== */
-// Este bloco garante que qualquer link <a> com uma imagem ir_unX (ir_un1, ir_un2, etc.)
-// sempre resete a paginaAtual antes do redirecionamento.
+/* ================== Reset ao clicar no link do questionário ================== */
 area.addEventListener('click', (ev) => {
   const linkUn = ev.target.closest('a.ir-unidade');
-  if (linkUn && linkUn.querySelector("img[src*='ir_un']")) {
-    // Detecta automaticamente o número da unidade alvo
-    const href = linkUn.getAttribute('href');
-    const match = href.match(/unidade\s*(\d+)/i);
-    if (match) {
-      const destino = `un${match[1]}`;
-      const destinoKey = `paginaAtual_${destino}`;
-      sessionStorage.setItem(destinoKey, 0); // reseta destino
-    }
 
+  if (linkUn && linkUn.querySelector("img[src*='img/questionario']")) {
+
+    // Define destino fixo para trilha
+    const destino = "trilha";
+    const destinoKey = `paginaAtual_${destino}`;
+
+    // Reseta a trilha antes de carregar
+    sessionStorage.setItem(destinoKey, 0);
+
+    // Cancela requisições pendentes
     currentController?.abort();
-    return; // deixa o <a> seguir o fluxo normal
+
+    return; // deixa o navegador seguir o href normalmente
   }
 
-  // (restante da sua delegação de eventos)
+  // (restante da delegação de eventos)
 });
+
+/* ==========================
+   IMG-REVEAL exclusivo do HAMBÚRGUER
+   ========================== */
+document.addEventListener("click", (ev) => {
+  const triggerHamburguer = ev.target.closest('#img-reveal');
+
+  if (triggerHamburguer) {
+    const targetSel = triggerHamburguer.getAttribute('data-target');
+    const target = document.querySelector(targetSel); // não depende de 'area'
+
+    if (target) {
+      const isHidden = getComputedStyle(target).display === 'none';
+      target.style.display = isHidden ? 'block' : 'none';
+      target.setAttribute('aria-hidden', String(!isHidden));
+    }
+
+    return; // impede conflito com outros reveals
+  }
+});
+
 
 /* ================== Start ================== */
 carregarPagina(paginaAtual);
+

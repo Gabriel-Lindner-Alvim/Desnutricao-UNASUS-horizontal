@@ -500,5 +500,26 @@ area.addEventListener('click', (ev) => {
   // (restante da sua delegação de eventos)
 });
 
+/* ==========================
+   IMG-REVEAL exclusivo do HAMBÚRGUER
+   ========================== */
+document.addEventListener("click", (ev) => {
+  const triggerHamburguer = ev.target.closest('#img-reveal');
+
+  if (triggerHamburguer) {
+    const targetSel = triggerHamburguer.getAttribute('data-target');
+    const target = document.querySelector(targetSel); // não depende de 'area'
+
+    if (target) {
+      const isHidden = getComputedStyle(target).display === 'none';
+      target.style.display = isHidden ? 'block' : 'none';
+      target.setAttribute('aria-hidden', String(!isHidden));
+    }
+
+    return; // impede conflito com outros reveals
+  }
+});
+
+
 /* ================== Start ================== */
 carregarPagina(paginaAtual);

@@ -1,4 +1,4 @@
-<div class="container text-start" style="margin-top: 5vh;position: relative;">
+<div class="container text-start" style="margin-top: 5vh;position: relative; padding-left: 7vw; padding-right: 7vw;">
     <div class="row" style="margin-bottom: 5vh;">
         <div class="col-md-12 borda-inicial">
             <p>Em 2024, segundo o SISVAN, 9,7% das gestantes adultas brasileiras apresentavam baixo peso na gestação. A
@@ -24,32 +24,112 @@
       opacity: 0.9;      
     ">
             <p>As seguintes medidas são fundamentais para que haja recuperação nutricional de forma mais rápida,
-                minimizando os prejuízos à saúde:</p>
+                minimizando os prejuízos à saúde. <b> Clique nos botões a seguir para conhecer cada uma.</b></p>
         </div>
     </div>
-    <div class="row align-items-center" style="margin-top: -70px;">
+    <div class="row align-items-center">
         <div class="col-4 text-center">
             <img src="img/image 19.svg" alt="" width="100%">
         </div>
         <div class="col-8">
-            <ul>
-                <li><span>Aumentar a densidade calórica das preparações, oferecer preparações lácteas usando farinhas
-                        (ex. aveia, massa de macaxeira), uso de raízes e tubérculos nas refeições, uso de amendoim e
-                        oleaginosas pra aumentar as calorias e acréscimo de óleo vegetal na refeição.
-                    </span></li>
-                <li><span>Uma pessoa gestante geralmente precisa verificar se a quantidade de proteína ingerida está de
-                        acordo com as recomendações para gestantes.
-                    </span></li>
-                <li><span>Promover escolhas alimentares adequadas e saudáveis por meio do aconselhamento durante as
-                        consultas de pré-natal, seguindo as recomendações dos Guias Alimentares.
-                    </span></li>
-                <li><span>Na vigência de inapetência, verificar se há necessidade de maior fracionamento das refeições,
-                        com densidade energética adequada, a fim de atingir as necessidades nutricionais.
-                    </span></li>
-                <li><span>Assegurar que a pessoa gestante receba as suplementações de micronutrientes adequadas, no
-                        mínimo ferro e ácido fólico pelo Programa Nacional de Suplementação de Ferro, e cálcio como
-                        preconizado pelo Ministério da Saúde (Brasil, 2025).</span></li>
-            </ul>
+            <div class="d-flex justify-content-center gap-4 text-center" style="margin-bottom: 3vh;"> 
+                <div class="d-flex justify-content-center flex-wrap gap-3"> 
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCompreender" style="background: none; border: none; padding: 0;"> 
+                        <img src="img/slide25/aumentar.svg" class="img-fluid aumentar" draggable="false" onmouseover="this.src='img/slide25/aumentar-hover.svg'"  onmouseout="this.src='img/slide25/aumentar.svg'"> 
+                    </button> 
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#ModalClassificar" style="background: none; border: none; padding: 0;"> 
+                        <img src="img/slide25/adequar.svg" class="img-fluid aumentar" draggable="false" onmouseover="this.src='img/slide25/adequar-hover.svg'"  onmouseout="this.src='img/slide25/adequar.svg'"> 
+                    </button> 
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#ModalAnalisar" style="background: none; border: none; padding: 0;"> 
+                        <img src="img/slide25/fracionamento.svg" class="img-fluid aumentar" draggable="false" onmouseover="this.src='img/slide25/fracionamento-hover.svg'"  onmouseout="this.src='img/slide25/fracionamento.svg'">
+                    </button> 
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#ModalExplorar" style="background: none; border: none; padding: 0;"> 
+                       <img src="img/slide25/garantia.svg" class="img-fluid aumentar" draggable="false" onmouseover="this.src='img/slide25/garantia-hover.svg'"  onmouseout="this.src='img/slide25/garantia.svg'">
+                    </button> 
+                </div> 
+            </div>
         </div>
     </div>
+</div>
+
+
+<div class="modal fade" id="ModalCompreender" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/slide25/aumentar-modal.svg" class="img-fluid" draggable="false">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
+               draggable="false"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCompreender')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="ModalClassificar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/slide25/adequar-modal.svg" class="img-fluid" draggable="false">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
+               draggable="false"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalClassificar')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalAnalisar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/slide25/fracionamento-modal.svg" class="img-fluid" draggable="false">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
+               draggable="false"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalAnalisar')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalExplorar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-body position-relative p-0" style="text-align: center;">
+
+        <!-- Container for image and overlay -->
+        <div style="position: relative; display: inline-block;">
+          <img src="img/slide25/garantia-modal.svg" class="img-fluid" draggable="false">
+          
+          <!-- Close button in top-right of image -->
+          <img src="../img/botao-x.svg" 
+               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
+               draggable="false"
+               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalExplorar')).hide();">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
