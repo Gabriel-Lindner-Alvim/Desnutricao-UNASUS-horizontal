@@ -504,7 +504,7 @@ area.addEventListener('click', (ev) => {
    IMG-REVEAL exclusivo do HAMBÚRGUER
    ========================== */
 document.addEventListener("click", (ev) => {
-  const triggerHamburguer = ev.target.closest('#img-reveal');
+  const triggerHamburguer = ev.target.closest('#img-reveal-hamburguer');
 
   if (triggerHamburguer) {
     const targetSel = triggerHamburguer.getAttribute('data-target');
