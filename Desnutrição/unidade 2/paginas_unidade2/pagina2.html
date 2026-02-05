@@ -1,5 +1,5 @@
-<div class="container-fluid text-start" style="padding-left: 12vw; padding-right: 12vw; max-width: 2500px;">
-    <div class="row" style="margin-bottom: 5vh;">
+<div class="container borda-inicial" style="padding: 0px 10vh;" >
+    <div class="row" style="margin-bottom: 20px;">
         <div class="col-md-12 borda-inicial">
             <div style="background-color: #7DCFFC; border-radius: 20px; text-align: center; padding: 20px;">
                 <h2 style="color: #075585"> Apresentação da Unidade</h2>
@@ -8,49 +8,54 @@
             </div>
         </div>
 
-        <div class="col-md-12" style="margin-top: 5vh;">
-            <p>Nosso objetivo é fornecer informações práticas e atualizadas para que você possa atuar de forma preventiva e diagnóstica, contribuindo para a melhoria da saúde e do bem-estar dessas populações.</p>
-        </div>
+ 
+    </div>
+        <div class="row align-items-center" style="margin-bottom: 5vh;">
 
-        <div class="col-md-12" >
+        <div class="col-12">
+            <p >Nosso objetivo é fornecer informações práticas e atualizadas para que você possa atuar de forma preventiva e diagnóstica, contribuindo para a melhoria da saúde e do bem-estar dessas populações.</p>
 
-  <p style="font-size: 30px; font-weight: bold; color: #0367A5; margin-bottom: 20px;">
-    Nesta unidade, você irá:
-  </p>
+   </div>
 
-  <!-- GRID 2x2, 100% width -->
-  <div style="
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 100%;
-  ">
+    <div class="col-md-12">
+      <h3 style="font-weight: bold; color: #0367A5;">Nesta unidade, você irá:</h3>
 
-    <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCompreender"
+      <!-- GRID 2x2 com largura total -->
+      <div style="
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+        margin-top: 40px;
+      ">
+
+        <!-- Compreender -->
+   <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCompreender"
       style="background: none; border: none; padding: 0; width: 100%;">
       <img src="img/nesta-unidade/Component 1.svg" class="img-fluid aumentar" draggable="false"
-        style="width: 100%;">
+           style="width: 100%;">
+    </button>
+
+     <button type="button" data-bs-toggle="modal" data-bs-target="#ModalAnalisar"
+      style="background: none; border: none; padding: 0; width: 100%;">
+      <img src="img/nesta-unidade/Component 2.svg" class="img-fluid aumentar" draggable="false"
+           style="width: 100%;">
     </button>
 
     <button type="button" data-bs-toggle="modal" data-bs-target="#ModalClassificar"
       style="background: none; border: none; padding: 0; width: 100%;">
-      <img src="img/nesta-unidade/Component 2.svg" class="img-fluid aumentar" draggable="false"
-        style="width: 100%;">
-    </button>
-
-    <button type="button" data-bs-toggle="modal" data-bs-target="#ModalAnalisar"
-      style="background: none; border: none; padding: 0; width: 100%;">
       <img src="img/nesta-unidade/Component 3.svg" class="img-fluid aumentar" draggable="false"
-        style="width: 100%;">
+           style="width: 100%;">
     </button>
 
     <button type="button" data-bs-toggle="modal" data-bs-target="#ModalExplorar"
       style="background: none; border: none; padding: 0; width: 100%;">
       <img src="img/nesta-unidade/Component 4.svg" class="img-fluid aumentar" draggable="false"
-        style="width: 100%;">
+           style="width: 100%;">
     </button>
 
-  </div>
+      </div>
+    </div>
 
 </div>
 
@@ -68,10 +73,7 @@
           <img src="img/nesta-unidade/explorar-modal.svg" class="img-fluid" draggable="false">
           
           <!-- Close button in top-right of image -->
-          <img src="../img/botao-x.svg" 
-               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
-               draggable="false"
-               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCompreender')).hide();">
+          <img src="../img/botao-x.svg" style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;" draggable="false" onclick="bootstrap.Modal.getInstance(document.getElementById('ModalCompreender')).hide();">
         </div>
       </div>
     </div>
@@ -89,10 +91,7 @@
           <img src="img/nesta-unidade/aprender-modal.svg" class="img-fluid" draggable="false">
           
           <!-- Close button in top-right of image -->
-          <img src="../img/botao-x.svg" 
-               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
-               draggable="false"
-               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalClassificar')).hide();">
+          <img src="../img/botao-x.svg" style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;" draggable="false" onclick="bootstrap.Modal.getInstance(document.getElementById('ModalClassificar')).hide();">
         </div>
       </div>
     </div>
@@ -109,10 +108,7 @@
           <img src="img/nesta-unidade/conhecer-modal.svg" class="img-fluid" draggable="false">
           
           <!-- Close button in top-right of image -->
-          <img src="../img/botao-x.svg" 
-               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
-               draggable="false"
-               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalAnalisar')).hide();">
+          <img src="../img/botao-x.svg" style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;" draggable="false" onclick="bootstrap.Modal.getInstance(document.getElementById('ModalAnalisar')).hide();">
         </div>
       </div>
     </div>
@@ -129,14 +125,11 @@
           <img src="img/nesta-unidade/analisar-modal.svg" class="img-fluid" draggable="false">
           
           <!-- Close button in top-right of image -->
-          <img src="../img/botao-x.svg" 
-               style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;"
-               draggable="false"
-               onclick="bootstrap.Modal.getInstance(document.getElementById('ModalExplorar')).hide();">
+          <img src="../img/botao-x.svg" style="position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; cursor: pointer;" draggable="false" onclick="bootstrap.Modal.getInstance(document.getElementById('ModalExplorar')).hide();">
         </div>
       </div>
     </div>
   </div>
 </div>
 
- <img src="img/flor-fundo.svg " class="imagem-fixa-slide-22" draggable="false">
+ <!-- <img src="img/flor-fundo.svg " class="imagem-fixa-slide-2" draggable="false"></div> -->

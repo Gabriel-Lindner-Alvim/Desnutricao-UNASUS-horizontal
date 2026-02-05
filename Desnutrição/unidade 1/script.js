@@ -27,6 +27,7 @@ const rIC = window.requestIdleCallback || (cb => setTimeout(() => cb({ timeRemai
 const configuracoesPagina = {
   0: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
   1: { backgroundColor: "#027EC7" },
+  2: { backgroundColor: "#d3efffff" },
   3: { backgroundImage: "url('img/un1/banana plate.png')", backgroundSize: "cover", backgroundPosition: "40%", backgroundAttachment: "fixed" },
   4: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },
   11: { backgroundImage: "url(../img/header_titulo.svg)", backgroundSize: "cover" },

@@ -327,6 +327,8 @@ async function carregarPagina(numero) {
         popup?.classList.remove("d-none");
         imagemAtiva = img;
       });
+
+      
     });
 
 
@@ -395,6 +397,14 @@ async function carregarPagina(numero) {
     area.innerHTML = "<p>Erro ao carregar a página.</p>";
     console.error("Erro ao carregar página:", erro);
   }
+
+  setTimeout(() => {
+  const card = area.querySelector('.thecard');
+  if (card) {
+    card.classList.add('flipped');
+  }
+}, 800); // 0.8s depois que o DOM daquela área existir
+
 }
 
 /* ================== Delegação de eventos ================== */
@@ -519,3 +529,4 @@ document.addEventListener("click", (ev) => {
 
 /* ================== Start ================== */
 carregarPagina(paginaAtual);
+

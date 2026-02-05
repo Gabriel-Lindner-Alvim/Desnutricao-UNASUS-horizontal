@@ -13,6 +13,7 @@
 } 
 
 
+
 body {
   margin: 0;
   height: 100vh;
@@ -162,12 +163,21 @@ display: flex !important;
   fill: #082D49;
 }
 
+.imagem-fixa-slide-2 {
+  position: fixed;
+  top: 30vh;
+  left: -2vw;
+  width: 30vw; /* ajuste conforme quiser */
+  height: auto;
+  z-index: -1;
+}
+
 .esquerda {
-  left: 50px;
+  left: 5px;
 }
 
 .direita {
-  right: 50px;
+  right: 5px;
 }
 
 h1 {
@@ -1100,6 +1110,22 @@ p {
   font-weight: bold;
   margin-right: 12vw;
 }
+.centro-subunidade h2{
+  font-family: 'Montserrat-Black';
+}
+
+.centro-subunidade-grande h2 {
+  position: absolute;
+  top: 35%;
+  left: 35%; /* This becomes the starting point */
+  z-index: 10;
+  font-size: 3rem;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  margin-right: 12vw;
+  font-family: 'Montserrat-Black';
+}
 
 .numero-subunidade {
   display: inline-block; /* <== This makes the width fit the content */
@@ -1144,6 +1170,8 @@ p {
   font-weight: bold;
   margin-right: 12vw;
 }
+
+
 
 .reveal {
   overflow: hidden;
@@ -1347,4 +1375,29 @@ p {
   left: 2px;
   color: #027EC7;
   font-size: 18px;
+}
+
+@media (max-width:1200px)  {
+  .modal-body{
+    overflow-x: scroll !important;
+  }
+}
+
+
+@media (min-width:2500px)  {
+  .centro-subunidade{
+display: none !important;  }
+.direita-subunidade{
+  display: none;
+}
+.centro-subunidade-grande{
+  display: contents !important; 
+
+}
+}
+
+@media (max-width: 900px){
+  .header-container a img{
+  height: 2vh !important;
+}
 }
